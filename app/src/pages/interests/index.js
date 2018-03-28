@@ -1,11 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
-import GridList, { GridListTile, GridListTileBar } from 'material-ui/GridList'
+import { GridList, GridListTile, GridListTileBar } from 'material-ui/Gridlist'
 import Subheader from 'material-ui/List/ListSubheader'
 import IconButton from 'material-ui/IconButton'
-import tileData from './tileData'
+import InfoIcon from 'material-ui-icons/Info'
+import food from './Photos/food.p'
 
 const styles = theme => ({
   root: {
@@ -47,8 +49,8 @@ const tileData = [
   }
 ]
 
-function areaOfInterest(props) {
-  const { classes } = PropTypes
+const areaOfInterest = props => {
+  const { classes } = props
   return (
     <div className={classes.root}>
       <GridList cellHeight={180} className={classes.gridList}>
@@ -56,11 +58,11 @@ function areaOfInterest(props) {
           <Subheader component="div">What interests you? </Subheader>
         </GridListTile>
         {tileData.map(tile => (
-          <GridListTile key={tile.img}>
+          <GridListTile key={tile.author}>
             <img src={tile.img} alt={tile.title} />
             <GridListTileBar
               title={tile.title}
-              subtitle={<span>by: tile.author}</span>}
+              subtitle={<span>by: {tile.author}</span>}
               actionIcon={
                 <IconButton className={classes.icon}>
                   <InfoIcon />
@@ -74,9 +76,12 @@ function areaOfInterest(props) {
   )
 }
 
+// TitlebarGridList.propTypes = {
+//   classes: PropTypes.object.isRequired
+// }
 function mapStateToProps(state) {
   return {
-    homeState: state.appData
+    home: state.appData
   }
 }
 
