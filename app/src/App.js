@@ -3,7 +3,9 @@ import logo from './logo.svg'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from './pages/home'
 import './App.css'
-// <Route path="/interests" component={Interests}/>
+import Interests from './pages/interests/index'
+import IndividualTour from './pages/recommendations/tour'
+
 // <Route path="/interests/history" component={History}/>
 // <Route path="/interests/culinary"component={Culinary}/>
 // <Route path="/interests/adventure"component={Adventure}/>
@@ -19,6 +21,8 @@ class App extends Component {
         <div>
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route path="/interests" component={Interests} />
+            <Route path="/recommendations/:id" component={IndividualTour}>
           </Switch>
         </div>
       </BrowserRouter>

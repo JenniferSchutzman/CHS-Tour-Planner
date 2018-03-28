@@ -38,4 +38,13 @@ module.exports = app => {
   app.delete('/tours/:id', (req, res) => {
     deleteDoc(req.params.id).then(doc => res.send(doc))
   })
+  app.get('/interests', (req, res, next) => {
+    getTours({ include_docs: true }).then(tours => res.send(tours))
+  })
+  app.get('/recommendations', (req, res, next) => {
+    getTours({ include_docs: true }).then(tours => res.send(tours))
+  })
+  app.get('/recommendations/:id', (req, res, next) => {
+    getDoc(req.params.id).then(doc => res.send(doc))
+  })
 }

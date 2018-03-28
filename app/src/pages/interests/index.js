@@ -3,11 +3,12 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
-import { GridList, GridListTile, GridListTileBar } from 'material-ui/Gridlist'
+import GridList, { GridListTile, GridListTileBar } from 'material-ui/GridList'
 import Subheader from 'material-ui/List/ListSubheader'
 import IconButton from 'material-ui/IconButton'
 import InfoIcon from 'material-ui-icons/Info'
-import food from './Photos/food.p'
+import { map } from 'ramda'
+const tileData = require('./tileData')
 
 const styles = theme => ({
   root: {
@@ -26,59 +27,28 @@ const styles = theme => ({
   }
 })
 
-const tileData = [
-  {
-    img: '../Photos/food.jpeg',
-    title: 'Culinary: food & drinks',
-    author: 'Culinary: food & drinks'
-  },
-  {
-    img: '../Photos/black_white.jpeg',
-    title: 'History',
-    author: 'History'
-  },
-  {
-    img: '../Photos/surfing_color',
-    title: 'Adventure',
-    author: 'Adventure'
-  },
-  {
-    img: '../Photos/graveyard.jpeg',
-    title: 'Haunted',
-    author: 'Haunted'
-  }
-]
-
-const areaOfInterest = props => {
+const Interests = props => {
   const { classes } = props
   return (
-    <div className={classes.root}>
+    <div>
       <GridList cellHeight={180} className={classes.gridList}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
           <Subheader component="div">What interests you? </Subheader>
         </GridListTile>
-        {tileData.map(tile => (
-          <GridListTile key={tile.author}>
+        {map(tile =>
+          <GridListTile key={tile.img}>
             <img src={tile.img} alt={tile.title} />
             <GridListTileBar
               title={tile.title}
               subtitle={<span>by: {tile.author}</span>}
-              actionIcon={
-                <IconButton className={classes.icon}>
-                  <InfoIcon />
-                </IconButton>
-              }
             />
-          </GridListTile>
-        ))}
+          </GridListTile>(tileData)
+        )}
       </GridList>
     </div>
   )
 }
 
-// TitlebarGridList.propTypes = {
-//   classes: PropTypes.object.isRequired
-// }
 function mapStateToProps(state) {
   return {
     home: state.appData
@@ -87,4 +57,4 @@ function mapStateToProps(state) {
 
 const connector = connect(mapStateToProps)
 
-export default connector(withStyles(styles)(areaOfInterest))
+export default connector(withStyles(styles)(Interests))

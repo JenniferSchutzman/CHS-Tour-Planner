@@ -27,10 +27,10 @@ const styles = {
   }
 }
 
-const fountainImage = props => {
-  const { classes } = props
-  return <div className={classes.row}>/></div>
-}
+// const fountainImage = props => {
+//   const { classes } = props
+//   return <div className={classes.row}>/></div>
+// }
 
 const Welcome = () => (
   <center>
@@ -46,7 +46,7 @@ const Home = props => {
     <div style={{ padding: '60px' }}>
       <Welcome />
       <center>
-        <fountainImage />
+        // <fountainImage />
         <Avatar
           alt="fountain"
           src="https://c1.staticflickr.com/7/6240/6349710040_d6b09c28b6_b.jpg"
@@ -55,15 +55,17 @@ const Home = props => {
         <Typography style={{ padding: '16px' }} variant="display1">
           In just 3 easy steps we will find you the perfect tour.
         </Typography>
-        <Button
-          variant="raised"
-          size="large"
-          color="grey"
-          className={classes.button}
-        >
-          <p />
-          Let's Get Started
-        </Button>
+        <dim>
+          <Button
+            variant="raised"
+            size="large"
+            color="grey"
+            className={classes.button}
+          >
+            <p />
+            Get Started
+          </Button>
+        </dim>
       </center>
     </div>
   )
