@@ -9,6 +9,9 @@ import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
 import green from 'material-ui/colors/green'
 import yellow from 'material-ui/colors/yellow'
 import red from 'material-ui/colors/red'
+import { getTour } from './action-creators/individual-tour'
+import { recommendations } from './action-creators/tours'
+// import { startAppState } from './'
 
 const customTheme = createMuiTheme({
   palette: {
@@ -28,3 +31,8 @@ ReactDOM.render(
   document.getElementById('root')
 )
 registerServiceWorker()
+
+store.dispatch(getTour)
+store.dispatch(recommendations)
+// store.dispatch(startAppState)
+//

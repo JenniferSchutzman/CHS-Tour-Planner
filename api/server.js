@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 5000
 const tourRoute = require('./routes/tours')
 
 app.use(bodyParser.json())
+app.use(cors({ credentials: true }))
 
 // app.use(cors({ credentials: true }))
 

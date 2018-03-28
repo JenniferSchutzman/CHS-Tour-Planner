@@ -38,13 +38,13 @@ module.exports = app => {
   app.delete('/tours/:id', (req, res) => {
     deleteDoc(req.params.id).then(doc => res.send(doc))
   })
-  app.get('/interests', (req, res, next) => {
+  app.get('/interests', (req, res) => {
     getTours({ include_docs: true }).then(tours => res.send(tours))
   })
-  app.get('/recommendations', (req, res, next) => {
+  app.get('/recommendations', (req, res) => {
     getTours({ include_docs: true }).then(tours => res.send(tours))
   })
-  app.get('/recommendations/:id', (req, res, next) => {
+  app.get('/recommendations/:id', (req, res) => {
     getDoc(req.params.id).then(doc => res.send(doc))
   })
 }
