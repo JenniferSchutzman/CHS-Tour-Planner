@@ -44,7 +44,6 @@ class IndividualTour extends React.Component {
           <CardContent>
             <Typography gutterBottom variant="headline" component="h2" />
             {this.props.tour.tourName}
-            <h1>inside card conent no state</h1>
             <p />
             <Typography component="p">{this.props.tour.desc}</Typography>
             <Grid item xs={12} md={6} />
@@ -61,8 +60,7 @@ class IndividualTour extends React.Component {
             <Typography component="p"> {this.props.tour.address}</Typography>
             <Typography component="p"> </Typography>
             <Typography component="p">
-              {' '}
-              {this.props.tour.linkToBookOnline}
+              <a href={this.props.tour.linkToBookOnline}>Book Online</a>
             </Typography>
           </CardContent>
           <CardActions>
