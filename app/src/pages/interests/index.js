@@ -57,9 +57,11 @@ const Interests = props => {
 //OR wil have only that that interest object appear so can jumpt straight into mapping over the objects
 
 function mapStateToProps(state) {
+  console.log('inside mapStateToProps interests', state)
   return {
     interests: state.interests
   }
+  console.log('interests state', state)
 }
 
 const connector = connect(mapStateToProps)
