@@ -9,10 +9,6 @@ import Avatar from 'material-ui/Avatar'
 import Button from 'material-ui/Button'
 import AddIcon from 'material-ui-icons/Add'
 
-// import Paper from 'material-ui/Paper'
-// import Typography from 'material-ui/Typography'
-
-// import fountain from './pics/fountain.png'
 const styles = {
   row: {
     display: 'flex',
@@ -26,11 +22,6 @@ const styles = {
     height: 300
   }
 }
-
-// const fountainImage = props => {
-//   const { classes } = props
-//   return <div className={classes.row}>/></div>
-// }
 
 const Welcome = () => (
   <center>
@@ -46,7 +37,6 @@ const Home = props => {
     <div style={{ padding: '60px' }}>
       <Welcome />
       <center>
-        // <fountainImage />
         <Avatar
           alt="fountain"
           src="https://c1.staticflickr.com/7/6240/6349710040_d6b09c28b6_b.jpg"
@@ -56,15 +46,17 @@ const Home = props => {
           In just 3 easy steps we will find you the perfect tour.
         </Typography>
         <dim>
-          <Button
-            variant="raised"
-            size="large"
-            color="grey"
-            className={classes.button}
-          >
-            <p />
-            Get Started
-          </Button>
+          <Link to="/interests" style={{ textDecoration: 'none' }}>
+            <Button
+              variant="raised"
+              size="large"
+              color="grey"
+              className={classes.button}
+            >
+              <p />
+              Get Started
+            </Button>
+          </Link>
         </dim>
       </center>
     </div>

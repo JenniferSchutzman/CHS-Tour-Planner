@@ -26,7 +26,7 @@ module.exports = app => {
   app.get('/tours/:id', (req, res) => {
     getDoc(req.params.id).then(doc => res.send(doc))
   })
-  app.post('/tours/', (req, res) => {
+  app.post('/tours', (req, res) => {
     req.body._id = `${slugify(req.body.tourName, {
       lower: true
     })}`
@@ -39,6 +39,12 @@ module.exports = app => {
     deleteDoc(req.params.id).then(doc => res.send(doc))
   })
   app.get('/interests', (req, res) => {
+    getTours({ include_docs: true }).then(tours => res.send(tours))
+  })
+  app.get('/experiences', (req, res) => {
+    getTours({ include_docs: true }).then(tours => res.send(tours))
+  })
+  app.get('/schedule', (req, res) => {
     getTours({ include_docs: true }).then(tours => res.send(tours))
   })
   app.get('/recommendations', (req, res) => {

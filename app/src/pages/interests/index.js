@@ -8,7 +8,9 @@ import Subheader from 'material-ui/List/ListSubheader'
 import IconButton from 'material-ui/IconButton'
 import InfoIcon from 'material-ui-icons/Info'
 import { map } from 'ramda'
-const tileData = require('./tileData')
+import { tileData } from './tileData'
+import Button from 'material-ui/Button'
+import classNames from 'classnames'
 
 const styles = theme => ({
   root: {
@@ -28,30 +30,35 @@ const styles = theme => ({
 })
 
 const Interests = props => {
+  // const { classes } = tileData.props
   const { classes } = props
   return (
     <div>
-      <GridList cellHeight={180} className={classes.gridList}>
+      <GridList cellHeight={180}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
           <Subheader component="div">What interests you? </Subheader>
         </GridListTile>
-        {map(tile =>
-          <GridListTile key={tile.img}>
+
+        {tileData.map(tile => (
+          <GridListTile>
             <img src={tile.img} alt={tile.title} />
-            <GridListTileBar
-              title={tile.title}
-              subtitle={<span>by: {tile.author}</span>}
+            <GridListTileBar title={tile.title} />
             />
-          </GridListTile>(tileData)
-        )}
+          </GridListTile>
+        ))}
       </GridList>
     </div>
   )
 }
 
+//MAKE A LARGE IF STATEMENT FOR THE BUTTON LINKS?
+//OR SHOULD ALL BUTTONS LINK TO EXPERIENCES BUT THE IF STATEMENT IS IN THE EXPERIENCE INDEX?
+//If (state.interests.name == 'History') { return map over those objects to dispplay }
+//OR wil have only that that interest object appear so can jumpt straight into mapping over the objects
+
 function mapStateToProps(state) {
   return {
-    home: state.appData
+    interests: state.interests
   }
 }
 

@@ -11,7 +11,11 @@ import yellow from 'material-ui/colors/yellow'
 import red from 'material-ui/colors/red'
 import { getTour } from './action-creators/individual-tour'
 import { recommendations } from './action-creators/tours'
-// import { startAppState } from './'
+import {
+  areaOfInterest,
+  experienceTypes,
+  schedule
+} from './action-creators/response-tracker'
 
 const customTheme = createMuiTheme({
   palette: {
@@ -34,5 +38,6 @@ registerServiceWorker()
 
 store.dispatch(getTour)
 store.dispatch(recommendations)
+store.dispatch(schedule)
 // store.dispatch(startAppState)
 //

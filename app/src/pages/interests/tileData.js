@@ -1,9 +1,4 @@
-const tileData = [
-  {
-    img: 'https://c1.staticflickr.com/8/7269/7568334032_3e2f981eba_b.jpg',
-    title: 'Culinary: food & drinks',
-    author: 'Culinary: food & drinks'
-  },
+export const tileData = [
   {
     img:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm_D6irhgO7p0FDmOORID-U7nPnidwE1ZN0RFU_WUm3aUrmrFFOg',
@@ -11,8 +6,13 @@ const tileData = [
     author: 'History'
   },
   {
+    img: 'https://c1.staticflickr.com/8/7269/7568334032_3e2f981eba_b.jpg',
+    title: 'Culinary',
+    author: 'Culinary'
+  },
+  {
     img:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_AjjPzGfa4xHMjeVZ7XlT-AxFvaaGjyOpJWIaiaeeXbHY56yZ',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdGNIWH_m3KoWFlxkwnyoA9a-9KCCiEHNoo2nZresLFXuHXRe4',
     title: 'Adventure',
     author: 'Adventure'
   },

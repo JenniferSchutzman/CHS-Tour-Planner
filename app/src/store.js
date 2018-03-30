@@ -4,12 +4,14 @@ import startAppState from './reducers/home-data'
 import tours from './reducers/tours'
 import tour from './reducers/get-tour'
 import homeData from './reducers/home-data'
+import stateTracker from './reducers/response-tracker'
 
 const store = createStore(
   combineReducers({
     homeData,
     tour,
-    tours
+    tours,
+    stateTracker
   }),
   applyMiddleware(thunk)
 )

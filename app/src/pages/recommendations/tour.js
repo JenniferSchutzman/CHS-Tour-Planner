@@ -19,10 +19,51 @@ const styles = theme => ({
     height: 200
   }
 })
+// const IndividualTour = props => {
+//   return (
+//     <div>
+//       <Card>
+//         <CardMedia
+//           image="https://c1.staticflickr.com/9/8202/8211345552_fe75149247_b.jpg"
+//           title="Savor the Flavors of Charleston"
+//         />
+//
+//         <CardContent>
+//           <Typography gutterBottom variant="headline" component="h2">
+//             Savor the Flavors of Charleston
+//           </Typography>
+//           <Typography component="p">
+//             Come join us as we walk, talk and taste our way through Charleston.
+//             This 2½ hour Charleston Food Tour will immerse you in the history
+//             and culture of the Lowcountry. You will discover how our unique
+//             cuisine has evolved over the past 300+ years while sampling
+//             delicious specialties from local eateries, markets, bakeries,
+//             restaurants, and culinary landmarks.
+//           </Typography>
+//           <Grid item xs={12} md={6} />
+//           <p />
+//           <Typography component="p"> Company Name </Typography>
+//           <Typography component="p"> Price</Typography>
+//           <Typography component="p"> Schedule</Typography>
+//           <Typography component="p"> Link to Company Website</Typography>
+//         </CardContent>
+//         <CardActions>
+//           <Button size="small" color="primary">
+//             GO BACK
+//           </Button>
+//           <Button size="small" color="primary">
+//             START OVER
+//           </Button>
+//         </CardActions>
+//       </Card>
+//     </div>
+//   )
+// }
 
 class IndividualTour extends React.Component {
   componentDidMount() {
     const id = this.props.match.params.id
+    console.log('id inside mount', id)
     this.props.getTour(id)
     console.log('inside componentDidMount', this.props.getTour(id))
   }
@@ -32,6 +73,7 @@ class IndividualTour extends React.Component {
     console.log('classes', classes)
     return (
       <div>
+        <div> {this.props.tour.address}</div>
         <Card>
           <CardMedia
             image="https://c1.staticflickr.com/9/8202/8211345552_fe75149247_b.jpg"
@@ -72,7 +114,7 @@ class IndividualTour extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log('in mapStateToProps', state)
+  console.log('in mapStateToProps ONE tour', state)
   return {
     tour: state.tour
   }

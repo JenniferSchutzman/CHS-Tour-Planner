@@ -1,9 +1,10 @@
 import { GET_TOUR } from '../constants'
+import { merge } from 'ramda'
 
-export const tour = (state = {}, action) => {
+const tour = (state = {}, action) => {
   switch (action.type) {
     case GET_TOUR:
-      return action.payload
+      return merge(state, action.payload)
     default:
       return state
   }
