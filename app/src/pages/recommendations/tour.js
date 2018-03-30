@@ -10,6 +10,12 @@ import Button from 'material-ui/Button'
 import Typography from 'material-ui/Typography'
 import Grid from 'material-ui/Grid'
 import IconButton from 'material-ui/IconButton'
+import { CircularProgress } from 'material-ui/Progress'
+import AddIcon from 'material-ui-icons/Add'
+import PhoneIcon from 'material-ui-icons/Phone'
+import BottomNavigation, {
+  BottomNavigationAction
+} from 'material-ui/BottomNavigation'
 
 const styles = theme => ({
   card: {
@@ -29,7 +35,8 @@ class IndividualTour extends React.Component {
     console.log('inside componentDidMount', this.props.getTour(id))
   }
   render() {
-    const { classes } = this.props
+    const { classes, value } = this.props
+
     console.log('sinde render', this.props)
     console.log('classes', classes)
     return (
@@ -42,7 +49,7 @@ class IndividualTour extends React.Component {
           />
 
           <CardContent>
-            <Typography gutterBottom variant="headline" component="h2" />
+            <Typography gutterBottom variant="headline" component="h1" />
             {this.props.tour.tourName}
             <p />
             <Typography component="p">{this.props.tour.desc}</Typography>
@@ -62,6 +69,13 @@ class IndividualTour extends React.Component {
             <Typography component="p">
               <a href={this.props.tour.linkToBookOnline}>Book Online</a>
             </Typography>
+            <dim>
+              <Button>
+                <margin-left>
+                  <PhoneIcon />
+                </margin-left>
+              </Button>
+            </dim>
           </CardContent>
           <CardActions>
             <Button size="small" color="primary">

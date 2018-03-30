@@ -327,8 +327,7 @@ db
       type: 'walking',
       desc:
         "This 2 1/2 hour tour explores Charleston's Historic French Quarter, offering the best of Charleston's history and food while walking some of the oldest & most historic streets in the city! Showcasing some of Charleston's traditional favorites, as well as recent innovations, this tour highlights the cuisine of our favorite locally-owned and operated restaurants in the Holy City. It is a journey that is informative, delicious and fun!",
-      img:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvfAjhMbZRorQvuEWhvMs1DEGH1H2h8VvyoZapLAVEDdb3Yim2HQ',
+      img: '/food2.jpeg',
       linkToBookOnline:
         'https://charlestonculinarytours.com/activities/charleston-downtown-culinary-tour/',
       schedule: [
@@ -433,7 +432,7 @@ db
       type: 'museum',
       desc:
         'This 120 minute guided tour centers on the history of aviation and the many pilots behind the flying machines. This peek inside some of our favorite aircraft offers a view not available to the general public. This special tour is limited to 20 max guests due to space and time.',
-      img: '',
+      img: './aircraft.jpeg',
       linkToBookOnline: 'http://www.patriotspoint.org/tours/group-tours/',
       schedule: [
         {
@@ -499,7 +498,7 @@ db
       type: 'boat',
       desc:
         'Once aboard, you will experience a relaxing 30 minute narrated cruise to historic Fort Sumter. You will learn about the events which led to the outbreak of America’s most bloody war. When you arrive you will be greeted by National Park Service Rangers, who will provide further details about Fort Sumter and its pivotal role in the American Civil War. On the fort you will find a very informative museum (360 Video of Museum) with many historic artifacts and a souvenir shop. After your roughly one hour visit, you will enjoy a scenic cruise back to your departure point.',
-      img: '',
+      img: '/sumter.png',
       linkToBookOnline: 'https://fortsumtertours.com/tours/fort-sumter-tour/',
       schedule: [
         {
@@ -538,7 +537,7 @@ db
       type: 'boat',
       desc:
         'People of all walks of life can enjoy two –hour public sails! There are no set courses, she sails with the winds and tides so every cruise is unique. You will always be in the sheltered harbor area and see all the sites just closer to some than others. While this is not a narrated cruise, the crew is happy to answer any questions and point out landmarks and wildlife.',
-      img: '',
+      img: '/sunset_sail.jpeg',
       linkToBookOnline: 'https://www.schoonerpride.com/main/daily-sails',
 
       schedule: [
@@ -572,7 +571,7 @@ db
       duration: '1.5 hours',
       desc:
         'Climb aboard the Carolina Belle to enjoy the beauty of the Charleston Harbor and learn the rich history of the Holy City. During the scenic and relaxing 90 minute tour, you will see over 75 landmarks and points of interest!  Your professional USCG licensed captain will narrate history, sights, and facts about the Charleston Harbor as you pass locations critical to United States history.',
-      img: '',
+      img: './harborTour.jpg',
       linkToBookOnline: 'https://www.charlestonharbortours.com',
       schedule: [
         {
@@ -604,7 +603,7 @@ db
       duration: '1.5 hours',
       desc:
         'Almost a century before it was built, the ground on which George Walton Williams would build his home was hallowed in the tradition of optimistic patriotism. 14-16 Meeting Street in downtown Charleston was originally part of the Lowndes House plot owned by Governor Charles Pinckney, who hosted George Washington three times in 1791.  The New Grand Tour is an hour and half long. It covers the entire Mansion, including the Italianate tower. ',
-      img: '',
+      img: '/Calmuseum.jpg',
       linkToBookOnline: 'http://www.calhounmansion.net/tour_schedule/',
 
       schedule: [
@@ -639,7 +638,7 @@ db
       type: 'walking',
       desc:
         "The highlight of Tour Charleston's Ghosts of Charleston Tour is entering the lush, spellbinding Unitarian Church Graveyard built in 1772. Real time hauntings occur only a handful of times a year. However, since 1996, when we started what is now Charleston's oldest ghost tour, spirits in the Unitarian Church Graveyard have reached out to many people on our tour in visual, tactile and auditory ways.",
-      img: '',
+      img: './GhostCharTour.jpg',
       linkToBookOnline: 'http://www.tourcharleston.com/ghost-tours/',
       schedule: [
         {

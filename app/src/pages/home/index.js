@@ -39,7 +39,7 @@ const Home = props => {
       <center>
         <Avatar
           alt="fountain"
-          src="https://c1.staticflickr.com/7/6240/6349710040_d6b09c28b6_b.jpg"
+          src="../../../fountain.png"
           className={classNames(classes.avatar, classes.bigAvatar)}
         />
         <Typography style={{ padding: '16px' }} variant="display1">
