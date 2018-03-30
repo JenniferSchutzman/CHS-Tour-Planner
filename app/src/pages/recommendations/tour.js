@@ -19,52 +19,13 @@ const styles = theme => ({
     height: 200
   }
 })
-// const IndividualTour = props => {
-//   return (
-//     <div>
-//       <Card>
-//         <CardMedia
-//           image="https://c1.staticflickr.com/9/8202/8211345552_fe75149247_b.jpg"
-//           title="Savor the Flavors of Charleston"
-//         />
-//
-//         <CardContent>
-//           <Typography gutterBottom variant="headline" component="h2">
-//             Savor the Flavors of Charleston
-//           </Typography>
-//           <Typography component="p">
-//             Come join us as we walk, talk and taste our way through Charleston.
-//             This 2½ hour Charleston Food Tour will immerse you in the history
-//             and culture of the Lowcountry. You will discover how our unique
-//             cuisine has evolved over the past 300+ years while sampling
-//             delicious specialties from local eateries, markets, bakeries,
-//             restaurants, and culinary landmarks.
-//           </Typography>
-//           <Grid item xs={12} md={6} />
-//           <p />
-//           <Typography component="p"> Company Name </Typography>
-//           <Typography component="p"> Price</Typography>
-//           <Typography component="p"> Schedule</Typography>
-//           <Typography component="p"> Link to Company Website</Typography>
-//         </CardContent>
-//         <CardActions>
-//           <Button size="small" color="primary">
-//             GO BACK
-//           </Button>
-//           <Button size="small" color="primary">
-//             START OVER
-//           </Button>
-//         </CardActions>
-//       </Card>
-//     </div>
-//   )
-// }
 
 class IndividualTour extends React.Component {
   componentDidMount() {
     const id = this.props.match.params.id
     console.log('id inside mount', id)
     this.props.getTour(id)
+
     console.log('inside componentDidMount', this.props.getTour(id))
   }
   render() {
@@ -73,31 +34,36 @@ class IndividualTour extends React.Component {
     console.log('classes', classes)
     return (
       <div>
-        <div> {this.props.tour.address}</div>
         <Card>
           <CardMedia
+            className={classes.media}
             image="https://c1.staticflickr.com/9/8202/8211345552_fe75149247_b.jpg"
             title="Savor the Flavors of Charleston"
           />
 
           <CardContent>
-            <Typography gutterBottom variant="headline" component="h2">
-              Savor the Flavors of Charleston
-            </Typography>
-            <Typography component="p">
-              Come join us as we walk, talk and taste our way through
-              Charleston. This 2½ hour Charleston Food Tour will immerse you in
-              the history and culture of the Lowcountry. You will discover how
-              our unique cuisine has evolved over the past 300+ years while
-              sampling delicious specialties from local eateries, markets,
-              bakeries, restaurants, and culinary landmarks.
-            </Typography>
+            <Typography gutterBottom variant="headline" component="h2" />
+            {this.props.tour.tourName}
+            <h1>inside card conent no state</h1>
+            <p />
+            <Typography component="p">{this.props.tour.desc}</Typography>
             <Grid item xs={12} md={6} />
             <p />
-            <Typography component="p"> Company Name </Typography>
-            <Typography component="p"> Price</Typography>
-            <Typography component="p"> Schedule</Typography>
-            <Typography component="p"> Link to Company Website</Typography>
+            <Typography component="p"> ${this.props.tour.price}</Typography>
+            <Typography component="p">
+              {' '}
+              Duration: {this.props.tour.duration}
+            </Typography>
+            <Typography component="p">
+              {' '}
+              {this.props.tour.companyName}{' '}
+            </Typography>
+            <Typography component="p"> {this.props.tour.address}</Typography>
+            <Typography component="p"> </Typography>
+            <Typography component="p">
+              {' '}
+              {this.props.tour.linkToBookOnline}
+            </Typography>
           </CardContent>
           <CardActions>
             <Button size="small" color="primary">
@@ -128,4 +94,4 @@ const mapActionsToProps = dispatch => {
 
 const connector = connect(mapStateToProps, mapActionsToProps)
 
-export default connector(IndividualTour)
+export default connector(withStyles(styles)(IndividualTour))
