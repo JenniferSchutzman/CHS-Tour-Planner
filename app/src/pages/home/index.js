@@ -26,7 +26,7 @@ const styles = {
 const Welcome = () => (
   <center>
     <Typography style={{ padding: '16px' }} variant="display2">
-      Welcome to the Charleston Tour Planner
+      Charleston Tour Planner
     </Typography>
   </center>
 )
@@ -42,8 +42,8 @@ const Home = props => {
           src="../../../fountain.png"
           className={classNames(classes.avatar, classes.bigAvatar)}
         />
-        <Typography style={{ padding: '16px' }} variant="display1">
-          In just 3 easy steps we will find you the perfect tour.
+        <Typography style={{ padding: '16px' }} variant="display5">
+          In just 3 easy steps, we will find you the perfect tour.
         </Typography>
         <dim>
           <Link to="/interests" style={{ textDecoration: 'none' }}>

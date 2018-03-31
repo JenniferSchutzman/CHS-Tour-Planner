@@ -8,7 +8,7 @@ import Subheader from 'material-ui/List/ListSubheader'
 import IconButton from 'material-ui/IconButton'
 import InfoIcon from 'material-ui-icons/Info'
 import { map } from 'ramda'
-import { tileData } from './tileData'
+// import { tileData } from './tileData'
 import Button from 'material-ui/Button'
 import classNames from 'classnames'
 
@@ -32,6 +32,8 @@ const styles = theme => ({
 const Interests = props => {
   // const { classes } = tileData.props
   const { classes } = props
+  console.log('inside grid interests state', props.stateTracker)
+  const data = props.stateTracker
   return (
     <div>
       <GridList cellHeight={180}>
@@ -39,10 +41,10 @@ const Interests = props => {
           <Subheader component="div">What interests you? </Subheader>
         </GridListTile>
 
-        {tileData.map(tile => (
+        {data.interests.map(tile => (
           <GridListTile>
-            <img src={tile.img} alt={tile.title} />
-            <GridListTileBar title={tile.title} />
+            <img src={tile.img} alt={tile.name} />
+            <GridListTileBar title={tile.name} />
             />
           </GridListTile>
         ))}
@@ -57,11 +59,10 @@ const Interests = props => {
 //OR wil have only that that interest object appear so can jumpt straight into mapping over the objects
 
 function mapStateToProps(state) {
-  console.log('inside mapStateToProps interests', state)
+  console.log('inside mapStateToProps stateTracker', state.stateTracker)
   return {
-    interests: state.interests
+    stateTracker: state.stateTracker
   }
-  console.log('interests state', state)
 }
 
 const connector = connect(mapStateToProps)

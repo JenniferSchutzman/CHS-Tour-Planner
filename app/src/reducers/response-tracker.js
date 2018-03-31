@@ -33,7 +33,7 @@ const initialState = {
         { name: 'Drinks', img: '../../public/char_wine.jpeg' }
       ],
       name: 'Culinary',
-      imgPath: '/food2.jpeg'
+      img: '/food2.jpeg'
     },
     {
       experienceTypes: [
