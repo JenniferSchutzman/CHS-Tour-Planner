@@ -39,5 +39,6 @@ registerServiceWorker()
 store.dispatch(getTour)
 store.dispatch(recommendations)
 store.dispatch(schedule)
+store.dispatch(experienceTypes)
 // store.dispatch(startAppState)
 //

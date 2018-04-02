@@ -44,7 +44,7 @@ class IndividualTour extends React.Component {
         <Card>
           <CardMedia
             className={classes.media}
-            image="https://c1.staticflickr.com/9/8202/8211345552_fe75149247_b.jpg"
+            image={this.props.tour.img}
             title="Savor the Flavors of Charleston"
           />
 

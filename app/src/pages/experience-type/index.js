@@ -6,6 +6,8 @@ import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import IconButton from 'material-ui/IconButton'
 import { connect } from 'react-redux'
+import GridList, { GridListTile, GridListTileBar } from 'material-ui/GridList'
+import Subheader from 'material-ui/List/ListSubheader'
 
 const styles = theme => ({
   root: {
@@ -24,32 +26,31 @@ const styles = theme => ({
   }
 })
 const Experiences = props => {
-  const { classes } = props
-  return (
-    <center>
-      <dim>
-        <Link to="/schedule" style={{ textDecoration: 'none' }}>
-          <Button
-            variant="raised"
-            size="large"
-            color="grey"
-            className={classes.button}
-          >
-            <p />
-            Next
-          </Button>
-        </Link>
-      </dim>
-    </center>
-  )
+  // const { classes } = props
+  const data = props.stateTracker
+  console.log('data', data)
+  return <h1>inside experiences page</h1>
 }
 
 function mapStateToProps(state) {
+  console.log('inside mapStateToProps EXPERIENCES', state)
   return {
-    types: state.types
+    stateTracker: state.stateTracker.interests === 'history'
   }
 }
 
 const connector = connect(mapStateToProps)
 
-export default connect(withStyles(styles)(Experiences))
+export default connector(withStyles(styles)(Experiences))
+
+// <Link to="/schedule" style={{ textDecoration: 'none' }}>
+//   <Button
+//     variant="raised"
+//     size="large"
+//     color="grey"
+//     className={classes.button}
+//   >
+//     <p />
+//     Next
+//   </Button>
+// </Link>

@@ -1,6 +1,6 @@
 import {
   SELECTED_INTEREST,
-  SELECTED_EXPERIENCE,
+  SELECTED_HISTORY,
   SELECTED_DAYS
 } from '../constants'
 import { concat } from 'ramda'
@@ -14,7 +14,7 @@ const initialState = {
         { name: 'Boat', img: '../../public/sailing.jpeg' },
         { name: 'Walking', img: '../../public/street.png' }
       ],
-      name: 'history',
+      name: 'History',
       img: '/BroadStreetCharleston.jpg'
     },
     {
@@ -25,7 +25,7 @@ const initialState = {
         { name: 'Fishing', img: '../../public/fishing.png' }
       ],
       name: 'Adventure',
-      imgPath: '/surfing_color.jpeg'
+      img: '/surfing_color.jpeg'
     },
     {
       experienceTypes: [
@@ -59,13 +59,20 @@ export const stateTracker = (state = initialState, action) => {
   switch (action.type) {
     case SELECTED_INTEREST:
       return concat([action.payload], state)
-    // case SELECTED_EXPERIENCE:
-    //   return concat([action.payload], state)
+    // case SELECTED_HISTORY:
+    //   return concat([action.payload], state.interests.name)
     // case SELECTED_DAYS:
     //   return concat([action.payload], state)
     default:
       return state
   }
 }
+
+// export const stateTrackerExperiences = (state = stateTracker, action) => {
+//   switch (action.type) {
+//     case SELECTED_HISTORY:
+//       return concat([action.payload], state.interests.history)
+//   }
+// }
 
 export default stateTracker
