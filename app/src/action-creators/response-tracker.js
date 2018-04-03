@@ -3,7 +3,9 @@ import {
   SELECTED_EXPERIENCE,
   SELECTED_DAYS,
   SELECTED_INTEREST,
-  SELECTED_HISTORY
+  SELECTED_HISTORY,
+  SET_SCHEDULE,
+  CHECK_DAY
 } from '../constants'
 const url = 'http://localhost:5000'
 

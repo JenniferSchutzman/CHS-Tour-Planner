@@ -1,9 +1,11 @@
 import {
   SELECTED_INTEREST,
   SELECTED_HISTORY,
-  SELECTED_DAYS
+  SELECTED_DAYS,
+  CHECK_DAY,
+  SET_SCHEDULE
 } from '../constants'
-import { concat } from 'ramda'
+import { concat, map, merge } from 'ramda'
 
 const initialState = {
   interests: [
@@ -54,8 +56,24 @@ const initialState = {
     { name: 'Sunday', selected: null }
   ]
 }
+// map over the dow
+// for each day in the array
+// look for the day name that matches the action.payload.day
 
 export const stateTracker = (state = initialState, action) => {
+  switch (action.type) {
+    case CHECK_DAY:
+      let newDow = map(
+        day =>
+          day.name === action.payload.day
+            ? { name: day.name, selected: action.payload.checked }
+            : day,
+        state.dow
+      )
+      return merge(initialState, { dow: newDow })
+    default:
+      return state
+  }
   return state
   // export const stateTracker = (state = initialState, action) => {
   //   switch (action.type) {
@@ -74,6 +92,25 @@ export const stateTracker = (state = initialState, action) => {
 //   switch (action.type) {
 //     case SELECTED_HISTORY:
 //       return concat([action.payload], state.interests.history)
+//   }
+// }
+
+// export const days = (state = initialState, action) => {
+//   switch (action.type) {
+//     case SET_SCHEDULE:
+//       return action.payload
+//     default:
+//       return state
+//   }
+// }
+
+// export const checkDay = (state = { selected: null }, action) => {
+//   switch (action.type) {
+//     case CHECK_DAY:
+//       console.log('CHECK_DAY', action.payload)
+//       return { selected: true }
+//     default:
+//       return state
 //   }
 // }
 

@@ -7,7 +7,8 @@ import classNames from 'classnames'
 import { map, pluck, contains } from 'ramda'
 import { Link } from 'react-router-dom'
 import Button from 'material-ui/Button'
-import { schedule } from '../../action-creators/schedule'
+import { CHECK_DAY } from '../../constants'
+import { schedule, checkDay } from '../../action-creators/schedule'
 import List, {
   ListItem,
   ListItemIcon,
@@ -25,56 +26,6 @@ const styles = theme => ({
   }
 })
 
-// const HandleToggle = value => () => {
-//   return (
-//
-//   )
-// }
-
-const Schedule = props => {
-  const { classes } = props
-  console.log('inside schedule state days payload', props.days)
-  const data = props.days
-  const plucked = pluck('name', data)
-  console.log('data name plucked', plucked)
-  return (
-    <div style={{ padding: '60px' }}>
-      <center>
-        <div>
-          <List
-            subheader={
-              <ListSubheader>Which days would you prefer? </ListSubheader>
-            }
-          >
-            {plucked.map(day => (
-              <ListItem>
-                <ListItemIcon>
-                  <TodayIcon />
-                </ListItemIcon>
-                <ListItemText primary={day} />
-                <Switch />
-              </ListItem>
-            ))}
-          </List>
-        </div>
-        <dim>
-          <Link to="/recommendations" style={{ textDecoration: 'none' }}>
-            <Button
-              variant="raised"
-              size="large"
-              color="grey"
-              className={classes.button}
-            >
-              <p />
-              Ready for Results
-            </Button>
-          </Link>
-        </dim>
-      </center>
-    </div>
-  )
-}
-
 // const Schedule = props => {
 //   const { classes } = props
 //   console.log('inside schedule state days payload', props.days)
@@ -87,7 +38,7 @@ const Schedule = props => {
 //         <div>
 //           <List
 //             subheader={
-//               <ListSubheader>Which days would you prefer? </ListSubheader>
+//               <ListSubheader>Which day(s) would you prefer? </ListSubheader>
 //             }
 //           >
 //             <ListItem>
@@ -95,56 +46,7 @@ const Schedule = props => {
 //                 <TodayIcon />
 //               </ListItemIcon>
 //               <ListItemText primary="Anyday is fine" />
-//               <Switch />
-//             </ListItem>
-//             <ListItem>
-//               <ListItemIcon>
-//                 <TodayIcon />
-//               </ListItemIcon>
-//               <ListItemText primary="Monday" />
-//               <Switch />
-//             </ListItem>
-//             <ListItem>
-//               <ListItemIcon>
-//                 <TodayIcon />
-//               </ListItemIcon>
-//               <ListItemText primary="Tuesday" />
-//               <Switch />
-//             </ListItem>
-//             <ListItem>
-//               <ListItemIcon>
-//                 <TodayIcon />
-//               </ListItemIcon>
-//               <ListItemText primary="Wednesday" />
-//               <Switch />
-//             </ListItem>
-//             <ListItem>
-//               <ListItemIcon>
-//                 <TodayIcon />
-//               </ListItemIcon>
-//               <ListItemText primary="Thursday" />
-//               <Switch />
-//             </ListItem>
-//             <ListItem>
-//               <ListItemIcon>
-//                 <TodayIcon />
-//               </ListItemIcon>
-//               <ListItemText primary="Friday" />
-//               <Switch />
-//             </ListItem>
-//             <ListItem>
-//               <ListItemIcon>
-//                 <TodayIcon />
-//               </ListItemIcon>
-//               <ListItemText primary="Saturday" />
-//               <Switch />
-//             </ListItem>
-//             <ListItem>
-//               <ListItemIcon>
-//                 <TodayIcon />
-//               </ListItemIcon>
-//               <ListItemText primary="Sunday" />
-//               <Switch />
+//               <Switch checked={state.checked} onChange={props.checkDay} />
 //             </ListItem>
 //           </List>
 //         </div>
@@ -166,13 +68,70 @@ const Schedule = props => {
 //   )
 // }
 
+const Schedule = props => {
+  const { classes } = props
+  // console.log('inside schedule state days payload', props.days)
+  const data = props.days
+  // const plucked = pluck('name', data)
+
+  // console.log('schedule render', JSON.stringify(props.days[0].name))
+  return (
+    <div style={{ padding: '60px' }}>
+      <center>
+        <div>
+          <List
+            subheader={
+              <ListSubheader>Which day(s) would you prefer? </ListSubheader>
+            }
+          >
+            {map(day => (
+              <ListItem>
+                <ListItemIcon>
+                  <TodayIcon />
+                </ListItemIcon>
+                <ListItemText primary={day.name} />
+                <Switch
+                  checked={day.selected}
+                  onChange={props.checkDay(day.name)}
+                  value={day.name}
+                />
+              </ListItem>
+            ))(data)}
+          </List>
+        </div>
+        <dim>
+          <Link to="/recommendations" style={{ textDecoration: 'none' }}>
+            <Button
+              variant="raised"
+              size="large"
+              color="grey"
+              className={classes.button}
+            >
+              <p />
+              Ready for Results
+            </Button>
+          </Link>
+        </dim>
+      </center>
+    </div>
+  )
+}
 function mapStateToProps(state) {
   console.log('inside mapStateToProps schedule', state)
-
   return {
     days: state.stateTracker.dow
   }
 }
-const connector = connect(mapStateToProps)
+
+function mapActionsToProps(dispatch, getState) {
+  return {
+    checkDay: day => event =>
+      dispatch({
+        type: CHECK_DAY,
+        payload: { day, checked: event.target.checked }
+      })
+  }
+}
+const connector = connect(mapStateToProps, mapActionsToProps)
 
 export default connector(withStyles(styles)(Schedule))

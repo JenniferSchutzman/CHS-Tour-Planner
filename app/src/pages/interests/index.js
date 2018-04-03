@@ -8,7 +8,7 @@ import Subheader from 'material-ui/List/ListSubheader'
 import IconButton from 'material-ui/IconButton'
 import InfoIcon from 'material-ui-icons/Info'
 import { map } from 'ramda'
-import { tileData } from './tileData'
+// import { tileData } from './tileData'
 import Button from 'material-ui/Button'
 import classNames from 'classnames'
 
@@ -43,7 +43,9 @@ const Interests = props => {
 
         {data.interests.map(tile => (
           <GridListTile>
-            <img src={tile.img} alt={tile.name} />
+            <Link to="/experiences" style={{ textDecoration: 'none' }}>
+              <img src={tile.img} alt={tile.name} />
+            </Link>
             <GridListTileBar title={tile.name} />
             />
           </GridListTile>

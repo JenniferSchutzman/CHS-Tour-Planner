@@ -9,7 +9,7 @@ import { connect } from 'react-redux'
 import GridList, { GridListTile, GridListTileBar } from 'material-ui/GridList'
 import Subheader from 'material-ui/List/ListSubheader'
 import { getExperienceTypes } from '../../action-creators/response-tracker'
-
+import { map, filter, compose, pluck } from 'ramda'
 const styles = theme => ({
   root: {
     display: 'flex',
@@ -29,14 +29,38 @@ const styles = theme => ({
 const Experiences = props => {
   // const { classes } = props
   const data = props.stateTrackerExp
+  const filtered = filter(item => item.name === 'History')(data)
+  console.log('filtered', filtered)
+  const exp = filtered.experienceTypes
+
   console.log('data', data)
-  return <h1>inside experiences page</h1>
+  console.log('exp', exp)
+
+  return (
+    // <div>
+    // <GridList cellHeight={180}>
+    <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+      <Subheader component="div">
+        Which type of experiece do you prefer?{' '}
+      </Subheader>
+    </GridListTile>
+
+    //     {exp.map(tile => (
+    //       <GridListTile>
+    //         <img src={tile.img} alt={tile.name} />
+    //         <GridListTileBar title={tile.name} />
+    //         />
+    //       </GridListTile>
+    //     ))}
+    //   </GridList>
+    // </div>
+  )
 }
 
 function mapStateToProps(state) {
   console.log('inside mapStateToProps EXPERIENCES', state)
   return {
-    stateTrackerExp: state.history
+    stateTrackerExp: state.stateTracker.interests
   }
 }
 
