@@ -17,8 +17,10 @@ export const experienceTypes = async (dispatch, getState) => {
   console.log('history inside action creator', history)
   dispatch({ type: SELECTED_HISTORY, payload: history })
 }
-
-export const schedule = async (dispatch, getState) => {
-  const days = await fetch(`${url}/schedule`).then(res => res.json())
-  dispatch({ type: SELECTED_DAYS, payload: days })
-}
+// export const getExperienceTypes = async (dispatch, getState) => {
+//   console.log('You clicked on an interests', state.interest.name)
+//   return {
+//     type: 'SELECTED_HISTORY',
+//     payload: history
+//   }
+// }

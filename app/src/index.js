@@ -10,11 +10,11 @@ import green from 'material-ui/colors/green'
 import yellow from 'material-ui/colors/yellow'
 import red from 'material-ui/colors/red'
 import { getTour } from './action-creators/individual-tour'
+import { schedule } from './action-creators/schedule'
 import { recommendations } from './action-creators/tours'
 import {
   areaOfInterest,
-  experienceTypes,
-  schedule
+  experienceTypes
 } from './action-creators/response-tracker'
 
 const customTheme = createMuiTheme({

@@ -56,16 +56,18 @@ const initialState = {
 }
 
 export const stateTracker = (state = initialState, action) => {
-  switch (action.type) {
-    case SELECTED_INTEREST:
-      return concat([action.payload], state)
-    // case SELECTED_HISTORY:
-    //   return concat([action.payload], state.interests.name)
-    // case SELECTED_DAYS:
-    //   return concat([action.payload], state)
-    default:
-      return state
-  }
+  return state
+  // export const stateTracker = (state = initialState, action) => {
+  //   switch (action.type) {
+  //     case SELECTED_HISTORY:
+  //       return concat([action.payload], state)
+  // case SELECTED_HISTORY:
+  //   return concat([action.payload], state.interests.name)
+  // case SELECTED_DAYS:
+  //   return concat([action.payload], state)
+  //   default:
+  //     return state
+  // }
 }
 
 // export const stateTrackerExperiences = (state = stateTracker, action) => {

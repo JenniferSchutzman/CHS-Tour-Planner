@@ -8,6 +8,7 @@ import IconButton from 'material-ui/IconButton'
 import { connect } from 'react-redux'
 import GridList, { GridListTile, GridListTileBar } from 'material-ui/GridList'
 import Subheader from 'material-ui/List/ListSubheader'
+import { getExperienceTypes } from '../../action-creators/response-tracker'
 
 const styles = theme => ({
   root: {
@@ -27,7 +28,7 @@ const styles = theme => ({
 })
 const Experiences = props => {
   // const { classes } = props
-  const data = props.stateTracker
+  const data = props.stateTrackerExp
   console.log('data', data)
   return <h1>inside experiences page</h1>
 }
@@ -35,9 +36,16 @@ const Experiences = props => {
 function mapStateToProps(state) {
   console.log('inside mapStateToProps EXPERIENCES', state)
   return {
-    stateTracker: state.stateTracker.interests === 'history'
+    stateTrackerExp: state.history
   }
 }
+
+// function mapActionsToProps(state) {
+//   console.log('inside mapActionsToProps', state)
+//   return(
+//     getExperienceTypes: state => dispatch(getExperienceTypes(state.interest))
+//   )
+// }
 
 const connector = connect(mapStateToProps)
 

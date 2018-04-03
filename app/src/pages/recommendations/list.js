@@ -6,9 +6,13 @@ import GridList, { GridListTile, GridListTileBar } from 'material-ui/GridList'
 import Subheader from 'material-ui/List/ListSubheader'
 import IconButton from 'material-ui/IconButton'
 import InfoIcon from 'material-ui-icons/Info'
+import { Link } from 'react-router-dom'
+import { browserHistory } from 'react-router'
 
+// ${props.tours._id}`
 const Recommendations = props => {
   console.log('props inside Resources', props)
+
   return (
     <div>
       <GridList cellHeight={180} className={props.tours.gridList}>
@@ -31,6 +35,11 @@ const Recommendations = props => {
     </div>
   )
 }
+// <Link
+//   style={{ textDecoration: 'none' }}
+//   to={`/recommendations/${props.tours._id}`}
+// >
+// </Link>
 
 const mapStateToProps = state => {
   console.log('in mapStateToProps TOURS', state)
@@ -39,6 +48,12 @@ const mapStateToProps = state => {
   }
   console.log('in mapStateToProps after return', state)
 }
+
+// const mapActionsToProps = dispatch => {
+//   return {
+//     getTour: id => dispatch(getCategory(id))
+//   }
+// }
 
 const connector = connect(mapStateToProps)
 
