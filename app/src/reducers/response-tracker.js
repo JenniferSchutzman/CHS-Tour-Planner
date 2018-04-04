@@ -17,7 +17,8 @@ const initialState = {
         { name: 'Walking', img: '../../public/street.png' }
       ],
       name: 'History',
-      img: '/BroadStreetCharleston.jpg'
+      img:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf5pXiGmew-Qup76YUfafCYyLLIh_BB-pyJqh7wcEVP2YeyKZ83A'
     },
     {
       experienceTypes: [
@@ -71,9 +72,12 @@ export const stateTracker = (state = initialState, action) => {
         state.dow
       )
       return merge(initialState, { dow: newDow })
+    case SELECTED_HISTORY:
+      concat([action.payload], state)
     default:
       return state
   }
+
   return state
   // export const stateTracker = (state = initialState, action) => {
   //   switch (action.type) {

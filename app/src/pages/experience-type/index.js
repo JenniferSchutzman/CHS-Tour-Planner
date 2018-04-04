@@ -28,13 +28,13 @@ const styles = theme => ({
 })
 const Experiences = props => {
   // const { classes } = props
-  const data = props.stateTrackerExp
-  const filtered = filter(item => item.name === 'History')(data)
-  console.log('filtered', filtered)
-  const exp = filtered.experienceTypes
-
-  console.log('data', data)
-  console.log('exp', exp)
+  // const data = props.stateTrackerExp
+  // const filtered = filter(item => item.name === 'History')(data)
+  // console.log('filtered', filtered)
+  // const exp = filtered.experienceTypes
+  //
+  // console.log('data', data)
+  // console.log('exp', exp)
 
   return (
     // <div>

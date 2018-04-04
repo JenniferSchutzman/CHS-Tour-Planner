@@ -41,6 +41,18 @@ module.exports = app => {
   app.get('/interests', (req, res) => {
     getTours({ include_docs: true }).then(tours => res.send(tours))
   })
+  app.get('/interests/History', (req, res) => {
+    getTours({ include_docs: true }).then(tours => res.send(tours))
+  })
+  app.get('/interests/Adventure', (req, res) => {
+    getTours({ include_docs: true }).then(tours => res.send(tours))
+  })
+  app.get('/interests/Culinary', (req, res) => {
+    getTours({ include_docs: true }).then(tours => res.send(tours))
+  })
+  app.get('/interests/Haunted', (req, res) => {
+    getTours({ include_docs: true }).then(tours => res.send(tours))
+  })
   app.get('/experiences', (req, res) => {
     getTours({ include_docs: true }).then(tours => res.send(tours))
   })

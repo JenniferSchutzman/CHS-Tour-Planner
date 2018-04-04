@@ -43,7 +43,10 @@ const Interests = props => {
 
         {data.interests.map(tile => (
           <GridListTile>
-            <Link to="/experiences" style={{ textDecoration: 'none' }}>
+            <Link
+              to={`/interests/${tile.name}`}
+              style={{ textDecoration: 'none' }}
+            >
               <img src={tile.img} alt={tile.name} />
             </Link>
             <GridListTileBar title={tile.name} />
