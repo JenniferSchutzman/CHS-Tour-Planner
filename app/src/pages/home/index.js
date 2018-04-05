@@ -18,8 +18,8 @@ const styles = {
     margin: 10
   },
   bigAvatar: {
-    width: 300,
-    height: 300
+    width: 200,
+    height: 200
   }
 }
 
@@ -37,17 +37,17 @@ const Home = props => {
     <center>
       <div style={{ padding: '60px' }}>
         <Welcome />
-
-        <Avatar
-          alt="fountain"
-          src="../../../fountain.png"
-          className={classNames(classes.avatar, classes.bigAvatar)}
-        />
-        <Typography style={{ padding: '16px' }} variant="display5">
-          In just 3 easy steps, we will find you the perfect tour.
-        </Typography>
         <dim>
           <Link to="/interests" style={{ textDecoration: 'none' }}>
+            <Avatar
+              alt="fountain"
+              src="../../../fountain.png"
+              className={classNames(classes.avatar, classes.bigAvatar)}
+            />
+            <Typography style={{ padding: '16px' }} variant="display5">
+              In just 3 easy steps, we will find you the perfect tour.
+            </Typography>
+
             <Button
               variant="raised"
               size="large"

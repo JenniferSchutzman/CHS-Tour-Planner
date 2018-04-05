@@ -31,7 +31,7 @@ class IndividualTour extends React.Component {
     const id = this.props.match.params.id
     console.log('id inside mount', id)
     this.props.getTour(id)
-
+    console.log('phone', this.props.state)
     console.log('inside componentDidMount', this.props.getTour(id))
   }
   render() {
@@ -71,11 +71,16 @@ class IndividualTour extends React.Component {
               <a href={this.props.tour.linkToBookOnline}>Book Online</a>
             </Typography>
             <dim>
-              <Button>
-                <margin-left>
+              <a href={`tel:${this.props.phone}`}>
+                <Button
+                  fab
+                  color="secondary"
+                  aria-label="call"
+                  className="fab-button"
+                >
                   <PhoneIcon />
-                </margin-left>
-              </Button>
+                </Button>
+              </a>
             </dim>
           </CardContent>
           <CardActions>

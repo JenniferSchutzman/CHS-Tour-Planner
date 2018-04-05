@@ -77,10 +77,13 @@ export const stateTracker = (state = initialState, action) => {
       return merge(initialState, { dow: newDow })
 
     case SELECTED_INTEREST:
-      return map(
+      const newState = map(
         i => (i.name === action.payload ? merge(i, { selected: true }) : i),
-        state
+        state.interests
       )
+
+      return merge(state, { interests: newState })
+      return newState
     default:
       return state
   }

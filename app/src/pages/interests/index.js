@@ -104,6 +104,7 @@ const Interests = props => {
         <ButtonBase
           focusRipple
           key={image.name}
+          onClick={onClick(history, image.name)}
           className={classes.image}
           style={{
             width: width
@@ -148,8 +149,9 @@ function mapStateToProps(state) {
 function mapActionsToProps(dispatch) {
   return {
     onClick: (history, value) => () => {
+      console.log('onClick clicked', value)
       dispatch({ type: SELECTED_INTEREST, payload: value })
-      history.push(`/interest/${value}`)
+      history.push(`/interests/${value}`)
     }
   }
 }

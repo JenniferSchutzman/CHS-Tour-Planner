@@ -95,7 +95,7 @@ const History = props => {
     find(x => x.name === 'History')
   )(props.insideInterests)
   console.log('data inside history', JSON.stringify(data))
-
+  console.log('inside interests')
   return (
     <div>
       <GridList cellHeight={180}>
@@ -139,6 +139,7 @@ const History = props => {
 }
 
 function mapStateToProps(state) {
+  console.log('this state', state)
   return {
     insideInterests: state.stateTracker.interests
   }
