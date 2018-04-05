@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
+
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from './pages/home'
 import './App.css'
 import Interests from './pages/interests/index'
 import IndividualTour from './pages/recommendations/tour'
 import Recommendations from './pages/recommendations/list'
-import Experiences from './pages/experience-type/index'
+
 import Schedule from './pages/schedule/index'
 import Haunted from './pages/experience-type/Haunted.js'
 import History from './pages/experience-type/History.js'
@@ -33,7 +33,6 @@ class App extends Component {
             <Route path="/interests/Culinary" component={Culinary} />
             <Route path="/interests/History" component={History} />
             <Route path="/interests" component={Interests} />
-            <Route path="/experiences" component={Experiences} />
             <Route path="/schedule" component={Schedule} />
             <Route path="/recommendations/:id" component={IndividualTour} />
             <Route path="/recommendations" component={Recommendations} />

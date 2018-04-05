@@ -1,10 +1,5 @@
-import {
-  SELECTED_INTEREST,
-  SELECTED_DAYS,
-  CHECK_DAY,
-  SET_SCHEDULE
-} from '../constants'
-import { concat, map, merge, compose, find } from 'ramda'
+import { SELECTED_INTEREST, CHECK_DAY, SELECTED_EXP } from '../constants'
+import { map, merge, compose, find, flatten } from 'ramda'
 
 const initialState = {
   interests: [
@@ -60,9 +55,6 @@ const initialState = {
     { name: 'Sunday', selected: null }
   ]
 }
-// map over the dow
-// for each day in the array
-// look for the day name that matches the action.payload.day
 
 export const stateTracker = (state = initialState, action) => {
   switch (action.type) {
@@ -81,57 +73,22 @@ export const stateTracker = (state = initialState, action) => {
         i => (i.name === action.payload ? merge(i, { selected: true }) : i),
         state.interests
       )
-
       return merge(state, { interests: newState })
       return newState
     default:
       return state
+    case SELECTED_EXP:
+      console.log('hit reducer')
+
+      const newExp = map(
+        exp =>
+          exp.name === action.payload ? merge(exp, { selected: true }) : exp,
+        state.interests
+      )
+      console.log('state after newExp merge', newExp)
+      return merge(state, { experienceTypes: newExp })
   }
-  // let selectedItem = { selected: true }
-  // // NEED TO ACCESS name == history, then changed selected to true
-  // return merge(initialState, { interests: selectedItem })
-  // let selectedItem = map(
-  //   x => (x.name == 'History' ? { selected: true } : x),
-  //   state.interests
-  // )
   return state
-  // export const stateTracker = (state = initialState, action) => {
-  //   switch (action.type) {
-  //     case SELECTED_HISTORY:
-  //       return concat([action.payload], state)
-  // case SELECTED_HISTORY:
-  //   return concat([action.payload], state.interests.name)
-  // case SELECTED_DAYS:
-  //   return concat([action.payload], state)
-  //   default:
-  //     return state
-  // }
 }
-
-// export const stateTrackerExperiences = (state = stateTracker, action) => {
-//   switch (action.type) {
-//     case SELECTED_HISTORY:
-//       return concat([action.payload], state.interests.history)
-//   }
-// }
-
-// export const days = (state = initialState, action) => {
-//   switch (action.type) {
-//     case SET_SCHEDULE:
-//       return action.payload
-//     default:
-//       return state
-//   }
-// }
-
-// export const checkDay = (state = { selected: null }, action) => {
-//   switch (action.type) {
-//     case CHECK_DAY:
-//       console.log('CHECK_DAY', action.payload)
-//       return { selected: true }
-//     default:
-//       return state
-//   }
-// }
 
 export default stateTracker

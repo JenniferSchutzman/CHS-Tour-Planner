@@ -1,16 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
-import GridList, { GridListTile, GridListTileBar } from 'material-ui/GridList'
+import GridList, { GridListTile } from 'material-ui/GridList'
 import Subheader from 'material-ui/List/ListSubheader'
-import IconButton from 'material-ui/IconButton'
-import InfoIcon from 'material-ui-icons/Info'
-import { map } from 'ramda'
-import Button from 'material-ui/Button'
 import ButtonBase from 'material-ui/ButtonBase'
-import { selectInterest } from '../../action-creators/response-tracker'
 import { SELECTED_INTEREST } from '../../constants'
 import classNames from 'classnames'
 
@@ -91,7 +84,6 @@ const styles = theme => ({
 const Interests = props => {
   const { classes, onClick, history } = props
   const width = '30%'
-  console.log('inside grid interests state', JSON.stringify(props.stateTracker))
   const data = props.stateTracker
   return (
     <div>
@@ -134,13 +126,7 @@ const Interests = props => {
   )
 }
 
-//MAKE A LARGE IF STATEMENT FOR THE BUTTON LINKS?
-//OR SHOULD ALL BUTTONS LINK TO EXPERIENCES BUT THE IF STATEMENT IS IN THE EXPERIENCE INDEX?
-//If (state.interests.name == 'History') { return map over those objects to dispplay }
-//OR wil have only that that interest object appear so can jumpt straight into mapping over the objects
-
 function mapStateToProps(state) {
-  console.log('inside mapStateToProps stateTracker', state.stateTracker)
   return {
     stateTracker: state.stateTracker
   }

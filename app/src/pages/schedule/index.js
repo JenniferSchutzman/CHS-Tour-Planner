@@ -1,10 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
 import { withStyles } from 'material-ui/styles'
 import { connect } from 'react-redux'
-import Typography from 'material-ui/Typography'
-import classNames from 'classnames'
-import { map, pluck, contains } from 'ramda'
+
+import { map } from 'ramda'
 import { Link } from 'react-router-dom'
 import Button from 'material-ui/Button'
 import { CHECK_DAY } from '../../constants'
@@ -12,7 +11,6 @@ import { schedule, checkDay } from '../../action-creators/schedule'
 import List, {
   ListItem,
   ListItemIcon,
-  ListItemSecondaryAction,
   ListItemText,
   ListSubheader
 } from 'material-ui/List'

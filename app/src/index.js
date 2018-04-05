@@ -12,7 +12,6 @@ import red from 'material-ui/colors/red'
 import { getTour } from './action-creators/individual-tour'
 import { schedule } from './action-creators/schedule'
 import { recommendations } from './action-creators/tours'
-import { areaOfInterest, historyExp } from './action-creators/response-tracker'
 
 const customTheme = createMuiTheme({
   palette: {

@@ -1,19 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
-import GridList, { GridListTile, GridListTileBar } from 'material-ui/GridList'
+import GridList, { GridListTile } from 'material-ui/GridList'
 import Subheader from 'material-ui/List/ListSubheader'
-import IconButton from 'material-ui/IconButton'
-import InfoIcon from 'material-ui-icons/Info'
 import { prop, find, compose } from 'ramda'
-import Button from 'material-ui/Button'
-import classNames from 'classnames'
-
 import ButtonBase from 'material-ui/ButtonBase'
 import Typography from 'material-ui/Typography'
-
+import { SELECTED_EXP } from '../../constants'
 const styles = theme => ({
   root: {
     display: 'flex',
@@ -88,13 +81,13 @@ const styles = theme => ({
 })
 
 const Adventure = props => {
-  const { classes } = props
+  const { classes, onClick, history } = props
   const width = '30%'
   const data = compose(
     prop('experienceTypes'),
     find(x => x.name === 'Adventure')
   )(props.insideInterests)
-  console.log('data inside Adventure', JSON.stringify(data))
+
   return (
     <div>
       <GridList cellHeight={180}>
@@ -108,6 +101,7 @@ const Adventure = props => {
         <ButtonBase
           focusRipple
           key={image.name}
+          onClick={onClick(history, image.name)}
           className={classes.image}
           style={{
             width: width
@@ -138,10 +132,21 @@ const Adventure = props => {
 }
 
 function mapStateToProps(state) {
+  console.log('state', state.stateTracker.interests)
   return {
     insideInterests: state.stateTracker.interests
   }
 }
-const connector = connect(mapStateToProps)
+
+function mapActionsToProps(dispatch) {
+  return {
+    onClick: (history, value) => () => {
+      console.log('onClick clicked', value)
+      dispatch({ type: SELECTED_EXP, payload: value })
+      history.push(`/schedule`)
+    }
+  }
+}
+const connector = connect(mapStateToProps, mapActionsToProps)
 
 export default connector(withStyles(styles)(Adventure))

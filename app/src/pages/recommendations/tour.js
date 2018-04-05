@@ -29,16 +29,10 @@ const styles = theme => ({
 class IndividualTour extends React.Component {
   componentDidMount() {
     const id = this.props.match.params.id
-    console.log('id inside mount', id)
     this.props.getTour(id)
-    console.log('phone', this.props.state)
-    console.log('inside componentDidMount', this.props.getTour(id))
   }
   render() {
     const { classes, value } = this.props
-
-    console.log('sinde render', this.props)
-    console.log('classes', classes)
     return (
       <div>
         <Card>
@@ -98,7 +92,6 @@ class IndividualTour extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log('in mapStateToProps ONE tour', state)
   return {
     tour: state.tour
   }
