@@ -1,50 +1,53 @@
 import {
   SELECTED_INTEREST,
-  SELECTED_HISTORY,
   SELECTED_DAYS,
   CHECK_DAY,
   SET_SCHEDULE
 } from '../constants'
-import { concat, map, merge } from 'ramda'
+import { concat, map, merge, compose, find } from 'ramda'
 
 const initialState = {
   interests: [
     {
       experienceTypes: [
-        { name: 'Museum', img: '../../public/white_Museum.jpg' },
-        { name: 'Carriage', img: '../../public/hisCharCarriageTour.jpg' },
-        { name: 'Boat', img: '../../public/sailing.jpeg' },
-        { name: 'Walking', img: '../../public/street.png' }
+        { name: 'Museum', img: '/white_Museum.jpg', selected: null },
+        { name: 'Carriage', img: '/hisCharCarriageTour.jpg', selected: null },
+        { name: 'Boat', img: '/sailing.jpeg', selected: null },
+        { name: 'Walking', img: '/street.png', selected: null }
       ],
       name: 'History',
       img:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf5pXiGmew-Qup76YUfafCYyLLIh_BB-pyJqh7wcEVP2YeyKZ83A'
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf5pXiGmew-Qup76YUfafCYyLLIh_BB-pyJqh7wcEVP2YeyKZ83A',
+      selected: null
     },
     {
       experienceTypes: [
-        { name: 'Kayak', img: '../../public/kayak.png' },
-        { name: 'Surf', img: '../../public/surfing_1.jpeg' },
-        { name: 'Charter', img: '../../public/sunset_sail.jpeg' },
-        { name: 'Fishing', img: '../../public/fishing.png' }
+        { name: 'Kayak', img: '/kayak.png', selected: null },
+        { name: 'Surfing', img: '/surfing_1.jpeg', selected: null },
+        { name: 'Charter', img: '/sunset_sail.jpeg', selected: null },
+        { name: 'Fishing', img: '/fishing.png', selected: null }
       ],
       name: 'Adventure',
-      img: '/surfing_color.jpeg'
+      img: '/surfing_color.jpeg',
+      selected: null
     },
     {
       experienceTypes: [
-        { name: 'Food', img: '../../public/food.jpeg' },
-        { name: 'Drinks', img: '../../public/char_wine.jpeg' }
+        { name: 'Food', img: '/food.jpeg', selected: null },
+        { name: 'Drinks', img: '/char_wine.jpeg', selected: null }
       ],
       name: 'Culinary',
-      img: '/food2.jpeg'
+      img: '/food2.jpeg',
+      selected: null
     },
     {
       experienceTypes: [
-        { name: 'Carriage', imgPath: '../../public/haunted_carriage.jpg' },
-        { name: 'Walking', imgPath: '../../public/GhostCharTour.jpg' }
+        { name: 'Carriage', imgPath: '/haunted_carriage.jpg', selected: null },
+        { name: 'Walking', imgPath: '/GhostCharTour.jpg', selected: null }
       ],
       name: 'Haunted',
-      img: '/graveyard2.png'
+      img: '/graveyard2.png',
+      selected: null
     }
   ],
   dow: [
@@ -72,12 +75,22 @@ export const stateTracker = (state = initialState, action) => {
         state.dow
       )
       return merge(initialState, { dow: newDow })
-    case SELECTED_HISTORY:
-      concat([action.payload], state)
+
+    case SELECTED_INTEREST:
+      return map(
+        i => (i.name === action.payload ? merge(i, { selected: true }) : i),
+        state
+      )
     default:
       return state
   }
-
+  // let selectedItem = { selected: true }
+  // // NEED TO ACCESS name == history, then changed selected to true
+  // return merge(initialState, { interests: selectedItem })
+  // let selectedItem = map(
+  //   x => (x.name == 'History' ? { selected: true } : x),
+  //   state.interests
+  // )
   return state
   // export const stateTracker = (state = initialState, action) => {
   //   switch (action.type) {

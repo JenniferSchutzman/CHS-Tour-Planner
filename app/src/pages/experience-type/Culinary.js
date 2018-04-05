@@ -7,13 +7,10 @@ import GridList, { GridListTile, GridListTileBar } from 'material-ui/GridList'
 import Subheader from 'material-ui/List/ListSubheader'
 import IconButton from 'material-ui/IconButton'
 import InfoIcon from 'material-ui-icons/Info'
-import { map } from 'ramda'
+import { prop, find, compose } from 'ramda'
 import Button from 'material-ui/Button'
-import ButtonBase from 'material-ui/ButtonBase'
-import { selectInterest } from '../../action-creators/response-tracker'
-import { SELECTED_INTEREST } from '../../constants'
 import classNames from 'classnames'
-
+import ButtonBase from 'material-ui/ButtonBase'
 import Typography from 'material-ui/Typography'
 
 const styles = theme => ({
@@ -88,19 +85,27 @@ const styles = theme => ({
     transition: theme.transitions.create('opacity')
   }
 })
-const Interests = props => {
-  const { classes, onClick, history } = props
+
+const Culinary = props => {
+  const { classes } = props
   const width = '30%'
-  console.log('inside grid interests state', JSON.stringify(props.stateTracker))
-  const data = props.stateTracker
+  console.log('inside Culinary state', props)
+  const data = compose(
+    prop('experienceTypes'),
+    find(x => x.name === 'Culinary')
+  )(props.insideInterests)
+  console.log('data inside history', JSON.stringify(data))
+
   return (
     <div>
       <GridList cellHeight={180}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-          <Subheader component="div">What interests you? </Subheader>
+          <Subheader component="div">
+            Which type of experience do you prefer?{' '}
+          </Subheader>
         </GridListTile>
       </GridList>
-      {data.interests.map(image => (
+      {data.map(image => (
         <ButtonBase
           focusRipple
           key={image.name}
@@ -133,27 +138,12 @@ const Interests = props => {
   )
 }
 
-//MAKE A LARGE IF STATEMENT FOR THE BUTTON LINKS?
-//OR SHOULD ALL BUTTONS LINK TO EXPERIENCES BUT THE IF STATEMENT IS IN THE EXPERIENCE INDEX?
-//If (state.interests.name == 'History') { return map over those objects to dispplay }
-//OR wil have only that that interest object appear so can jumpt straight into mapping over the objects
-
 function mapStateToProps(state) {
-  console.log('inside mapStateToProps stateTracker', state.stateTracker)
   return {
-    stateTracker: state.stateTracker
+    insideInterests: state.stateTracker.interests
   }
 }
 
-function mapActionsToProps(dispatch) {
-  return {
-    onClick: (history, value) => () => {
-      dispatch({ type: SELECTED_INTEREST, payload: value })
-      history.push(`/interest/${value}`)
-    }
-  }
-}
+const connector = connect(mapStateToProps)
 
-const connector = connect(mapStateToProps, mapActionsToProps)
-
-export default connector(withStyles(styles)(Interests))
+export default connector(withStyles(styles)(Culinary))

@@ -34,9 +34,10 @@ const Welcome = () => (
 const Home = props => {
   const { classes } = props
   return (
-    <div style={{ padding: '60px' }}>
-      <Welcome />
-      <center>
+    <center>
+      <div style={{ padding: '60px' }}>
+        <Welcome />
+
         <Avatar
           alt="fountain"
           src="../../../fountain.png"
@@ -58,8 +59,8 @@ const Home = props => {
             </Button>
           </Link>
         </dim>
-      </center>
-    </div>
+      </div>
+    </center>
   )
 }
 

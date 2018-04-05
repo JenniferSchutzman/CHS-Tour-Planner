@@ -64,6 +64,7 @@ class IndividualTour extends React.Component {
               {' '}
               {this.props.tour.companyName}{' '}
             </Typography>
+            <Typography component="p"> {this.props.tour.scehdule} </Typography>
             <Typography component="p"> {this.props.tour.address}</Typography>
             <Typography component="p"> </Typography>
             <Typography component="p">

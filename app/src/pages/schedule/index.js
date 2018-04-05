@@ -26,55 +26,10 @@ const styles = theme => ({
   }
 })
 
-// const Schedule = props => {
-//   const { classes } = props
-//   console.log('inside schedule state days payload', props.days)
-//   const data = props.days
-//   const plucked = pluck('name', data)
-//   console.log('data name plucked', plucked)
-//   return (
-//     <div style={{ padding: '60px' }}>
-//       <center>
-//         <div>
-//           <List
-//             subheader={
-//               <ListSubheader>Which day(s) would you prefer? </ListSubheader>
-//             }
-//           >
-//             <ListItem>
-//               <ListItemIcon>
-//                 <TodayIcon />
-//               </ListItemIcon>
-//               <ListItemText primary="Anyday is fine" />
-//               <Switch checked={state.checked} onChange={props.checkDay} />
-//             </ListItem>
-//           </List>
-//         </div>
-//         <dim>
-//           <Link to="/recommendations" style={{ textDecoration: 'none' }}>
-//             <Button
-//               variant="raised"
-//               size="large"
-//               color="grey"
-//               className={classes.button}
-//             >
-//               <p />
-//               Ready for Results
-//             </Button>
-//           </Link>
-//         </dim>
-//       </center>
-//     </div>
-//   )
-// }
-
 const Schedule = props => {
   const { classes } = props
-  // console.log('inside schedule state days payload', props.days)
   const data = props.days
-  // const plucked = pluck('name', data)
-
-  // console.log('schedule render', JSON.stringify(props.days[0].name))
+  console.log('state as days', JSON.stringify(props.days))
   return (
     <div style={{ padding: '60px' }}>
       <center>
@@ -117,7 +72,6 @@ const Schedule = props => {
   )
 }
 function mapStateToProps(state) {
-  console.log('inside mapStateToProps schedule', state)
   return {
     days: state.stateTracker.dow
   }
