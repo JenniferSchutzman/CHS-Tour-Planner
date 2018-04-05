@@ -11,7 +11,7 @@ import Button from 'material-ui/Button'
 import classNames from 'classnames'
 import ButtonBase from 'material-ui/ButtonBase'
 import Typography from 'material-ui/Typography'
-
+import { SELECTED_EXP } from '../../constants'
 const styles = theme => ({
   root: {
     display: 'flex',

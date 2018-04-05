@@ -1,5 +1,5 @@
 import { SELECTED_INTEREST, CHECK_DAY, SELECTED_EXP } from '../constants'
-import { map, merge, compose, find, flatten } from 'ramda'
+import { map, merge, compose, find, flatten, tap, filter, toLower } from 'ramda'
 
 const initialState = {
   interests: [
@@ -78,17 +78,31 @@ export const stateTracker = (state = initialState, action) => {
     default:
       return state
     case SELECTED_EXP:
-      console.log('hit reducer')
-
-      const newExp = map(
-        exp =>
-          exp.name === action.payload ? merge(exp, { selected: true }) : exp,
-        state.interests
-      )
-      console.log('state after newExp merge', newExp)
+      const wiretap = x => console.log(x)
+      console.log('hit reducer', action.payload)
+      const newExp = compose(
+        map(
+          exp =>
+            exp.name === toLower(action.payload)
+              ? merge(exp, { selected: true })
+              : exp
+        ),
+        tap(wiretap),
+        flatten(),
+        tap(wiretap),
+        map(exp => exp.experienceTypes),
+        filter(x => x.name === 'History')
+      )(state.interests)
       return merge(state, { experienceTypes: newExp })
+      return state
+      console.log('after merge', state)
   }
   return state
+  console.log('after return state', state)
 }
-
+// const newExp = map(
+//   exp =>
+//     exp.name === action.payload ? merge(exp, { selected: true }) : exp,
+//   state.interests
+// )
 export default stateTracker

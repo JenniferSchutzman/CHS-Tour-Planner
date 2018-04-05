@@ -6,6 +6,7 @@ import Subheader from 'material-ui/List/ListSubheader'
 import { prop, find, compose } from 'ramda'
 import ButtonBase from 'material-ui/ButtonBase'
 import Typography from 'material-ui/Typography'
+import { SELECTED_EXP } from '../../constants'
 
 const styles = theme => ({
   root: {
