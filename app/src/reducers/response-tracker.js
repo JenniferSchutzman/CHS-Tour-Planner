@@ -42,8 +42,8 @@ const initialState = {
     },
     {
       experienceTypes: [
-        { name: 'Carriage', imgPath: '/haunted_carriage.jpg', selected: null },
-        { name: 'Walking', imgPath: '/GhostCharTour.jpg', selected: null }
+        { name: 'Carriage', img: '/haunted_carriage.jpeg', selected: null },
+        { name: 'Walking', img: '/GhostCharTour.jpg', selected: null }
       ],
       name: 'Haunted',
       img: '/graveyard2.png',

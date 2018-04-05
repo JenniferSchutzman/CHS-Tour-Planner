@@ -92,7 +92,7 @@ const History = props => {
   console.log('inside History state', props)
   const data = compose(
     prop('experienceTypes'),
-    find(x => x.name === 'History')
+    find(x => x.name === 'Haunted')
   )(props.insideInterests)
   console.log('data inside history', JSON.stringify(data))
 
