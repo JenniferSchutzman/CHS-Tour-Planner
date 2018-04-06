@@ -75,16 +75,6 @@ const initialState = {
 //    find(x => x.name === 'history')
 export const stateTracker = (state = initialState, action) => {
   switch (action.type) {
-    case CHECK_DAY:
-      let newDow = map(
-        day =>
-          day.name === action.payload.day
-            ? { name: day.name, selected: action.payload.checked }
-            : day,
-        state.dow
-      )
-      return merge(initialState, { dow: newDow })
-
     case SELECTED_INTEREST:
       const newState = map(
         i => (i.name === action.payload ? merge(i, { selected: true }) : i),
@@ -147,7 +137,6 @@ export const stateTracker = (state = initialState, action) => {
         find(x => x.name === 'culinary'),
         map(i => merge(i, { name: toLower(i.name) }))
       )(state.interests)
-
       const finalInterestsWithNewExpCul = map(
         i =>
           i.name === 'History' || 'Culinary' || 'Adventure' || 'Haunted'
@@ -156,7 +145,7 @@ export const stateTracker = (state = initialState, action) => {
         state.interests
       )
       return merge(state, { interests: finalInterestsWithNewExpCul })
-      return state
+
     case SELECTED_HISTORY:
       const newExp = compose(
         map(
@@ -177,28 +166,18 @@ export const stateTracker = (state = initialState, action) => {
         state.interests
       )
       return merge(state, { interests: finalInterestsWithNewExp })
+    case CHECK_DAY:
+      let newDow = map(
+        day =>
+          day.name === action.payload.day
+            ? { name: day.name, selected: action.payload.checked }
+            : day,
+        state.dow
+      )
+      return merge(state, { dow: newDow })
   }
   return state
 }
 
-// case SELECTED_EXP:
-//   const wiretap = x => console.log(x)
-//   //console.log('hit reducer', action.payload)
-//   const newExp = compose(
-//     map(
-//       exp =>
-//         toLower(exp.name) === toLower(action.payload)
-//           ? merge(exp, { selected: true })
-//           : exp
-//     ),
-//     prop('experienceTypes'),
-//     find(x => x.name === 'history'),
-//     map(i => merge(i, { name: toLower(i.name) }))
-//   )(state.interests)
-//   //console.log('newExp', newExp)
-//   const finalInterestsWithNewExp = map(
-//     i => (i.name === 'History' ? merge(i, { experienceTypes: newExp }) : i),
-//     state.interests
-//   )
-//   return merge(state, { interests: finalInterestsWithNewExp })
+//    return merge(initialState, { dow: newDow })
 export default stateTracker
