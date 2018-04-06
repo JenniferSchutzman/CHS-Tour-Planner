@@ -14,31 +14,27 @@ const Recommendations = props => {
   const { classes } = props
   return (
     <div>
-      <div>
-        <GridList cellHeight={180} className={props.tours.gridList}>
-          <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-            <Subheader component="div">
-              Your Personalized Recommendations
-            </Subheader>
-          </GridListTile>
-          {props.tours.map(tile => (
-            <GridListTile key={tile.name}>
-              <Link
-                to={`/recommendations/${props.tours._id}`}
-                style={{ textDecoration: 'none' }}
-              />
+      <GridList cellHeight={180} className={props.tours.gridList}>
+        <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+          <Subheader component="div">
+            Your Personalized Recommendations
+          </Subheader>
+        </GridListTile>
+        {props.tours.map(tile => (
+          <GridListTile key={tile.name}>
+            <Link to={`/interests`} style={{ textDecoration: 'none' }} />
+            <center>
               <img src={tile.img} />
               />
-              <GridListTileBar
-                title={tile.tourName}
-                subtitle={<span> ${tile.price}</span>}
-              />
-            </GridListTile>
-          ))}
-        </GridList>
-      </div>
+            </center>
+            <GridListTileBar
+              title={tile.tourName}
+              subtitle={<span> ${tile.price}</span>}
+            />
+          </GridListTile>
+        ))}
+      </GridList>
       <p />
-
       <div>
         <center>
           <dim>

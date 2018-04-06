@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
 import { withStyles } from 'material-ui/styles'
 import GridList, { GridListTile } from 'material-ui/GridList'
 import Subheader from 'material-ui/List/ListSubheader'

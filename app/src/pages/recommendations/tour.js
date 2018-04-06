@@ -23,6 +23,9 @@ const styles = theme => ({
   },
   media: {
     height: 200
+  },
+  progress: {
+    margin: theme.spacing.unit * 25
   }
 })
 
@@ -31,8 +34,14 @@ class IndividualTour extends React.Component {
     const id = this.props.match.params.id
     this.props.getTour(id)
   }
+
   render() {
     const { classes, value } = this.props
+
+    if (this.props.tour._id !== this.props.match.params.id) {
+      return <CircularProgress className={classes.progress} color="secondary" />
+    }
+
     return (
       <div>
         <Card>
