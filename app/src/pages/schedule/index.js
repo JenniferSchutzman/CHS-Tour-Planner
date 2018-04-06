@@ -70,9 +70,10 @@ const Schedule = props => {
   )
 }
 function mapStateToProps(state) {
+  console.log('state', state)
   return {
     days: state.stateTracker.dow,
-    interests: state.stateTracker.interests
+    exp: state.stateTracker.interests
   }
 }
 
