@@ -6,7 +6,7 @@ import Subheader from 'material-ui/List/ListSubheader'
 import { prop, find, compose } from 'ramda'
 import ButtonBase from 'material-ui/ButtonBase'
 import Typography from 'material-ui/Typography'
-import { SELECTED_EXP } from '../../constants'
+import { SELECTED_ADVENTURE } from '../../constants'
 const styles = theme => ({
   root: {
     display: 'flex',
@@ -142,7 +142,7 @@ function mapActionsToProps(dispatch) {
   return {
     onClick: (history, value) => () => {
       console.log('onClick clicked', value)
-      dispatch({ type: SELECTED_EXP, payload: value })
+      dispatch({ type: SELECTED_ADVENTURE, payload: value })
       history.push(`/schedule`)
     }
   }

@@ -10,7 +10,7 @@ import Button from 'material-ui/Button'
 import classNames from 'classnames'
 import ButtonBase from 'material-ui/ButtonBase'
 import Typography from 'material-ui/Typography'
-import { SELECTED_EXP } from '../../constants'
+import { SELECTED_HAUNTED } from '../../constants'
 const styles = theme => ({
   root: {
     display: 'flex',
@@ -84,7 +84,7 @@ const styles = theme => ({
   }
 })
 
-const History = props => {
+const Haunted = props => {
   const { classes, onClick, history } = props
   const width = '30%'
   const data = compose(
@@ -144,7 +144,7 @@ function mapActionsToProps(dispatch) {
   return {
     onClick: (history, value) => () => {
       console.log('onClick clicked', value)
-      dispatch({ type: SELECTED_EXP, payload: value })
+      dispatch({ type: SELECTED_HAUNTED, payload: value })
       history.push(`/schedule`)
     }
   }
@@ -152,4 +152,4 @@ function mapActionsToProps(dispatch) {
 
 const connector = connect(mapStateToProps, mapActionsToProps)
 
-export default connector(withStyles(styles)(History))
+export default connector(withStyles(styles)(Haunted))
