@@ -93,16 +93,13 @@ export const stateTracker = (state = initialState, action) => {
         map(exp => exp.experienceTypes),
         filter(x => x.name === 'History')
       )(state.interests)
-      return merge(state, { experienceTypes: newExp })
-      return state
-      console.log('after merge', state)
+      const finalExp = map(
+        i => (i.name === 'history' ? merge(i, { experienceTypes: newExp }) : i),
+        state.interests
+      )
+      return merge(state, { experienceTypes: finalExp })
   }
   return state
-  console.log('after return state', state)
 }
-// const newExp = map(
-//   exp =>
-//     exp.name === action.payload ? merge(exp, { selected: true }) : exp,
-//   state.interests
-// )
+
 export default stateTracker

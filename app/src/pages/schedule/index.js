@@ -71,7 +71,8 @@ const Schedule = props => {
 }
 function mapStateToProps(state) {
   return {
-    days: state.stateTracker.dow
+    days: state.stateTracker.dow,
+    interests: state.stateTracker.interests
   }
 }
 
