@@ -85,50 +85,11 @@ class Recommendations extends React.Component {
     )
   }
 }
-// const Recommendations = props => {
-//   const { classes } = props
-//   return (
-//     <div>
-//       <GridList cellHeight={180} className={props.tours.gridList}>
-//         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-//           <Subheader component="div">
-//             Your Personalized Recommendations
-//           </Subheader>
-//         </GridListTile>
-//         {props.tours.map(tile => (
-//           <GridListTile key={tile.name}>
-//             <Link to={`/interests`} style={{ textDecoration: 'none' }} />
-//             <center>
-//               <img src={tile.img} />
-//               />
-//             </center>
-//             <GridListTileBar
-//               title={tile.tourName}
-//               subtitle={<span> ${tile.price}</span>}
-//             />
-//           </GridListTile>
-//         ))}
-//       </GridList>
-//       <p />
-//       <div>
-//         <center>
-//           <dim>
-//             <Link to="/interests" style={{ textDecoration: 'none' }}>
-//               <Button variant="raised" size="large" color="grey">
-//                 <p />
-//                 Start Over
-//               </Button>
-//             </Link>
-//           </dim>
-//         </center>
-//       </div>
-//     </div>
-//   )
-// }
 
 const mapStateToProps = state => {
   return {
-    tours: state.tours
+    tours: state.tours,
+    resultOptions: state.stateTracker
   }
   console.log('in mapStateToProps after return', state)
 }

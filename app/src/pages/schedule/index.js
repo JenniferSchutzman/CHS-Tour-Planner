@@ -1,12 +1,11 @@
 import React from 'react'
-
 import { withStyles } from 'material-ui/styles'
 import { connect } from 'react-redux'
-
 import { map } from 'ramda'
 import { Link } from 'react-router-dom'
 import Button from 'material-ui/Button'
-import { CHECK_DAY } from '../../constants'
+import classNames from 'classnames'
+import { CHECK_DAY, MAKE_RESULTS_ARRAY } from '../../constants'
 import { schedule, checkDay } from '../../action-creators/schedule'
 import List, {
   ListItem,
@@ -25,9 +24,9 @@ const styles = theme => ({
 })
 
 const Schedule = props => {
-  const { classes } = props
+  const { classes, history } = props
   const data = props.days
-  console.log('state as days', JSON.stringify(props.days))
+  //console.log('state as days', JSON.stringify(props.state))
   return (
     <div style={{ padding: '60px' }}>
       <center>
@@ -59,6 +58,7 @@ const Schedule = props => {
               size="large"
               color="grey"
               className={classes.button}
+              //onClick={onClick(history)}
             >
               <p />
               Ready for Results
@@ -73,7 +73,8 @@ function mapStateToProps(state) {
   console.log('state', state)
   return {
     days: state.stateTracker.dow,
-    exp: state.stateTracker.interests
+    exp: state.stateTracker.interests,
+    state: state.stateTracker
   }
 }
 
@@ -83,7 +84,11 @@ function mapActionsToProps(dispatch, getState) {
       dispatch({
         type: CHECK_DAY,
         payload: { day, checked: event.target.checked }
-      })
+      }),
+    onClick: history => () => {
+      dispatch({ type: MAKE_RESULTS_ARRAY })
+      history.push(`/recommendations`)
+    }
   }
 }
 const connector = connect(mapStateToProps, mapActionsToProps)

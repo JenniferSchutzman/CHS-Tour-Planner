@@ -4,7 +4,8 @@ import {
   SELECTED_HISTORY,
   SELECTED_HAUNTED,
   SELECTED_CULINARY,
-  SELECTED_ADVENTURE
+  SELECTED_ADVENTURE,
+  MAKE_RESULTS_ARRAY
 } from '../constants'
 import {
   map,
@@ -15,7 +16,8 @@ import {
   tap,
   filter,
   toLower,
-  prop
+  prop,
+  concat
 } from 'ramda'
 
 const initialState = {
@@ -175,6 +177,15 @@ export const stateTracker = (state = initialState, action) => {
         state.dow
       )
       return merge(state, { dow: newDow })
+    case MAKE_RESULTS_ARRAY:
+      var resultOptions = []
+      const chosenInterest = find(i => i.selected, action.payload.interests)
+      resultOptions = concat([chosenInterest.name], resultOptions)
+      const chosenExp = find(e => e.selected, chosenInterest.experienceTypes)
+      resultsOptions = concat([chosenExp.name], resultOptions)
+      const chosenDays = find(d => d.selected, action.payload.dow)
+      reultsOptions = concat([chosenDays.name], resultOptions)
+      return state
   }
   return state
 }
