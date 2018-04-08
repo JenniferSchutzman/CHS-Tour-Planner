@@ -65,19 +65,19 @@ class IndividualTour extends React.Component {
             <Grid item xs={12} md={6} />
             <p />
             <Typography component="p"> ${this.props.tour.price}</Typography>
-            <Typography component="p">
-              {' '}
-              Duration: {this.props.tour.duration}
-            </Typography>
+            <Typography component="p"> {this.props.tour.duration}</Typography>
             <Typography component="p">
               {' '}
               {this.props.tour.companyName}{' '}
             </Typography>
+            <Typography component="p">Tour Times:</Typography>
             <Typography component="p">
-              {compose(map(x => x.day), filter(x => x.open === true))(
-                this.props.schedule
-              )}
+              {compose(
+                map(x => ['  ', x.day, ':', ' ', x.time, ',', '  ']),
+                filter(x => x.open === true)
+              )(this.props.schedule)}
             </Typography>
+            <Typography component="p">Location:</Typography>
             <Typography component="p"> {this.props.tour.address}</Typography>
             <Typography component="p"> </Typography>
             <Typography component="p">
