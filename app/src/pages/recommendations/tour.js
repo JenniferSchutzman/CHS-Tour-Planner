@@ -30,13 +30,19 @@ const styles = theme => ({
   }
 })
 
+// const Day = () => (
+//   const day = this.props.schedule
+// console.log('day', JSON.stringify(day))
+// const schedule = compose(map(x => x.day), filter(x => x.open === true))(day)
+// )
 class IndividualTour extends React.Component {
   componentDidMount() {
     const id = this.props.match.params.id
     this.props.getTour(id)
   }
+
   render() {
-    const day = this.props.schedule
+    console.log(JSON.stringify(this.props.schedule))
     //const schedule = map(x => x.name, day)
     const { classes, value } = this.props
     if (this.props.tour._id !== this.props.match.params.id) {
@@ -67,7 +73,11 @@ class IndividualTour extends React.Component {
               {' '}
               {this.props.tour.companyName}{' '}
             </Typography>
-            <Typography component="p">"SCHEDULE WILL GO HERE "</Typography>
+            <Typography component="p">
+              {compose(map(x => x.day), filter(x => x.open === true))(
+                this.props.schedule
+              )}
+            </Typography>
             <Typography component="p"> {this.props.tour.address}</Typography>
             <Typography component="p"> </Typography>
             <Typography component="p">
