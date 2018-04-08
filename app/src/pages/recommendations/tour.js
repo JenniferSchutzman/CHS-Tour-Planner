@@ -90,9 +90,11 @@ class IndividualTour extends React.Component {
             <Button size="small" color="primary">
               GO BACK
             </Button>
-            <Button size="small" color="primary">
-              START OVER
-            </Button>
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              <Button size="small" color="primary">
+                START OVER
+              </Button>
+            </Link>
           </CardActions>
         </Card>
       </div>

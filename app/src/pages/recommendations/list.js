@@ -55,19 +55,19 @@ class Recommendations extends React.Component {
             </Subheader>
           </GridListTile>
           {this.props.tours.map(tile => (
-            <Link
-              to={`/recommendations/${tile._id}`}
-              style={{ textDecoration: 'none' }}
-            >
-              <GridListTile key={tile.name}>
+            <GridListTile key={tile.name}>
+              <Link
+                to={`/recommendations/${tile._id}`}
+                style={{ textDecoration: 'none' }}
+              >
                 <img src={tile.img} />
                 />
                 <GridListTileBar
                   title={tile.tourName}
                   subtitle={<span> ${tile.price}</span>}
                 />
-              </GridListTile>
-            </Link>
+              </Link>
+            </GridListTile>
           ))}{' '}
         </GridList>
         <p />
