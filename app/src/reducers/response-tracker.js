@@ -182,9 +182,9 @@ export const stateTracker = (state = initialState, action) => {
       const chosenInterest = find(i => i.selected, action.payload.interests)
       resultOptions = concat([chosenInterest.name], resultOptions)
       const chosenExp = find(e => e.selected, chosenInterest.experienceTypes)
-      resultsOptions = concat([chosenExp.name], resultOptions)
+      resultOptions = concat([chosenExp.name], resultOptions)
       const chosenDays = find(d => d.selected, action.payload.dow)
-      reultsOptions = concat([chosenDays.name], resultOptions)
+      resultOptions = concat([chosenDays.name], resultOptions)
       return state
   }
   return state

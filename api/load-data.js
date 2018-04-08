@@ -21,20 +21,39 @@ db
       linkToBookOnline: 'https://palmettocarriage.com/book-your-tour/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '9:00AM - 5:00PM',
-          tuesday: true,
-          tuesdayTime: '9:00AM - 5:00PM',
-          wednesday: true,
-          wednesdayTime: '9:00AM - 5:00PM',
-          thursday: true,
-          thursdayTime: '9:00AM - 5:00PM',
-          friday: true,
-          fridayTime: '9:00AM - 5:00PM',
-          saturday: true,
-          saturdayTime: '9:00AM - 5:00PM',
-          sunday: true,
-          sundayTime: '9:00AM - 5:00PM'
+          day: 'Monday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '9:00AM-5:00pm'
         }
       ],
       options: ['history', 'carriage']
@@ -253,7 +272,7 @@ db
       tourName: 'Savor the Flavors of Charleston Tour',
       companyName: 'Charleston Food Tours',
       address: '18 Anson Street, Charleston, SC 29401',
-      phone: '843-727-1100',
+      phone: 8437271100,
       price: 60,
       duration: '2.5 hours ',
       type: 'walking',
@@ -579,20 +598,39 @@ db
       linkToBookOnline: 'https://www.charlestonharbortours.com',
       schedule: [
         {
-          monday: true,
-          mondayTime: '11:30AM, 1:30PM, 3:30PM',
-          tuesday: true,
-          tuesdayTime: '11:30AM, 1:30PM, 3:30PM',
-          wednesday: true,
-          wednesdayTime: '11:30AM, 1:30PM, 3:30PM',
-          thursday: true,
-          thursdayTime: '11:30AM, 1:30PM, 3:30PM',
-          friday: true,
-          fridayTime: '11:30AM, 1:30PM, 3:30PM',
-          saturday: true,
-          saturdayTime: '11:30AM, 1:30PM, 3:30PM',
-          sunday: true,
-          sundayTime: '11:30AM, 1:30PM, 3:30PM'
+          day: 'Monday',
+          open: null,
+          time: '11:30AM, 1:30PM, 3:30PM'
+        },
+        {
+          day: 'Tuesday',
+          open: null,
+          time: '11:30AM, 1:30PM, 3:30PM'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '11:30AM, 1:30PM, 3:30PM'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '11:30AM, 1:30PM, 3:30PM'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '11:30AM, 1:30PM, 3:30PM'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '11:30AM, 1:30PM, 3:30PM'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '11:30AM, 1:30PM, 3:30PM'
         }
       ],
       options: ['history', 'boat']
@@ -602,7 +640,7 @@ db
       _id: 'history_calhoun-mansion',
       companyName: 'Calhoun Mansion',
       address: '',
-      phone: '843-722-8205',
+      phone: 8437228205,
       price: 75,
       duration: '1.5 hours',
       desc:

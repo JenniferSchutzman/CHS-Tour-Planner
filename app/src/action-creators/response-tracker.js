@@ -24,17 +24,3 @@ export const selectInterest = async (dispatch, getState) => {
   )
   dispatch({ type: SELECTED_HISTORY })
 }
-
-// export const hauntedExp = async (dispatch, getState) => {
-//   const history = await fetch(`${url}/interests/Haunted`).then(res =>
-//     res.json()
-//   )
-//   dispatch({ type: SELECTED_HAUNTED, payload: haunted })
-// }
-//
-// export const adventureExp = async (dispatch, getState) => {
-//   const history = await fetch(`${url}/interests/Adventure`).then(res =>
-//     res.json()
-//   )
-//   dispatch({ type: SELECTED_ADVENTURE, payload: adventure })
-// }

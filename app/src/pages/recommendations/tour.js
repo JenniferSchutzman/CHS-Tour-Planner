@@ -13,6 +13,7 @@ import IconButton from 'material-ui/IconButton'
 import { CircularProgress } from 'material-ui/Progress'
 import AddIcon from 'material-ui-icons/Add'
 import PhoneIcon from 'material-ui-icons/Phone'
+import { compose, filter, map } from 'ramda'
 import BottomNavigation, {
   BottomNavigationAction
 } from 'material-ui/BottomNavigation'
@@ -34,14 +35,13 @@ class IndividualTour extends React.Component {
     const id = this.props.match.params.id
     this.props.getTour(id)
   }
-
   render() {
+    const day = this.props.schedule
+    //const schedule = map(x => x.name, day)
     const { classes, value } = this.props
-
     if (this.props.tour._id !== this.props.match.params.id) {
       return <CircularProgress className={classes.progress} color="secondary" />
     }
-
     return (
       <div>
         <Card>
@@ -67,7 +67,7 @@ class IndividualTour extends React.Component {
               {' '}
               {this.props.tour.companyName}{' '}
             </Typography>
-            <Typography component="p"> {this.props.tour.scehdule} </Typography>
+            <Typography component="p">"SCHEDULE WILL GO HERE "</Typography>
             <Typography component="p"> {this.props.tour.address}</Typography>
             <Typography component="p"> </Typography>
             <Typography component="p">
@@ -102,7 +102,8 @@ class IndividualTour extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    tour: state.tour
+    tour: state.tour,
+    schedule: state.tour.schedule
   }
 }
 
