@@ -47,9 +47,13 @@ class Recommendations extends React.Component {
       return <CircularProgress className={classes.progress} color="secondary" />
     }
     return (
-      <div>
+      <div className={classes.root}>
         <GridList cellHeight={180} className={this.props.tours.gridList}>
-          <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+          <GridListTile
+            key="Subheader"
+            cols={2}
+            style={{ height: 'auto', width: '100%' }}
+          >
             <Subheader component="div">
               Your Personalized Recommendations
             </Subheader>
@@ -61,14 +65,13 @@ class Recommendations extends React.Component {
                 style={{ textDecoration: 'none' }}
               >
                 <img src={tile.img} />
-                />
                 <GridListTileBar
                   title={tile.tourName}
                   subtitle={<span> ${tile.price}</span>}
                 />
               </Link>
             </GridListTile>
-          ))}{' '}
+          ))}
         </GridList>
         <p />
         <div>

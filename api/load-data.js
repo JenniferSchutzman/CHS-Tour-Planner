@@ -56,7 +56,17 @@ db
           time: '9:00AM-5:00pm'
         }
       ],
-      options: ['history', 'carriage']
+      options: [
+        'history',
+        'carriage',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'history_historic-charleston-carriage-tour',
@@ -75,23 +85,52 @@ db
         'https://www.oldsouthcarriage.com/historic-charleston-carriage-tours/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '9:00AM - 5:00PM',
-          tuesday: true,
-          tuesdayTime: '9:00AM - 5:00PM',
-          wednesday: true,
-          wednesdayTime: '9:00AM - 5:00PM',
-          thursday: true,
-          thursdayTime: '9:00AM - 5:00PM',
-          friday: true,
-          fridayTime: '9:00AM - 5:00PM',
-          saturday: true,
-          saturdayTime: '9:00AM - 5:00PM',
-          sunday: true,
-          sundayTime: '9:00AM - 5:00PM'
+          day: 'Monday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '9:00AM-5:00pm'
         }
       ],
-      options: ['history', 'carriage']
+      options: [
+        'history',
+        'carriage',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'haunted_haunted-carriage-tour',
@@ -110,23 +149,52 @@ db
         'https://www.oldsouthcarriage.com/historic-charleston-carriage-tours/',
       schedule: [
         {
-          monday: true,
-          mondayTime: null,
-          tuesday: true,
-          tuesdayTime: null,
-          wednesday: true,
-          wednesdayTime: null,
-          thursday: true,
-          thursdayTime: null,
-          friday: true,
-          fridayTime: null,
-          saturday: true,
-          saturdayTime: null,
-          sunday: true,
-          sundayTime: null
+          day: 'Monday',
+          open: true,
+          time: null
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: null
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: null
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: null
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: null
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: null
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: null
         }
       ],
-      options: ['history', 'haunted', 'carriage']
+      options: [
+        'haunted',
+        'carriage',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'adventure_dolphin-safari',
@@ -145,23 +213,52 @@ db
 
       schedule: [
         {
-          monday: true,
-          mondayTime: '9:00AM, 12:00PM, 6:30PM',
-          tuesday: true,
-          tuesdayTime: '9:00AM, 12:00PM, 6:30PM',
-          wednesday: true,
-          wednesdayTime: '9:00AM, 12:00PM, 6:30PM',
-          thursday: true,
-          thursdayTime: '9:00AM, 12:00PM, 6:30PM',
-          friday: true,
-          fridayTime: '9:00AM, 12:00PM, 6:30PM',
-          saturday: true,
-          saturdayTime: '9:00AM, 12:00PM, 6:30PM',
-          sunday: true,
-          sundayTime: '9:00AM, 12:00PM, 6:30PM'
+          day: 'Monday',
+          open: true,
+          time: '9:00am, 12:00pm, 6:30pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '9:00am, 12:00pm, 6:30pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '9:00am, 12:00pm, 6:30pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '9:00am, 12:00pm, 6:30pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '9:00am, 12:00pm, 6:30pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '9:00am, 12:00pm, 6:30pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '9:00am, 12:00pm, 6:30pm'
         }
       ],
-      options: ['adventure', 'water']
+      options: [
+        'adventure',
+        'water',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'history_historic-charlreston-walking-tour',
@@ -170,7 +267,7 @@ db
       address: '107 Ashley Ave., Charleston, SC 29401',
       phone: '843-580-4019',
       price: 3,
-      duration: '',
+      duration: '2 hours',
       type: 'walking',
       desc:
         'Join Free Tours by Foot as we cross cobble stone streets and cut through back alleys, all while discovering the hidden gems, beautiful mansions, elegant churches not to mention a few graveyards of Charleston’s historic center.  It’s the epic story of Charleston’s role in American and world history.  It is a name-your-price tour, with a minimum $3 charge',
@@ -180,23 +277,52 @@ db
         'https://freetoursbyfoot.com/charleston-sc-tours/walking-tours/historic-district/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '9:30AM, 1:00PM',
-          tuesday: true,
-          tuesdayTime: '9:30AM',
-          wednesday: true,
-          wednesdayTime: '9:30AM',
-          thursday: true,
-          thursdayTime: '9:30AM',
-          friday: true,
-          fridayTime: '9:30AM',
-          saturday: true,
-          saturdayTime: '9:30AM',
-          sunday: true,
-          sundayTime: '9:30AM, 1:00PM'
+          day: 'Monday',
+          open: true,
+          time: '9:30am, 1:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '9:30am, 1:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '9:30am, 1:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '9:30am, 1:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '9:30am, 1:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '9:30am, 1:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '9:30am, 1:00pm'
         }
       ],
-      options: ['history', 'walking']
+      options: [
+        'history',
+        'walking',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'history_civil-war-tour-of-charleston',
@@ -215,23 +341,42 @@ db
         'https://freetoursbyfoot.com/charleston-sc-tours/walking-tours/historic-district/',
       schedule: [
         {
-          monday: false,
-          mondayTime: null,
-          tuesday: false,
-          tuesdayTime: null,
-          wednesday: false,
-          wednesdayTime: null,
-          thursday: false,
-          thursdayTime: null,
-          friday: false,
-          fridayTime: null,
-          saturday: true,
-          saturdayTime: '1:00PM',
-          sunday: false,
-          sundayTime: null
+          day: 'Monday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Tuesday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Wednesday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Thursday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Friday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '1:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: false,
+          time: null
         }
       ],
-      options: ['history', 'walking']
+      options: ['history', 'walking', 'saturday']
     },
     {
       _id: 'water_harbour-sailing-tour',
@@ -249,23 +394,52 @@ db
         'https://freetoursbyfoot.com/charleston-sc-tours/walking-tours/historic-district/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '8:30AM, 10:00AM, 2:30PM, 5:30PM',
-          tuesday: true,
-          tuesdayTime: '8:30AM, 11:30AM, 2:30PM, 5:30PM',
-          wednesday: true,
-          wednesdayTime: '8:30AM, 11:30AM, 2:30PM, 5:30PM',
-          thursday: true,
-          thursdayTime: '8:30AM, 11:30AM, 2:30PM, 5:30PM',
-          friday: true,
-          fridayTime: '8:30AM, 11:30AM, 2:30PM, 5:30PM',
-          saturday: true,
-          saturdayTime: '8:30AM, 10:00AM, 2:30PM, 5:30PM',
-          sunday: false,
-          sundayTime: '8:30AM, 11:30AM, 2:30PM, 5:30PM'
+          day: 'Monday',
+          open: true,
+          time: '8:30AM, 10:00AM, 2:30PM, 5:30PM'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '8:30AM, 11:30AM, 2:30PM, 5:30PM'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '8:30AM, 11:30AM, 2:30PM, 5:30PM'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '8:30AM, 11:30AM, 2:30PM, 5:30PM'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '8:30AM, 11:30AM, 2:30PM, 5:30PM'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '8:30AM, 10:00AM, 2:30PM, 5:30PM'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '8:30AM, 11:30AM, 2:30PM, 5:30PM'
         }
       ],
-      options: ['history', 'walking']
+      options: [
+        'history',
+        'walking',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'culinary_savor-the-flavors-of-charleston-tour',
@@ -283,23 +457,52 @@ db
         'https://charlestonfoodtours.com/food-tours/savor-the-flavors-of-charleston-tour/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '10:00AM, 2:00PM',
-          tuesday: true,
-          tuesdayTime: '10:00AM, 2:00PM',
-          wednesday: true,
-          wednesdayTime: '10:00AM, 2:00PM',
-          thursday: true,
-          thursdayTime: '10:00AM, 2:00PM',
-          friday: true,
-          fridayTime: '10:00AM, 2:00PM',
-          saturday: true,
-          saturdayTime: '10:00AM, 2:00PM',
-          sunday: true,
-          sundayTime: '10:00AM, 2:00PM'
+          day: 'Monday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '10:00am, 2:00pm'
         }
       ],
-      options: ['history', 'culinary', 'walking', 'food']
+      options: [
+        'culinary',
+        'food',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'culinary_upper-king-street-culinary-tour',
@@ -318,23 +521,52 @@ db
         'https://charlestonculinarytours.com/activities/charleston-upper-king-street-culinary-tour/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '3:00PM',
-          tuesday: true,
-          tuesdayTime: '3:00PM',
-          wednesday: true,
-          wednesdayTime: '3:00PM',
-          thursday: true,
-          thursdayTime: '3:00PM',
-          friday: true,
-          fridayTime: '3:00PM',
-          saturday: true,
-          saturdayTime: '3:00PM',
-          sunday: true,
-          sundayTime: '3:00PM'
+          day: 'Monday',
+          open: true,
+          time: '3:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '3:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '3:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '3:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '3:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '3:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '3:00pm'
         }
       ],
-      options: ['history', 'culinary', 'walking', 'food', 'wine', 'pub']
+      options: [
+        'culinary',
+        'wine',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'culinary_downtown-charleston-culinary-tour',
@@ -351,23 +583,52 @@ db
         'https://charlestonculinarytours.com/activities/charleston-downtown-culinary-tour/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '2:00PM, 3:00PM',
-          tuesday: true,
-          tuesdayTime: '2:00PM, 3:00PM',
-          wednesday: true,
-          wednesdayTime: '2:00PM, 3:00PM',
-          thursday: true,
-          thursdayTime: '2:00PM, 3:00PM',
-          friday: true,
-          fridayTime: '2:00PM, 3:00PM',
-          saturday: true,
-          saturdayTime: '2:00PM, 3:00PM',
-          sunday: false,
-          sundayTime: null
+          day: 'Monday',
+          open: true,
+          time: '2:00pm, 3:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '2:00pm, 3:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '2:00pm, 3:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '2:00pm, 3:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '2:00pm, 3:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '2:00pm, 3:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '2:00pm, 3:00pm'
         }
       ],
-      options: ['history', 'culinary', 'walking', 'food']
+      options: [
+        'culinary',
+        'food',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'culinary_sippin-wadamalaw-island-tour',
@@ -386,24 +647,52 @@ db
         'https://www.craftedcharlestontours.com/charleston-wine-tasting-tours',
       schedule: [
         {
-          monday: false,
-          mondayTime: null,
-          tuesday: true,
-          tuesdayTime: '10:00AM, 11:00AM, 12:00PM, 1:00PM',
-          wednesday: true,
-          wednesdayTime: '10:00AM, 11:00AM, 12:00PM, 1:00PM',
-          thursday: true,
-          thursdayTime: '10:00AM, 11:00AM, 12:00PM, 1:00PM',
-          friday: true,
-          fridayTime: '10:00AM, 11:00AM, 12:00PM, 1:00PM',
-          saturday: true,
-          saturdayTime:
-            '10:00AM, 10:30AM, 11:00AM, 11:30AM, 12:00PM, 12:30PM, 1:00PM, 1:30PM',
-          sunday: false,
-          sundayTime: null
+          day: 'Monday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '10:00am, 11:00am, 12:00pm, 1:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '10:00am, 11:00am, 12:00pm, 1:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '10:00am, 11:00am, 12:00pm, 1:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '10:00am, 11:00am, 12:00pm, 1:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '10:00am, 11:00am, 12:00pm, 1:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: false,
+          time: null
         }
       ],
-      options: ['culinary', 'wine', 'pub']
+      options: [
+        'culinary',
+        'drinks',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'culinary_charleston-distillery-tour',
@@ -422,23 +711,43 @@ db
         'https://www.craftedcharlestontours.com/charleston-tours/charleston-distillery-tours',
       schedule: [
         {
-          monday: false,
-          mondayTime: null,
-          tuesday: false,
-          tuesdayTime: null,
-          wednesday: false,
-          wednesdayTime: null,
-          thursday: true,
-          thursdayTime: '11:00AM',
-          friday: true,
-          fridayTime: '11:00AM',
-          saturday: true,
-          saturdayTime: '11:00AM',
-          sunday: false,
-          sundayTime: null
+          day: 'Monday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Tuesday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Wednesday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '11:00am'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '11:00am'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '11:00am'
+        },
+        {
+          day: 'Sunday',
+          open: false,
+          time: null
         }
       ],
-      options: ['history', 'walking']
+
+      options: ['history', 'walking', 'thursday', 'friday', 'saturday']
     },
     {
       tourName: 'Aircraft Inside and Out',
@@ -456,23 +765,53 @@ db
       linkToBookOnline: 'http://www.patriotspoint.org/tours/group-tours/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '9:00AM - 6:30AM',
-          tuesday: true,
-          tuesdayTime: '9:00AM - 6:30PM',
-          wednesday: true,
-          wednesdayTime: '9:00AM - 6:30PM',
-          thursday: true,
-          thursdayTime: '9:00AM - 6:30PM',
-          friday: true,
-          fridayTime: '9:00AM - 6:30PM',
-          saturday: true,
-          saturdayTime: '9:00AM - 6:30PM',
-          sunday: true,
-          sundayTime: '9:00AM - 6:30PM'
+          day: 'Monday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '9:00am - 6:30pm'
         }
       ],
-      options: ['history', 'museum']
+
+      options: [
+        'history',
+        'museum',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       tourName: 'Flight Deck and Hangar Deck',
@@ -490,23 +829,53 @@ db
       linkToBookOnline: 'http://www.patriotspoint.org/tours/group-tours/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '9:00AM - 6:30AM',
-          tuesday: true,
-          tuesdayTime: '9:00AM - 6:30PM',
-          wednesday: true,
-          wednesdayTime: '9:00AM - 6:30PM',
-          thursday: true,
-          thursdayTime: '9:00AM - 6:30PM',
-          friday: true,
-          fridayTime: '9:00AM - 6:30PM',
-          saturday: true,
-          saturdayTime: '9:00AM - 6:30PM',
-          sunday: true,
-          sundayTime: '9:00AM - 6:30PM'
+          day: 'Monday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '9:00am - 6:30pm'
         }
       ],
-      options: ['history', 'museum']
+
+      options: [
+        'history',
+        'museum',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       tourName: 'Fort Sumter Tour',
@@ -524,29 +893,53 @@ db
       linkToBookOnline: 'https://fortsumtertours.com/tours/fort-sumter-tour/',
       schedule: [
         {
-          monday: true,
-          mondayTime:
-            '9:30AM, 10:30am, 12:00PM, 1:00PM, 2:30PM, 3:30PM, 4:00PM',
-          tuesday: true,
-          tuesdayTime:
-            '9:30AM, 10:30am, 12:00PM, 1:00PM, 2:30PM, 3:30PM, 4:00PM',
-          wednesday: true,
-          wednesdayTime:
-            '9:30AM, 10:30am, 12:00PM, 1:00PM, 2:30PM, 3:30PM, 4:00PM',
-          thursday: true,
-          thursdayTime:
-            '9:30AM, 10:30am, 12:00PM, 1:00PM, 2:30PM, 3:30PM, 4:00PM',
-          friday: true,
-          fridayTime:
-            '9:30AM, 10:30am, 12:00PM, 1:00PM, 2:30PM, 3:30PM, 4:00PM',
-          saturday: true,
-          saturdayTime:
-            '9:30AM, 10:30am, 12:00PM, 1:00PM, 2:30PM, 3:30PM, 4:00PM',
-          sunday: true,
-          sundayTime: '9:30AM, 10:30am, 12:00PM, 1:00PM, 2:30PM, 3:30PM, 4:00PM'
+          day: 'Monday',
+          open: true,
+          time: '9:30am, 10:30am, 12:00pm, 1:00pm, 2:30pm, 3:30pm, 4:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '9:30am, 10:30am, 12:00pm, 1:00pm, 2:30pm, 3:30pm, 4:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '9:30am, 10:30am, 12:00pm, 1:00pm, 2:30pm, 3:30pm, 4:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '9:30am, 10:30am, 12:00pm, 1:00pm, 2:30pm, 3:30pm, 4:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '9:30am, 10:30am, 12:00pm, 1:00pm, 2:30pm, 3:30pm, 4:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '9:30am, 10:30am, 12:00pm, 1:00pm, 2:30pm, 3:30pm, 4:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '9:30am, 10:30am, 12:00pm, 1:00pm, 2:30pm, 3:30pm, 4:00pm'
         }
       ],
-      options: ['history', 'boat']
+
+      options: [
+        'history',
+        'boat',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       tourName: 'Sunset Sail',
@@ -561,26 +954,55 @@ db
         'People of all walks of life can enjoy two –hour public sails! There are no set courses, she sails with the winds and tides so every cruise is unique. You will always be in the sheltered harbor area and see all the sites just closer to some than others. While this is not a narrated cruise, the crew is happy to answer any questions and point out landmarks and wildlife.',
       img: '/sunset_sail.jpeg',
       linkToBookOnline: 'https://www.schoonerpride.com/main/daily-sails',
-
       schedule: [
         {
-          monday: true,
-          mondayTime: '6:00PM',
-          tuesday: true,
-          tuesdayTime: '6:00PM',
-          wednesday: true,
-          wednesdayTime: '6:00PM',
-          thursday: true,
-          thursdayTime: '6:00PM',
-          friday: true,
-          fridayTime: '6:00PM',
-          saturday: true,
-          saturdayTime: '6:00PM',
-          sunday: true,
-          sundayTime: '6:00PM'
+          day: 'Monday',
+          open: true,
+          time: '6:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '6:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '6:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '6:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '6:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '6:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '6:00pm'
         }
       ],
-      options: ['adventure', 'boat']
+
+      options: [
+        'adventure',
+        'boat',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       tourName: 'Historic Charleston Harbor Tour',
@@ -599,12 +1021,12 @@ db
       schedule: [
         {
           day: 'Monday',
-          open: null,
+          open: true,
           time: '11:30AM, 1:30PM, 3:30PM'
         },
         {
           day: 'Tuesday',
-          open: null,
+          open: true,
           time: '11:30AM, 1:30PM, 3:30PM'
         },
         {
@@ -633,7 +1055,17 @@ db
           time: '11:30AM, 1:30PM, 3:30PM'
         }
       ],
-      options: ['history', 'boat']
+      options: [
+        'history',
+        'boat',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       tourName: 'Calhoun Mansion',
@@ -648,26 +1080,55 @@ db
       img:
         'data:image/jpeg;base64,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',
       linkToBookOnline: 'http://www.calhounmansion.net/tour_schedule/',
-
       schedule: [
         {
-          monday: true,
-          mondayTime: '11:00AM, 12:30PM, 2:00PM, 3:30pm, 5:00PM',
-          tuesday: true,
-          tuesdayTime: '11:00AM, 12:30PM, 2:00PM, 3:30pm, 5:00PM',
-          wednesday: true,
-          wednesdayTime: '11:00AM, 12:30PM, 2:00PM, 3:30pm, 5:00PM',
-          thursday: true,
-          thursdayTime: '11:00AM, 12:30PM, 2:00PM, 3:30pm, 5:00PM',
-          friday: true,
-          fridayTime: '11:00AM, 12:30PM, 2:00PM, 3:30pm, 5:00PM',
-          saturday: true,
-          saturdayTime: '11:00AM, 12:30PM, 2:00PM, 3:30pm, 5:00PM',
-          sunday: true,
-          sundayTime: '11:00AM, 12:30PM, 2:00PM, 3:30pm, 5:00PM'
+          day: 'Monday',
+          open: true,
+          time: '11:00am, 12:30pm, 2:00pm, 3:30pm, 5:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '11:00am, 12:30pm, 2:00pm, 3:30pm, 5:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '11:00am, 12:30pm, 2:00pm, 3:30pm, 5:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '11:00am, 12:30pm, 2:00pm, 3:30pm, 5:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '11:00am, 12:30pm, 2:00pm, 3:30pm, 5:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '11:00am, 12:30pm, 2:00pm, 3:30pm, 5:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '11:00am, 12:30pm, 2:00pm, 3:30pm, 5:00pm'
         }
       ],
-      options: ['history', 'museum', 'plantation']
+
+      options: [
+        'history',
+        'museum',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       tourName: 'Ghosts of Charleston Tour',
@@ -685,61 +1146,117 @@ db
       linkToBookOnline: 'http://www.tourcharleston.com/ghost-tours/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '7:30PM, 9:30PM',
-          tuesday: true,
-          tuesdayTime: '7:30PM, 9:30PM',
-          wednesday: true,
-          wednesdayTime: '7:30PM, 9:30PM',
-          thursday: true,
-          thursdayTime: '7:30PM, 9:30PM',
-          friday: true,
-          fridayTime: '7:30PM, 9:30PM',
-          saturday: true,
-          saturdayTime: '7:30PM, 9:30PM',
-          sunday: true,
-          sundayTime: '7:30PM, 9:30PM'
+          day: 'Monday',
+          open: true,
+          time: '7:30pm, 9:30pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '7:30pm, 9:30pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '7:30pm, 9:30pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '7:30pm, 9:30pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '7:30pm, 9:30pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '7:30pm, 9:30pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '7:30pm, 9:30pm'
         }
       ],
-      options: ['history', 'haunted', 'walking']
+
+      options: [
+        'haunted',
+        'walking',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
 
     {
       tourName: 'The Haunted Jail Tour',
       _id: 'haunted_the-haunted-jail-tour',
       companyName: 'BullDog Tours',
-      address: '',
-      price: '',
-      duration: '',
-      type: '',
+      address: '18 Anson Street, Charleston, SC 29401 ',
+      price: '25',
+      phone: 8437662080,
+      duration: '45 minutes',
       desc:
         'Join us for a behind-the-scenes tour of the Old City Jail, which housed some of Charleston’s most infamous criminals, 19th-century pirates, and Civil War prisoners. Located on Magazine Street downtown, the Old City Jail was in operation from 1802 until 1939, and most of the building’s original structures — like the cells and warden’s quarters — remain intact.  Book Your Tour!',
       img:
         'https://upload.wikimedia.org/wikipedia/commons/3/37/Charleston%2C_SC_Old_City_Jail.jpg',
-      linkToBookOnline: '',
+      linkToBookOnline: 'https://bulldogtours.com/the-haunted-jail-tour/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '7:00PM, 7:30PM, 8:00PM, 8:30PM, 9:00PM, 9:30PM, 10:00PM',
-          tuesday: true,
-          tuesdayTime:
-            '7:00PM, 7:30PM, 8:00PM, 8:30PM, 9:00PM, 9:30PM, 10:00PM',
-          wednesday: true,
-          wednesdayTime:
-            '7:00PM, 7:30PM, 8:00PM, 8:30PM, 9:00PM, 9:30PM, 10:00PM',
-          thursday: true,
-          thursdayTime:
-            '7:00PM, 7:30PM, 8:00PM, 8:30PM, 9:00PM, 9:30PM, 10:00PM',
-          friday: true,
-          fridayTime: '7:00PM, 7:30PM, 8:00PM, 8:30PM, 9:00PM, 9:30PM, 10:00PM',
-          saturday: true,
-          saturdayTime:
-            '7:00PM, 7:30PM, 8:00PM, 8:30PM, 9:00PM, 9:30PM, 10:00PM',
-          sunday: true,
-          sundayTime: '7:00PM, 7:30PM, 8:00PM, 8:30PM, 9:00PM, 9:30PM, 10:00PM'
+          day: 'Monday',
+          open: true,
+          time: '7:00pm, 8:00pm, 9:00pm, 10:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '7:00pm, 8:00pm, 9:00pm, 10:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '7:00pm, 8:00pm, 9:00pm, 10:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '7:00pm, 8:00pm, 9:00pm, 10:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '7:00pm, 8:00pm, 9:00pm, 10:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '7:00pm, 8:00pm, 9:00pm, 10:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '7:00pm, 8:00pm, 9:00pm, 10:00pm'
         }
       ],
-      options: ['history', 'haunted']
+
+      options: [
+        'haunted',
+        'walking',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     }
   ])
   .then(result => console.log('Documents successfully uploaded!', result))

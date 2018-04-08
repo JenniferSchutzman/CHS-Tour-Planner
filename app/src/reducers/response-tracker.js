@@ -26,7 +26,6 @@ const initialState = {
       experienceTypes: [
         { name: 'Museum', img: '/white_Museum.jpg', selected: null },
         { name: 'Carriage', img: '/hisCharCarriageTour.jpg', selected: null },
-        { name: 'Boat', img: '/sailing.jpeg', selected: null },
         { name: 'Walking', img: '/street.png', selected: null }
       ],
       name: 'History',
@@ -38,8 +37,7 @@ const initialState = {
       experienceTypes: [
         { name: 'Kayak', img: '/kayak.png', selected: null },
         { name: 'Surfing', img: '/surfing_1.jpeg', selected: null },
-        { name: 'Charter', img: '/sunset_sail.jpeg', selected: null },
-        { name: 'Fishing', img: '/fishing.png', selected: null }
+        { name: 'Charter', img: '/sunset_sail.jpeg', selected: null }
       ],
       name: 'Adventure',
       img: '/surfing_color.jpeg',
