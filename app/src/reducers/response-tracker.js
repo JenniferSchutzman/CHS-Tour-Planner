@@ -198,7 +198,7 @@ export const stateTracker = (state = initialState, action) => {
       console.log('chosenDays', chosenDays)
       const resultOptionsFINAL = concat([chosenDays.name], resultOptions2)
       console.log('resultsOptionsFINAL', resultOptionsFINAL)
-      return resultOptionsFINAL
+      return (state = resultOptionsFINAL)
   }
 
   return state

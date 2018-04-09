@@ -52,7 +52,7 @@ class Recommendations extends React.Component {
   render() {
     //const { props } = this.props
     //const tag1 = props.results[0]
-    //console.log('props.results', props.results)
+    console.log('this.props.results', this.props.results)
     const { classes, value } = this.props
     const apiArray = this.props.tours
     if (apiArray < 1) {
