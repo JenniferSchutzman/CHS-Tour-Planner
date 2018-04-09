@@ -36,7 +36,7 @@ const initialState = {
     {
       experienceTypes: [
         { name: 'Kayak', img: '/kayak.png', selected: null },
-        { name: 'Surfing', img: '/surfing_1.jpeg', selected: null },
+        { name: 'Surf', img: '/surfing_1.jpeg', selected: null },
         { name: 'Boat', img: '/sunset_sail.jpeg', selected: null }
       ],
       name: 'Adventure',
