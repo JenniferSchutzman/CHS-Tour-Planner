@@ -53,9 +53,9 @@ module.exports = app => {
   app.get('/interests/Haunted', (req, res) => {
     getTours({ include_docs: true }).then(tours => res.send(tours))
   })
-  app.get('/experiences', (req, res) => {
-    getTours({ include_docs: true }).then(tours => res.send(tours))
-  })
+  // app.get('/experiences', (req, res) => {
+  //   getTours({ include_docs: true }).then(tours => res.send(tours))
+  // })
   app.get('/schedule', (req, res) => {
     getTours({ include_docs: true }).then(tours => res.send(tours))
   })

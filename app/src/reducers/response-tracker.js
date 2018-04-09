@@ -37,7 +37,7 @@ const initialState = {
       experienceTypes: [
         { name: 'Kayak', img: '/kayak.png', selected: null },
         { name: 'Surfing', img: '/surfing_1.jpeg', selected: null },
-        { name: 'Charter', img: '/sunset_sail.jpeg', selected: null }
+        { name: 'Boat', img: '/sunset_sail.jpeg', selected: null }
       ],
       name: 'Adventure',
       img: '/surfing_color.jpeg',
@@ -181,26 +181,16 @@ export const stateTracker = (state = initialState, action) => {
       return merge(state, { dow: newDow })
     case MAKE_RESULTS_ARRAY:
       var resultOptions = []
-      console.log('action.payload', JSON.stringify(action.payload))
-      console.log('action.payload', JSON.stringify(action.payload))
+
       //console.log('dow in state payloard', JSON.stringify(action.payload.dow))
       const chosenInterest = find(i => i.selected, action.payload.interests)
-      console.log('chosenInterest.name', chosenInterest.name)
       const resultOptions1 = concat([chosenInterest.name], resultOptions)
-      console.log('resultOptions1', resultOptions1)
-
       const chosenExp = find(e => e.selected, chosenInterest.experienceTypes)
-      console.log('chosenExp', chosenExp)
       const resultOptions2 = concat([chosenExp.name], resultOptions1)
-      console.log('resultOptions2', resultOptions2)
-      console.log('action.payload', JSON.stringify(action.payload))
       const chosenDays = find(d => d.selected, action.payload.dow)
-      console.log('chosenDays', chosenDays)
       const resultOptionsFINAL = concat([chosenDays.name], resultOptions2)
-      console.log('resultsOptionsFINAL', resultOptionsFINAL)
       return (state = resultOptionsFINAL)
   }
-
   return state
 }
 

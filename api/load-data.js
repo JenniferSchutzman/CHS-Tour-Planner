@@ -250,7 +250,7 @@ db
       ],
       options: [
         'adventure',
-        'water',
+        'surf',
         'monday',
         'tuesday',
         'wednesday',
@@ -430,8 +430,8 @@ db
         }
       ],
       options: [
-        'history',
-        'walking',
+        'adventure',
+        'boat',
         'monday',
         'tuesday',
         'wednesday',
@@ -558,7 +558,7 @@ db
       ],
       options: [
         'culinary',
-        'wine',
+        'drinks',
         'monday',
         'tuesday',
         'wednesday',
@@ -747,7 +747,7 @@ db
         }
       ],
 
-      options: ['history', 'walking', 'thursday', 'friday', 'saturday']
+      options: ['culinary', 'drinks', 'thursday', 'friday', 'saturday']
     },
     {
       tourName: 'Aircraft Inside and Out',
@@ -931,7 +931,7 @@ db
 
       options: [
         'history',
-        'boat',
+        'museum',
         'monday',
         'tuesday',
         'wednesday',
@@ -1056,7 +1056,7 @@ db
         }
       ],
       options: [
-        'history',
+        'adventure',
         'boat',
         'monday',
         'tuesday',

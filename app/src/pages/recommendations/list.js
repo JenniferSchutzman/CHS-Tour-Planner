@@ -12,7 +12,17 @@ import Button from 'material-ui/Button'
 import { recommendations } from '../../action-creators/individual-tour'
 import { CircularProgress } from 'material-ui/Progress'
 import PropTypes from 'prop-types'
-import { empty, not } from 'ramda'
+import {
+  compose,
+  find,
+  filter,
+  contains,
+  toLower,
+  empty,
+  not,
+  map,
+  tap
+} from 'ramda'
 
 const styles = theme => ({
   progress: {
@@ -40,19 +50,32 @@ class Recommendations extends React.Component {
   componentDidMount() {
     this.props.recommendations
   }
-
-  // const tag2 = resultOptions[1]
-  // const tag3 = resultOptions[2]
-  // const tag4 = resultOptions[3]
-  // const tag5 = resultOptions[4]
-  // const tag6 = resultOptions[5]
-  // const tag7 = resultOptions[6]
-  // const tag8 = resultOptions[7]
-  // const tag9 = resultOptions[8]
   render() {
-    //const { props } = this.props
-    //const tag1 = props.results[0]
-    console.log('this.props.results', this.props.results)
+    const tag1 = this.props.results[0]
+    const tag2 = this.props.results[1]
+    const tag3 = this.props.results[2]
+    const tag4 = this.props.results[3]
+    const tag5 = this.props.results[4]
+    const tag6 = this.props.results[5]
+    const tag7 = this.props.results[6]
+    const tag8 = this.props.results[7]
+    console.log('tag1', tag1)
+    console.log('tag2', tag2)
+    console.log('tag3', tag3)
+    //const wiretap = x => console.log('tap', x)
+    const results = compose(
+      map(y => y),
+      //  tap(wiretap),
+      filter(x => contains(toLower(tag3), x.options)),
+      //tap(wiretap),
+      filter(x => contains(toLower(tag2), x.options)),
+      //tap(wiretap),
+      filter(x => contains(toLower(tag1), x.options))
+      //tap(wiretap)
+    )(this.props.tours)
+    console.log('filtered', results)
+    //  console.log('this.props.results', JSON.stringify(this.props.results))
+    //console.log('this.props.tours', JSON.stringify(this.props.tours))
     const { classes, value } = this.props
     const apiArray = this.props.tours
     if (apiArray < 1) {
@@ -71,7 +94,7 @@ class Recommendations extends React.Component {
               Your Personalized Recommendations
             </Subheader>
           </GridListTile>
-          {this.props.tours.map(tile => (
+          {results.map(tile => (
             <GridListTile key={tile.name}>
               <Link
                 to={`/recommendations/${tile._id}`}
@@ -90,16 +113,21 @@ class Recommendations extends React.Component {
         </GridList>
         <p />
         <div>
-          <center>
-            <dim>
-              <Link to="/interests" style={{ textDecoration: 'none' }}>
-                <Button variant="raised" size="large" color="grey">
-                  <p />
-                  Start Over
-                </Button>
-              </Link>
-            </dim>
-          </center>
+          <dim>
+            <Link to="/interests" style={{ textDecoration: 'none' }}>
+              <Button variant="raised" size="large" color="grey">
+                <p />
+                Start Over
+              </Button>
+            </Link>
+
+            <Link to="/tours" style={{ textDecoration: 'none' }}>
+              <Button variant="raised" size="large" color="grey">
+                <p />
+                See all tours
+              </Button>
+            </Link>
+          </dim>
         </div>
       </div>
     )
