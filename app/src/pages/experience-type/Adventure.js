@@ -19,7 +19,7 @@ const styles = theme => ({
     height: 200,
     [theme.breakpoints.down('xs')]: {
       width: '100% !important', // Overrides inline-style
-      height: 100
+      height: 150
     },
     '&:hover': {
       zIndex: 1
@@ -82,7 +82,7 @@ const styles = theme => ({
 
 const Adventure = props => {
   const { classes, onClick, history } = props
-  const width = '30%'
+  const width = '70%'
   const data = compose(
     prop('experienceTypes'),
     find(x => x.name === 'Adventure')
@@ -90,11 +90,11 @@ const Adventure = props => {
 
   return (
     <div>
-      <GridList cellHeight={180}>
+      <GridList cellHeight={150}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-          <Subheader component="div">
-            Which type of experience do you prefer?{' '}
-          </Subheader>
+          <Typography variant="display1" gutterBottom>
+            Which type of experience do you prefer?
+          </Typography>
         </GridListTile>
       </GridList>
       {data.map(image => (
@@ -132,7 +132,7 @@ const Adventure = props => {
 }
 
 function mapStateToProps(state) {
-  console.log('state', state.stateTracker.interests)
+  //console.log('state', state.stateTracker.interests)
   return {
     insideInterests: state.stateTracker.interests
   }
@@ -141,7 +141,7 @@ function mapStateToProps(state) {
 function mapActionsToProps(dispatch) {
   return {
     onClick: (history, value) => () => {
-      console.log('onClick clicked', value)
+      //    console.log('onClick clicked', value)
       dispatch({ type: SELECTED_ADVENTURE, payload: value })
       history.push(`/schedule`)
     }

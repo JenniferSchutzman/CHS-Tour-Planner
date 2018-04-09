@@ -6,7 +6,6 @@ import Subheader from 'material-ui/List/ListSubheader'
 import ButtonBase from 'material-ui/ButtonBase'
 import { SELECTED_INTEREST } from '../../constants'
 import classNames from 'classnames'
-
 import Typography from 'material-ui/Typography'
 
 const styles = theme => ({
@@ -83,45 +82,50 @@ const styles = theme => ({
 })
 const Interests = props => {
   const { classes, onClick, history } = props
-  const width = '30%'
+  const width = '70%'
   const data = props.stateTracker
   return (
     <div>
-      <GridList cellHeight={180}>
-        <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-          <Subheader component="div">What interests you? </Subheader>
-        </GridListTile>
-      </GridList>
-      {data.interests.map(image => (
-        <ButtonBase
-          focusRipple
-          key={image.name}
-          onClick={onClick(history, image.name)}
-          className={classes.image}
-          style={{
-            width: width
-          }}
-        >
-          <span
-            className={classes.imageSrc}
-            style={{
-              backgroundImage: `url(${image.img})`
-            }}
-          />
-          <span className={classes.imageBackdrop} />
-          <span className={classes.imageButton}>
-            <Typography
-              component="span"
-              variant="subheading"
-              color="inherit"
-              className={classes.imageTitle}
-            >
-              {image.name}
-              <span className={classes.imageMarked} />
+      <center>
+        <GridList cellHeight={150}>
+          <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+            <Typography variant="display1" gutterBottom>
+              What Interests You?
             </Typography>
-          </span>
-        </ButtonBase>
-      ))}
+          </GridListTile>
+
+          {data.interests.map(image => (
+            <ButtonBase
+              focusRipple
+              key={image.name}
+              onClick={onClick(history, image.name)}
+              className={classes.image}
+              style={{
+                width: width
+              }}
+            >
+              <span
+                className={classes.imageSrc}
+                style={{
+                  backgroundImage: `url(${image.img})`
+                }}
+              />
+              <span className={classes.imageBackdrop} />
+              <span className={classes.imageButton}>
+                <Typography
+                  component="span"
+                  variant="subheading"
+                  color="inherit"
+                  className={classes.imageTitle}
+                >
+                  {image.name}
+                  <span className={classes.imageMarked} />
+                </Typography>
+              </span>
+            </ButtonBase>
+          ))}
+        </GridList>
+      </center>
     </div>
   )
 }
