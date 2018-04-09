@@ -141,7 +141,7 @@ function mapStateToProps(state) {
 function mapActionsToProps(dispatch) {
   return {
     onClick: (history, value) => () => {
-      console.log('onClick clicked', value)
+      //console.log('onClick clicked', value)
       dispatch({ type: SELECTED_HISTORY, payload: value })
       history.push(`/schedule`)
     }

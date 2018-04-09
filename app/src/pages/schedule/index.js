@@ -24,7 +24,7 @@ const styles = theme => ({
 })
 
 const Schedule = props => {
-  const { classes, history } = props
+  const { classes, history, onClick } = props
   const data = props.days
   //console.log('state as days', JSON.stringify(props.state))
   return (
@@ -58,7 +58,7 @@ const Schedule = props => {
               size="large"
               color="grey"
               className={classes.button}
-              //onClick={onClick(history)}
+              onClick={onClick(history, props.state)}
             >
               <p />
               Ready for Results
@@ -85,8 +85,11 @@ function mapActionsToProps(dispatch, getState) {
         type: CHECK_DAY,
         payload: { day, checked: event.target.checked }
       }),
-    onClick: history => () => {
-      dispatch({ type: MAKE_RESULTS_ARRAY })
+    onClick: (history, data) => () => {
+      dispatch({
+        type: MAKE_RESULTS_ARRAY,
+        payload: data
+      })
       history.push(`/recommendations`)
     }
   }
