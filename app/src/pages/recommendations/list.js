@@ -59,23 +59,31 @@ class Recommendations extends React.Component {
     const tag6 = this.props.results[5]
     const tag7 = this.props.results[6]
     const tag8 = this.props.results[7]
-    console.log('tag1', tag1)
-    console.log('tag2', tag2)
-    console.log('tag3', tag3)
+    const tag9 = this.props.results[8]
+    console.log('tag4', tag4)
+    console.log('tag5', tag5)
+    console.log('tag6', tag6)
     //const wiretap = x => console.log('tap', x)
     const results = compose(
       map(y => y),
-      //  tap(wiretap),
-      filter(x => contains(toLower(tag3), x.options)),
-      //tap(wiretap),
+      filter(x =>
+        contains(
+          toLower(tag3) ||
+            toLower(tag4) ||
+            toLower(tag5) ||
+            toLower(tag6) ||
+            toLower(tag7) ||
+            toLower(tag8) ||
+            toLower(tag9),
+          x.options
+        )
+      ),
       filter(x => contains(toLower(tag2), x.options)),
-      //tap(wiretap),
       filter(x => contains(toLower(tag1), x.options))
-      //tap(wiretap)
     )(this.props.tours)
     console.log('filtered', results)
-    //  console.log('this.props.results', JSON.stringify(this.props.results))
-    //console.log('this.props.tours', JSON.stringify(this.props.tours))
+    console.log('this.props.results', JSON.stringify(this.props.results))
+    console.log('this.props.tours', JSON.stringify(this.props.tours))
     const { classes, value } = this.props
     const apiArray = this.props.tours
     if (apiArray < 1) {

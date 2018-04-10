@@ -18,6 +18,7 @@ export const tours = (state = [], action) => {
     case ALL_RECOMMENDATIONS:
       return action.payload
     case ALL_TOURS:
+      //  console.log('reducer all tours hit', state)
       return action.payload
     default:
       return state

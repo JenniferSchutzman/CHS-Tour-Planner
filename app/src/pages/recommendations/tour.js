@@ -100,6 +100,11 @@ class IndividualTour extends React.Component {
             <Button size="small" color="primary">
               GO BACK
             </Button>
+            <Link to="/tours" style={{ textDecoration: 'none' }}>
+              <Button size="small" color="primary">
+                SEE ALL TOURS
+              </Button>
+            </Link>
             <Link to="/" style={{ textDecoration: 'none' }}>
               <Button size="small" color="primary">
                 START OVER

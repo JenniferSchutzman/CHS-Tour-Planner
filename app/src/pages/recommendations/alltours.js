@@ -57,7 +57,48 @@ class AllTours extends React.Component {
       return <CircularProgress className={classes.progress} color="secondary" />
     }
 
-    return <h1>you are at al tours</h1>
+    return (
+      <div className={classes.root}>
+        <GridList cellHeight={180} className={this.props.tours.gridList}>
+          <GridListTile
+            key="Subheader"
+            cols={2}
+            style={{ height: 'auto', width: '100%' }}
+          >
+            <Subheader component="div">See All Tours</Subheader>
+          </GridListTile>
+          {this.props.tours.map(tile => (
+            <GridListTile key={tile.name}>
+              <Link
+                to={`/recommendations/${tile._id}`}
+                style={{ textDecoration: 'none' }}
+              >
+                <center>
+                  <img src={tile.img} />
+                </center>
+                <GridListTileBar
+                  title={tile.tourName}
+                  subtitle={<span> ${tile.price}</span>}
+                />
+              </Link>
+            </GridListTile>
+          ))}
+        </GridList>
+        <p />
+        <center>
+          <div>
+            <dim>
+              <Link to="/" style={{ textDecoration: 'none' }}>
+                <Button variant="raised" size="large" color="grey">
+                  <p />
+                  Start Over
+                </Button>
+              </Link>
+            </dim>
+          </div>
+        </center>
+      </div>
+    )
   }
 }
 

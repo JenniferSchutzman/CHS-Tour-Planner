@@ -33,6 +33,7 @@ ReactDOM.render(
 registerServiceWorker()
 
 store.dispatch(getTour)
+store.dispatch(allTours)
 store.dispatch(recommendations)
 store.dispatch(schedule)
 // store.dispatch(startAppState)
