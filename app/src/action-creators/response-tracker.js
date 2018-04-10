@@ -13,10 +13,10 @@ import {
 } from '../constants'
 const url = 'http://localhost:5000'
 
-export const home = async (dispatch, getState) ={
-  const home = await fetch(`${url}/`).then(res => res.json())
-  dispatch({type: START_OVER, payload: home})
-}
+// export const home = async (dispatch, getState) ={
+//   const home = await fetch(`${url}/`).then(res => res.json())
+//   dispatch({type: START_OVER, payload: home})
+// }
 
 export const areaOfInterest = async (dispatch, getState) => {
   dispatch({ type: SELECTED_INTEREST, payload: {} })

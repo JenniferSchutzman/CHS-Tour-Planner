@@ -97,9 +97,11 @@ class IndividualTour extends React.Component {
             </dim>
           </CardContent>
           <CardActions>
-            <Button size="small" color="primary">
-              GO BACK
-            </Button>
+            <Link to="/recommendations" style={{ textDecoration: 'none' }}>
+              <Button size="small" color="primary">
+                GO BACK
+              </Button>
+            </Link>
             <Link to="/tours" style={{ textDecoration: 'none' }}>
               <Button size="small" color="primary">
                 SEE ALL TOURS

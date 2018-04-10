@@ -8,6 +8,7 @@ import { withStyles } from 'material-ui/styles'
 import Avatar from 'material-ui/Avatar'
 import Button from 'material-ui/Button'
 import AddIcon from 'material-ui-icons/Add'
+import { START_OVER } from '../../constants'
 
 const styles = {
   row: {
@@ -39,25 +40,24 @@ const Home = props => {
       <div style={{ padding: '60px' }}>
         <Welcome />
         <dim>
-          <Link to="/interests" style={{ textDecoration: 'none' }}>
-            <Avatar
-              alt="fountain"
-              src="../../../fountain.png"
-              className={classNames(classes.avatar, classes.bigAvatar)}
-            />
-            <Typography style={{ padding: '16px' }} variant="display5">
-              In just 3 easy steps, we will find you the perfect tour.
-            </Typography>
-            <Button
-              variant="raised"
-              size="large"
-              color="grey"
-              className={classes.button}
-            >
-              <p />
-              Get Started
-            </Button>
-          </Link>
+          <Avatar
+            alt="fountain"
+            src="../../../fountain.png"
+            className={classNames(classes.avatar, classes.bigAvatar)}
+          />
+          <Typography style={{ padding: '16px' }} variant="display5">
+            In just 3 easy steps, we will find you the perfect tour.
+          </Typography>
+          <Button
+            variant="raised"
+            size="large"
+            color="grey"
+            onClick={props.onClick(props.history)}
+            className={classes.button}
+          >
+            <p />
+            Get Started
+          </Button>
         </dim>
       </div>
     </center>
@@ -70,6 +70,16 @@ function mapStateToProps(state) {
   }
 }
 
-const connector = connect(mapStateToProps)
+function mapActionToProps(dispatch) {
+  return {
+    onClick: history => e => {
+      dispatch({ type: START_OVER })
+      history.push('/interests')
+    }
+    //console.log('onClick set InitiatialState agian')
+  }
+}
+
+const connector = connect(mapStateToProps, mapActionToProps)
 
 export default connector(withStyles(styles)(Home))

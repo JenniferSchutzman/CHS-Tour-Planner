@@ -84,12 +84,12 @@ const styles = theme => ({
 const Culinary = props => {
   const { classes, onClick, history } = props
   const width = '30%'
-  console.log('insideinterests before data compose', props.insideInterests)
+  //  console.log('insideinterests before data compose', props.insideInterests)
   const data = compose(
     prop('experienceTypes'),
     find(x => x.name === 'Culinary')
   )(props.insideInterests)
-  console.log('data after compose', data)
+  //console.log('data after compose', data)
   return (
     <div>
       <GridList cellHeight={180}>
@@ -144,7 +144,7 @@ function mapStateToProps(state) {
 function mapActionsToProps(dispatch) {
   return {
     onClick: (history, value) => () => {
-      console.log('onClick clicked', value)
+      //console.log('onClick clicked', value)
       dispatch({ type: SELECTED_CULINARY, payload: value })
       history.push(`/schedule`)
     }

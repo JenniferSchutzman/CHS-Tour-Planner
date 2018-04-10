@@ -62,9 +62,9 @@ class Recommendations extends React.Component {
     const tag7 = this.props.results[6]
     const tag8 = this.props.results[7]
     const tag9 = this.props.results[8]
-    console.log('tag4', tag4)
-    console.log('tag5', tag5)
-    console.log('tag6', tag6)
+    //console.log('tag4', tag4)
+    //console.log('tag5', tag5)
+    //  console.log('tag6', tag6)
     //const wiretap = x => console.log('tap', x)
     const results = compose(
       map(y => y),
@@ -83,9 +83,9 @@ class Recommendations extends React.Component {
       filter(x => contains(toLower(tag2), x.options)),
       filter(x => contains(toLower(tag1), x.options))
     )(this.props.tours)
-    console.log('filtered', results)
-    console.log('this.props.results', JSON.stringify(this.props.results))
-    console.log('this.props.tours', JSON.stringify(this.props.tours))
+    //console.log('filtered', results)
+    //console.log('this.props.results', JSON.stringify(this.props.results))
+    //console.log('this.props.tours', JSON.stringify(this.props.tours))
     const { classes, value } = this.props
     const apiArray = this.props.tours
     if (apiArray < 1) {
@@ -150,7 +150,7 @@ const mapStateToProps = state => {
     tours: state.tours,
     results: state.stateTracker
   }
-  console.log('in mapStateToProps after return', state)
+  //  console.log('in mapStateToProps after return', state)
 }
 
 const connector = connect(mapStateToProps)

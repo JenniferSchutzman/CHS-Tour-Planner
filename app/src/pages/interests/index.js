@@ -7,6 +7,7 @@ import ButtonBase from 'material-ui/ButtonBase'
 import { SELECTED_INTEREST } from '../../constants'
 import classNames from 'classnames'
 import Typography from 'material-ui/Typography'
+import { pathOr } from 'ramda'
 
 const styles = theme => ({
   root: {
@@ -17,10 +18,12 @@ const styles = theme => ({
   },
   image: {
     position: 'relative',
-    height: 150,
+    height: 100,
     [theme.breakpoints.down('xs')]: {
-      width: '100% !important', // Overrides inline-style
-      height: 100
+      //  width: '100% !important', // Overrides inline-style
+      height: 100,
+      width: 500,
+      minWidth: 400
     },
     '&:hover': {
       zIndex: 1
@@ -83,9 +86,10 @@ const styles = theme => ({
 const Interests = props => {
   const { classes, onClick, history } = props
   const width = '70%'
-  const data = props.stateTracker
+  const interests = pathOr([], ['stateTracker', 'interests'], props)
+  console.log('interests', interests)
   return (
-    <div>
+    <div className={classes.root}>
       <center>
         <GridList cellHeight={150}>
           <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
@@ -94,8 +98,8 @@ const Interests = props => {
               What Interests You?
             </Typography>
           </GridListTile>
-
-          {data.interests.map(image => (
+          console.log()
+          {interests.map(image => (
             <ButtonBase
               focusRipple
               key={image.name}
@@ -132,6 +136,7 @@ const Interests = props => {
 }
 
 function mapStateToProps(state) {
+  console.log('what is state?', state)
   return {
     stateTracker: state.stateTracker
   }
@@ -140,7 +145,7 @@ function mapStateToProps(state) {
 function mapActionsToProps(dispatch) {
   return {
     onClick: (history, value) => () => {
-      console.log('onClick clicked', value)
+      //console.log('onClick clicked', value)
       dispatch({ type: SELECTED_INTEREST, payload: value })
       history.push(`/interests/${value}`)
     }

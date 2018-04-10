@@ -5,7 +5,8 @@ import {
   SELECTED_HAUNTED,
   SELECTED_CULINARY,
   SELECTED_ADVENTURE,
-  MAKE_RESULTS_ARRAY
+  MAKE_RESULTS_ARRAY,
+  START_OVER
 } from '../constants'
 import {
   map,
@@ -190,14 +191,21 @@ export const stateTracker = (state = initialState, action) => {
       const chosenDays = find(d => d.selected, action.payload.dow)
       const resultOptionsFINAL = concat([chosenDays.name], resultOptions2)
       return (state = resultOptionsFINAL)
+    case START_OVER:
+      return initialState
   }
   return state
 }
 
-// export const homeReducer = (state = initialS, action) => {
+// export const homeReducer = (state = initialState, action) => {
+//   console.log('stste in homeReducer onclick', state)
 //   switch (action.type) {
 //     case START_OVER:
-//       return (state = ininitialState)
+//       console.log('initial state inside start over', initialState)
+//       return initialState
+//     //console.log('stste case START_OVER', state)
+//     default:
+//       return state
 //   }
 // }
 
