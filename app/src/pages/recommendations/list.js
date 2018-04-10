@@ -12,6 +12,8 @@ import Button from 'material-ui/Button'
 import { recommendations } from '../../action-creators/individual-tour'
 import { CircularProgress } from 'material-ui/Progress'
 import PropTypes from 'prop-types'
+import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card'
+import Typography from 'material-ui/Typography'
 import {
   compose,
   find,
@@ -98,9 +100,12 @@ class Recommendations extends React.Component {
             cols={2}
             style={{ height: 'auto', width: '100%' }}
           >
-            <Subheader component="div">
-              Your Personalized Recommendations
-            </Subheader>
+            <center>
+              <p />
+              <Typography variant="display1" gutterBottom>
+                Your Personalized Recommendations
+              </Typography>
+            </center>
           </GridListTile>
           {results.map(tile => (
             <GridListTile key={tile.name}>
@@ -121,21 +126,19 @@ class Recommendations extends React.Component {
         </GridList>
         <p />
         <div>
-          <dim>
-            <Link to="/interests" style={{ textDecoration: 'none' }}>
-              <Button variant="raised" size="large" color="grey">
-                <p />
+          <CardActions>
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              <Button size="small" color="primary">
                 Start Over
               </Button>
             </Link>
 
             <Link to="/tours" style={{ textDecoration: 'none' }}>
-              <Button variant="raised" size="large" color="grey">
-                <p />
+              <Button size="small" color="primary">
                 See all tours
               </Button>
             </Link>
-          </dim>
+          </CardActions>
         </div>
       </div>
     )

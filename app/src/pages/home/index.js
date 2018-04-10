@@ -33,6 +33,7 @@ const Welcome = () => (
 
 const Home = props => {
   const { classes } = props
+  //console.log('clean start over home', JSON.toStringify(home))
   return (
     <center>
       <div style={{ padding: '60px' }}>
@@ -47,7 +48,6 @@ const Home = props => {
             <Typography style={{ padding: '16px' }} variant="display5">
               In just 3 easy steps, we will find you the perfect tour.
             </Typography>
-
             <Button
               variant="raised"
               size="large"
@@ -66,7 +66,7 @@ const Home = props => {
 
 function mapStateToProps(state) {
   return {
-    home: state.appData
+    home: state.home
   }
 }
 

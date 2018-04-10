@@ -7,6 +7,7 @@ import Button from 'material-ui/Button'
 import classNames from 'classnames'
 import { CHECK_DAY, MAKE_RESULTS_ARRAY } from '../../constants'
 import { schedule, checkDay } from '../../action-creators/schedule'
+
 import List, {
   ListItem,
   ListItemIcon,
@@ -15,6 +16,7 @@ import List, {
 } from 'material-ui/List'
 import Switch from 'material-ui/Switch'
 import TodayIcon from 'material-ui-icons/Today'
+import Typography from 'material-ui/Typography'
 const styles = theme => ({
   root: {
     width: '100%',
@@ -26,30 +28,30 @@ const styles = theme => ({
 const Schedule = props => {
   const { classes, history, onClick } = props
   const data = props.days
-  //console.log('state as days', JSON.stringify(props.state))
+  console.log('state with trues before clear', JSON.stringify(props.state))
   return (
     <div style={{ padding: '60px' }}>
       <center>
         <div>
-          <List
-            subheader={
-              <ListSubheader>Which day(s) would you prefer? </ListSubheader>
-            }
-          >
-            {map(day => (
-              <ListItem>
-                <ListItemIcon>
-                  <TodayIcon />
-                </ListItemIcon>
-                <ListItemText primary={day.name} />
-                <Switch
-                  checked={day.selected}
-                  onChange={props.checkDay(day.name)}
-                  value={day.name}
-                />
-              </ListItem>
-            ))(data)}
-          </List>
+          <center>
+            <Typography variant="display1" gutterBottom>
+              Select Your Availability
+            </Typography>
+          </center>
+
+          {map(day => (
+            <ListItem>
+              <ListItemIcon>
+                <TodayIcon />
+              </ListItemIcon>
+              <ListItemText primary={day.name} />
+              <Switch
+                checked={day.selected}
+                onChange={props.checkDay(day.name)}
+                value={day.name}
+              />
+            </ListItem>
+          ))(data)}
         </div>
         <dim>
           <Link to="/recommendations" style={{ textDecoration: 'none' }}>
@@ -70,7 +72,7 @@ const Schedule = props => {
   )
 }
 function mapStateToProps(state) {
-  console.log('state', state)
+  //console.log('state', state)
   return {
     days: state.stateTracker.dow,
     exp: state.stateTracker.interests,

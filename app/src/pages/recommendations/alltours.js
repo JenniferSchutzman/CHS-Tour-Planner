@@ -11,6 +11,7 @@ import classNames from 'classnames'
 import Button from 'material-ui/Button'
 import { recommendations } from '../../action-creators/individual-tour'
 import { CircularProgress } from 'material-ui/Progress'
+import Typography from 'material-ui/Typography'
 import PropTypes from 'prop-types'
 import {
   compose,
@@ -65,7 +66,12 @@ class AllTours extends React.Component {
             cols={2}
             style={{ height: 'auto', width: '100%' }}
           >
-            <Subheader component="div">See All Tours</Subheader>
+            <center>
+              <p />
+              <Typography variant="display1" gutterBottom>
+                See All Tours Here
+              </Typography>
+            </center>
           </GridListTile>
           {this.props.tours.map(tile => (
             <GridListTile key={tile.name}>

@@ -126,8 +126,8 @@ export const stateTracker = (state = initialState, action) => {
       )
       return merge(state, { interests: finalInterestsWithNewExpAdv })
     case SELECTED_CULINARY:
-      console.log('state.interests before the compose', action.payload)
-      console.log('exp.name before compose', JSON.stringify(state.interests))
+      //console.log('state.interests before the compose', action.payload)
+      //console.log('exp.name before compose', JSON.stringify(state.interests))
       const newExpCul = compose(
         map(
           exp =>
@@ -139,7 +139,7 @@ export const stateTracker = (state = initialState, action) => {
         find(x => x.name === 'culinary'),
         map(i => merge(i, { name: toLower(i.name) }))
       )(state.interests)
-      console.log('newExpCul after compose', newExpCul)
+      //console.log('newExpCul after compose', newExpCul)
       const finalInterestsWithNewExpCul = map(
         i =>
           i.name === 'History' || 'Culinary' || 'Adventure' || 'Haunted'
@@ -147,9 +147,9 @@ export const stateTracker = (state = initialState, action) => {
             : i,
         state.interests
       )
-      console.log('finalInterestsWithNewExpCul', finalInterestsWithNewExpCul)
+      //  console.log('finalInterestsWithNewExpCul', finalInterestsWithNewExpCul)
       return merge(state, { interests: finalInterestsWithNewExpCul })
-      console.log('state after all reducer function with cul', state)
+    //console.log('state after all reducer function with cul', state)
     case SELECTED_HISTORY:
       const newExp = compose(
         map(
@@ -193,6 +193,13 @@ export const stateTracker = (state = initialState, action) => {
   }
   return state
 }
+
+// export const homeReducer = (state = initialS, action) => {
+//   switch (action.type) {
+//     case START_OVER:
+//       return (state = ininitialState)
+//   }
+// }
 
 //    return merge(initialState, { dow: newDow })
 export default stateTracker

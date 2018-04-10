@@ -20,7 +20,7 @@ const styles = theme => ({
     height: 200,
     [theme.breakpoints.down('xs')]: {
       width: '100% !important', // Overrides inline-style
-      height: 100
+      height: 200
     },
     '&:hover': {
       zIndex: 1
@@ -93,9 +93,12 @@ const History = props => {
     <div>
       <GridList cellHeight={180}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-          <Subheader component="div">
-            Which type of experience do you prefer?{' '}
-          </Subheader>
+          <center>
+            <p />
+            <Typography variant="display1" gutterBottom>
+              Which experience would you prefer?
+            </Typography>
+          </center>
         </GridListTile>
       </GridList>
       {data.map(image => (

@@ -89,6 +89,7 @@ const Interests = props => {
       <center>
         <GridList cellHeight={150}>
           <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+            <p />
             <Typography variant="display1" gutterBottom>
               What Interests You?
             </Typography>
