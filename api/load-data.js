@@ -21,23 +21,52 @@ db
       linkToBookOnline: 'https://palmettocarriage.com/book-your-tour/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '9:00AM - 5:00PM',
-          tuesday: true,
-          tuesdayTime: '9:00AM - 5:00PM',
-          wednesday: true,
-          wednesdayTime: '9:00AM - 5:00PM',
-          thursday: true,
-          thursdayTime: '9:00AM - 5:00PM',
-          friday: true,
-          fridayTime: '9:00AM - 5:00PM',
-          saturday: true,
-          saturdayTime: '9:00AM - 5:00PM',
-          sunday: true,
-          sundayTime: '9:00AM - 5:00PM'
+          day: 'Monday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '9:00AM-5:00pm'
         }
       ],
-      options: ['history', 'carriage']
+      options: [
+        'history',
+        'carriage',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'history_historic-charleston-carriage-tour',
@@ -56,23 +85,52 @@ db
         'https://www.oldsouthcarriage.com/historic-charleston-carriage-tours/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '9:00AM - 5:00PM',
-          tuesday: true,
-          tuesdayTime: '9:00AM - 5:00PM',
-          wednesday: true,
-          wednesdayTime: '9:00AM - 5:00PM',
-          thursday: true,
-          thursdayTime: '9:00AM - 5:00PM',
-          friday: true,
-          fridayTime: '9:00AM - 5:00PM',
-          saturday: true,
-          saturdayTime: '9:00AM - 5:00PM',
-          sunday: true,
-          sundayTime: '9:00AM - 5:00PM'
+          day: 'Monday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '9:00AM-5:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '9:00AM-5:00pm'
         }
       ],
-      options: ['history', 'carriage']
+      options: [
+        'history',
+        'carriage',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'haunted_haunted-carriage-tour',
@@ -86,28 +144,57 @@ db
       desc:
         'On this 40-minute twilight tour, discover where spirits are reported to linger. A licensed guide will regale you with spooky tales from Charleston’s long history as you pass haunted alleys, graveyards, churches, hotels – and even a dungeon.',
       img:
-        'https://upload.wikimedia.org/wikipedia/commons/a/a5/Phillidelphia_Alley_Charleston_SC.jpg',
+        'data:image/jpeg;base64,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',
       linkToBookOnline:
         'https://www.oldsouthcarriage.com/historic-charleston-carriage-tours/',
       schedule: [
         {
-          monday: true,
-          mondayTime: null,
-          tuesday: true,
-          tuesdayTime: null,
-          wednesday: true,
-          wednesdayTime: null,
-          thursday: true,
-          thursdayTime: null,
-          friday: true,
-          fridayTime: null,
-          saturday: true,
-          saturdayTime: null,
-          sunday: true,
-          sundayTime: null
+          day: 'Monday',
+          open: true,
+          time: null
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: null
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: null
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: null
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: null
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: null
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: null
         }
       ],
-      options: ['history', 'haunted', 'carriage']
+      options: [
+        'haunted',
+        'carriage',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'adventure_dolphin-safari',
@@ -126,23 +213,52 @@ db
 
       schedule: [
         {
-          monday: true,
-          mondayTime: '9:00AM, 12:00PM, 6:30PM',
-          tuesday: true,
-          tuesdayTime: '9:00AM, 12:00PM, 6:30PM',
-          wednesday: true,
-          wednesdayTime: '9:00AM, 12:00PM, 6:30PM',
-          thursday: true,
-          thursdayTime: '9:00AM, 12:00PM, 6:30PM',
-          friday: true,
-          fridayTime: '9:00AM, 12:00PM, 6:30PM',
-          saturday: true,
-          saturdayTime: '9:00AM, 12:00PM, 6:30PM',
-          sunday: true,
-          sundayTime: '9:00AM, 12:00PM, 6:30PM'
+          day: 'Monday',
+          open: true,
+          time: '9:00am, 12:00pm, 6:30pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '9:00am, 12:00pm, 6:30pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '9:00am, 12:00pm, 6:30pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '9:00am, 12:00pm, 6:30pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '9:00am, 12:00pm, 6:30pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '9:00am, 12:00pm, 6:30pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '9:00am, 12:00pm, 6:30pm'
         }
       ],
-      options: ['adventure', 'water']
+      options: [
+        'adventure',
+        'surf',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'history_historic-charlreston-walking-tour',
@@ -151,7 +267,7 @@ db
       address: '107 Ashley Ave., Charleston, SC 29401',
       phone: '843-580-4019',
       price: 3,
-      duration: '',
+      duration: '2 hours',
       type: 'walking',
       desc:
         'Join Free Tours by Foot as we cross cobble stone streets and cut through back alleys, all while discovering the hidden gems, beautiful mansions, elegant churches not to mention a few graveyards of Charleston’s historic center.  It’s the epic story of Charleston’s role in American and world history.  It is a name-your-price tour, with a minimum $3 charge',
@@ -161,23 +277,52 @@ db
         'https://freetoursbyfoot.com/charleston-sc-tours/walking-tours/historic-district/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '9:30AM, 1:00PM',
-          tuesday: true,
-          tuesdayTime: '9:30AM',
-          wednesday: true,
-          wednesdayTime: '9:30AM',
-          thursday: true,
-          thursdayTime: '9:30AM',
-          friday: true,
-          fridayTime: '9:30AM',
-          saturday: true,
-          saturdayTime: '9:30AM',
-          sunday: true,
-          sundayTime: '9:30AM, 1:00PM'
+          day: 'Monday',
+          open: true,
+          time: '9:30am, 1:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '9:30am, 1:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '9:30am, 1:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '9:30am, 1:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '9:30am, 1:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '9:30am, 1:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '9:30am, 1:00pm'
         }
       ],
-      options: ['history', 'walking']
+      options: [
+        'history',
+        'walking',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'history_civil-war-tour-of-charleston',
@@ -196,23 +341,42 @@ db
         'https://freetoursbyfoot.com/charleston-sc-tours/walking-tours/historic-district/',
       schedule: [
         {
-          monday: false,
-          mondayTime: null,
-          tuesday: false,
-          tuesdayTime: null,
-          wednesday: false,
-          wednesdayTime: null,
-          thursday: false,
-          thursdayTime: null,
-          friday: false,
-          fridayTime: null,
-          saturday: true,
-          saturdayTime: '1:00PM',
-          sunday: false,
-          sundayTime: null
+          day: 'Monday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Tuesday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Wednesday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Thursday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Friday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '1:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: false,
+          time: null
         }
       ],
-      options: ['history', 'walking']
+      options: ['history', 'walking', 'saturday']
     },
     {
       _id: 'water_harbour-sailing-tour',
@@ -230,57 +394,116 @@ db
         'https://freetoursbyfoot.com/charleston-sc-tours/walking-tours/historic-district/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '8:30AM, 10:00AM, 2:30PM, 5:30PM',
-          tuesday: true,
-          tuesdayTime: '8:30AM, 11:30AM, 2:30PM, 5:30PM',
-          wednesday: true,
-          wednesdayTime: '8:30AM, 11:30AM, 2:30PM, 5:30PM',
-          thursday: true,
-          thursdayTime: '8:30AM, 11:30AM, 2:30PM, 5:30PM',
-          friday: true,
-          fridayTime: '8:30AM, 11:30AM, 2:30PM, 5:30PM',
-          saturday: true,
-          saturdayTime: '8:30AM, 10:00AM, 2:30PM, 5:30PM',
-          sunday: false,
-          sundayTime: '8:30AM, 11:30AM, 2:30PM, 5:30PM'
+          day: 'Monday',
+          open: true,
+          time: '8:30AM, 10:00AM, 2:30PM, 5:30PM'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '8:30AM, 11:30AM, 2:30PM, 5:30PM'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '8:30AM, 11:30AM, 2:30PM, 5:30PM'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '8:30AM, 11:30AM, 2:30PM, 5:30PM'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '8:30AM, 11:30AM, 2:30PM, 5:30PM'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '8:30AM, 10:00AM, 2:30PM, 5:30PM'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '8:30AM, 11:30AM, 2:30PM, 5:30PM'
         }
       ],
-      options: ['history', 'walking']
+      options: [
+        'adventure',
+        'boat',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'culinary_savor-the-flavors-of-charleston-tour',
       tourName: 'Savor the Flavors of Charleston Tour',
       companyName: 'Charleston Food Tours',
       address: '18 Anson Street, Charleston, SC 29401',
-      phone: '843-727-1100',
+      phone: 8437271100,
       price: 60,
       duration: '2.5 hours ',
       type: 'walking',
       desc:
         'Come join us as we walk, talk and taste our way through Charleston. This 2½ hour Charleston Food Tour will immerse you in the history and culture of the Lowcountry. You will discover how our unique cuisine has evolved over the past 300+ years while sampling delicious specialties from local eateries, markets, bakeries, restaurants, and culinary landmarks.',
-      img: 'https://c1.staticflickr.com/9/8202/8211345552_fe75149247_b.jpg',
+      img:
+        'data:image/jpeg;base64,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',
       linkToBookOnline:
         'https://charlestonfoodtours.com/food-tours/savor-the-flavors-of-charleston-tour/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '10:00AM, 2:00PM',
-          tuesday: true,
-          tuesdayTime: '10:00AM, 2:00PM',
-          wednesday: true,
-          wednesdayTime: '10:00AM, 2:00PM',
-          thursday: true,
-          thursdayTime: '10:00AM, 2:00PM',
-          friday: true,
-          fridayTime: '10:00AM, 2:00PM',
-          saturday: true,
-          saturdayTime: '10:00AM, 2:00PM',
-          sunday: true,
-          sundayTime: '10:00AM, 2:00PM'
+          day: 'Monday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '10:00am, 2:00pm'
         }
       ],
-      options: ['history', 'culinary', 'walking', 'food']
+      options: [
+        'culinary',
+        'food',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'culinary_upper-king-street-culinary-tour',
@@ -299,23 +522,52 @@ db
         'https://charlestonculinarytours.com/activities/charleston-upper-king-street-culinary-tour/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '3:00PM',
-          tuesday: true,
-          tuesdayTime: '3:00PM',
-          wednesday: true,
-          wednesdayTime: '3:00PM',
-          thursday: true,
-          thursdayTime: '3:00PM',
-          friday: true,
-          fridayTime: '3:00PM',
-          saturday: true,
-          saturdayTime: '3:00PM',
-          sunday: true,
-          sundayTime: '3:00PM'
+          day: 'Monday',
+          open: true,
+          time: '3:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '3:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '3:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '3:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '3:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '3:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '3:00pm'
         }
       ],
-      options: ['history', 'culinary', 'walking', 'food', 'wine', 'pub']
+      options: [
+        'culinary',
+        'food',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'culinary_downtown-charleston-culinary-tour',
@@ -327,29 +579,57 @@ db
       type: 'walking',
       desc:
         "This 2 1/2 hour tour explores Charleston's Historic French Quarter, offering the best of Charleston's history and food while walking some of the oldest & most historic streets in the city! Showcasing some of Charleston's traditional favorites, as well as recent innovations, this tour highlights the cuisine of our favorite locally-owned and operated restaurants in the Holy City. It is a journey that is informative, delicious and fun!",
-      img:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvfAjhMbZRorQvuEWhvMs1DEGH1H2h8VvyoZapLAVEDdb3Yim2HQ',
+      img: '/food2.jpeg',
       linkToBookOnline:
         'https://charlestonculinarytours.com/activities/charleston-downtown-culinary-tour/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '2:00PM, 3:00PM',
-          tuesday: true,
-          tuesdayTime: '2:00PM, 3:00PM',
-          wednesday: true,
-          wednesdayTime: '2:00PM, 3:00PM',
-          thursday: true,
-          thursdayTime: '2:00PM, 3:00PM',
-          friday: true,
-          fridayTime: '2:00PM, 3:00PM',
-          saturday: true,
-          saturdayTime: '2:00PM, 3:00PM',
-          sunday: false,
-          sundayTime: null
+          day: 'Monday',
+          open: true,
+          time: '2:00pm, 3:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '2:00pm, 3:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '2:00pm, 3:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '2:00pm, 3:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '2:00pm, 3:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '2:00pm, 3:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '2:00pm, 3:00pm'
         }
       ],
-      options: ['history', 'culinary', 'walking', 'food']
+      options: [
+        'culinary',
+        'food',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'culinary_sippin-wadamalaw-island-tour',
@@ -368,24 +648,52 @@ db
         'https://www.craftedcharlestontours.com/charleston-wine-tasting-tours',
       schedule: [
         {
-          monday: false,
-          mondayTime: null,
-          tuesday: true,
-          tuesdayTime: '10:00AM, 11:00AM, 12:00PM, 1:00PM',
-          wednesday: true,
-          wednesdayTime: '10:00AM, 11:00AM, 12:00PM, 1:00PM',
-          thursday: true,
-          thursdayTime: '10:00AM, 11:00AM, 12:00PM, 1:00PM',
-          friday: true,
-          fridayTime: '10:00AM, 11:00AM, 12:00PM, 1:00PM',
-          saturday: true,
-          saturdayTime:
-            '10:00AM, 10:30AM, 11:00AM, 11:30AM, 12:00PM, 12:30PM, 1:00PM, 1:30PM',
-          sunday: false,
-          sundayTime: null
+          day: 'Monday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '10:00am, 11:00am, 12:00pm, 1:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '10:00am, 11:00am, 12:00pm, 1:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '10:00am, 11:00am, 12:00pm, 1:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '10:00am, 11:00am, 12:00pm, 1:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '10:00am, 11:00am, 12:00pm, 1:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: false,
+          time: null
         }
       ],
-      options: ['culinary', 'wine', 'pub']
+      options: [
+        'culinary',
+        'drinks',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       _id: 'culinary_charleston-distillery-tour',
@@ -404,23 +712,43 @@ db
         'https://www.craftedcharlestontours.com/charleston-tours/charleston-distillery-tours',
       schedule: [
         {
-          monday: false,
-          mondayTime: null,
-          tuesday: false,
-          tuesdayTime: null,
-          wednesday: false,
-          wednesdayTime: null,
-          thursday: true,
-          thursdayTime: '11:00AM',
-          friday: true,
-          fridayTime: '11:00AM',
-          saturday: true,
-          saturdayTime: '11:00AM',
-          sunday: false,
-          sundayTime: null
+          day: 'Monday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Tuesday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Wednesday',
+          open: false,
+          time: null
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '11:00am'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '11:00am'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '11:00am'
+        },
+        {
+          day: 'Sunday',
+          open: false,
+          time: null
         }
       ],
-      options: ['history', 'walking']
+
+      options: ['culinary', 'drinks', 'thursday', 'friday', 'saturday']
     },
     {
       tourName: 'Aircraft Inside and Out',
@@ -433,27 +761,58 @@ db
       type: 'museum',
       desc:
         'This 120 minute guided tour centers on the history of aviation and the many pilots behind the flying machines. This peek inside some of our favorite aircraft offers a view not available to the general public. This special tour is limited to 20 max guests due to space and time.',
-      img: '',
+      img:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdgnMEv4A3tXwzQB-JrFNcfcbMEv85MyQx3krhRF5_s7zqtoWI',
       linkToBookOnline: 'http://www.patriotspoint.org/tours/group-tours/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '9:00AM - 6:30AM',
-          tuesday: true,
-          tuesdayTime: '9:00AM - 6:30PM',
-          wednesday: true,
-          wednesdayTime: '9:00AM - 6:30PM',
-          thursday: true,
-          thursdayTime: '9:00AM - 6:30PM',
-          friday: true,
-          fridayTime: '9:00AM - 6:30PM',
-          saturday: true,
-          saturdayTime: '9:00AM - 6:30PM',
-          sunday: true,
-          sundayTime: '9:00AM - 6:30PM'
+          day: 'Monday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '9:00am - 6:30pm'
         }
       ],
-      options: ['history', 'museum']
+
+      options: [
+        'history',
+        'museum',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       tourName: 'Flight Deck and Hangar Deck',
@@ -466,27 +825,58 @@ db
       type: 'museum',
       desc:
         'This 60 minute guided tour covers areas of the Flight Deck and Hangar Bay accenting the history of each area and the "Fighting Lady." If not able to go to the Flight Deck due to weather or other considerations, the Medal of Honor may be added to this program as time permits. To schedule your tour, please contact Shirl Knight. This tour is also handicap accessible',
-      img: '',
+      img:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK0MLTLgJwHTZNkyr88Qvp5aG_N-hqSsTlAPFLQAOBBkIaXQw2qg',
       linkToBookOnline: 'http://www.patriotspoint.org/tours/group-tours/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '9:00AM - 6:30AM',
-          tuesday: true,
-          tuesdayTime: '9:00AM - 6:30PM',
-          wednesday: true,
-          wednesdayTime: '9:00AM - 6:30PM',
-          thursday: true,
-          thursdayTime: '9:00AM - 6:30PM',
-          friday: true,
-          fridayTime: '9:00AM - 6:30PM',
-          saturday: true,
-          saturdayTime: '9:00AM - 6:30PM',
-          sunday: true,
-          sundayTime: '9:00AM - 6:30PM'
+          day: 'Monday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '9:00am - 6:30pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '9:00am - 6:30pm'
         }
       ],
-      options: ['history', 'museum']
+
+      options: [
+        'history',
+        'museum',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       tourName: 'Fort Sumter Tour',
@@ -499,33 +889,58 @@ db
       type: 'boat',
       desc:
         'Once aboard, you will experience a relaxing 30 minute narrated cruise to historic Fort Sumter. You will learn about the events which led to the outbreak of America’s most bloody war. When you arrive you will be greeted by National Park Service Rangers, who will provide further details about Fort Sumter and its pivotal role in the American Civil War. On the fort you will find a very informative museum (360 Video of Museum) with many historic artifacts and a souvenir shop. After your roughly one hour visit, you will enjoy a scenic cruise back to your departure point.',
-      img: '',
+      img:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6ExhPYqB-7QFOBJhXy_TlksuOHzUD9JWG-XEpDx23rMSstCdAKA',
       linkToBookOnline: 'https://fortsumtertours.com/tours/fort-sumter-tour/',
       schedule: [
         {
-          monday: true,
-          mondayTime:
-            '9:30AM, 10:30am, 12:00PM, 1:00PM, 2:30PM, 3:30PM, 4:00PM',
-          tuesday: true,
-          tuesdayTime:
-            '9:30AM, 10:30am, 12:00PM, 1:00PM, 2:30PM, 3:30PM, 4:00PM',
-          wednesday: true,
-          wednesdayTime:
-            '9:30AM, 10:30am, 12:00PM, 1:00PM, 2:30PM, 3:30PM, 4:00PM',
-          thursday: true,
-          thursdayTime:
-            '9:30AM, 10:30am, 12:00PM, 1:00PM, 2:30PM, 3:30PM, 4:00PM',
-          friday: true,
-          fridayTime:
-            '9:30AM, 10:30am, 12:00PM, 1:00PM, 2:30PM, 3:30PM, 4:00PM',
-          saturday: true,
-          saturdayTime:
-            '9:30AM, 10:30am, 12:00PM, 1:00PM, 2:30PM, 3:30PM, 4:00PM',
-          sunday: true,
-          sundayTime: '9:30AM, 10:30am, 12:00PM, 1:00PM, 2:30PM, 3:30PM, 4:00PM'
+          day: 'Monday',
+          open: true,
+          time: '9:30am, 10:30am, 12:00pm, 1:00pm, 2:30pm, 3:30pm, 4:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '9:30am, 10:30am, 12:00pm, 1:00pm, 2:30pm, 3:30pm, 4:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '9:30am, 10:30am, 12:00pm, 1:00pm, 2:30pm, 3:30pm, 4:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '9:30am, 10:30am, 12:00pm, 1:00pm, 2:30pm, 3:30pm, 4:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '9:30am, 10:30am, 12:00pm, 1:00pm, 2:30pm, 3:30pm, 4:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '9:30am, 10:30am, 12:00pm, 1:00pm, 2:30pm, 3:30pm, 4:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '9:30am, 10:30am, 12:00pm, 1:00pm, 2:30pm, 3:30pm, 4:00pm'
         }
       ],
-      options: ['history', 'boat']
+
+      options: [
+        'history',
+        'museum',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       tourName: 'Sunset Sail',
@@ -538,28 +953,57 @@ db
       type: 'boat',
       desc:
         'People of all walks of life can enjoy two –hour public sails! There are no set courses, she sails with the winds and tides so every cruise is unique. You will always be in the sheltered harbor area and see all the sites just closer to some than others. While this is not a narrated cruise, the crew is happy to answer any questions and point out landmarks and wildlife.',
-      img: '',
+      img: '/sunset_sail.jpeg',
       linkToBookOnline: 'https://www.schoonerpride.com/main/daily-sails',
-
       schedule: [
         {
-          monday: true,
-          mondayTime: '6:00PM',
-          tuesday: true,
-          tuesdayTime: '6:00PM',
-          wednesday: true,
-          wednesdayTime: '6:00PM',
-          thursday: true,
-          thursdayTime: '6:00PM',
-          friday: true,
-          fridayTime: '6:00PM',
-          saturday: true,
-          saturdayTime: '6:00PM',
-          sunday: true,
-          sundayTime: '6:00PM'
+          day: 'Monday',
+          open: true,
+          time: '6:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '6:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '6:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '6:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '6:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '6:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '6:00pm'
         }
       ],
-      options: ['adventure', 'boat']
+
+      options: [
+        'adventure',
+        'boat',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       tourName: 'Historic Charleston Harbor Tour',
@@ -572,60 +1016,120 @@ db
       duration: '1.5 hours',
       desc:
         'Climb aboard the Carolina Belle to enjoy the beauty of the Charleston Harbor and learn the rich history of the Holy City. During the scenic and relaxing 90 minute tour, you will see over 75 landmarks and points of interest!  Your professional USCG licensed captain will narrate history, sights, and facts about the Charleston Harbor as you pass locations critical to United States history.',
-      img: '',
+      img:
+        'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExIVFhUWFxcVFRUXFxYVFxUVFRUWFxcXFxUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGy0lHR0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAK0BJAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAACAwABBAUGB//EAEgQAAEDAgMDCAYHBQYGAwAAAAEAAhEDIQQSMQVBUQYTImFxgZHwFDKhscHRI0JSYpLS4RUzU8LxByRDcoKTFjRzorKzVGOj/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAJBEBAQEAAgEEAgIDAAAAAAAAAAERAhIhAzFRYRNBIjJScaH/2gAMAwEAAhEDEQA/AN9Km3KOiNBu6kXMtP1R4JeGmB2BaQF6eOdmfhhwHgEJww4DwWuEpz+pGQEMww3geCcKTeA8ArL0AfuTyEcwN4DwCaKY+yPAJTUwORgFzTfsjwCEtbplHgizKZJSwFOYJ9UeAS6rW8B4LXzYVOphAYiPujwCA0xwHgtzqYKgphMYz06IjQeAVmi3gPBODQomTOaI4DwCW+iOA8FqKAqiYzT6h4KubHAeC1EIS1GAhrBwHgmCOA8AjhCQl0lHYDgOA8EPNjgPAI1IVTjIVugFMcB4LRQwYO4eCWyxW+g9T6nKxXDjKQcGDYNHgk1sFl3exdVmIHBFzwO5ZT1LF3hK4Xo/3R4JZpjgPBduqBqudimXla8fU2s+XDIx5BwHgqyDgPBNVELVmXkHAeCnNjgPBHCuEArmxwHgFObHAeCbCqEwx4hgnQaKkzEi/d81ayvuTuUWdEdg9yLIroDojsHuTIWWukksKhprRCohHYmY0VYpQtCotRoIhVKfkVc2E9hYQXq86dkCovHBPQAOKISpzinOoA2sVlqVzqHnjuRlGjcFRCAPKhemQoQkIcypyNCEISFUqpVJQoCjlCVRAVq1ITJQTW1EuFIU8uMqpyw1tdWcSkFqotWf4lfkMqYglKc6VMimVOemLzCqhHCqFc44i3QwpCKFIVpVCqEUKQgMeJF+75qIsUL93xKiyvuTv0fVHYPcjlYadUwOwe5FzpWfV0dmyVUrJzhU5wp9C7NZcl1qsNc7XK0ujjAmEoSeoedEGLd0CI16PXcELP1P48arj5pmGxGdodpImOCbmXE2XVPNt4X95XQBK04zYm3K0koUiVJVdU6YSEOYICFWVPBpvOdSrnEtVCnyrwPnEbSkwryou0TIIlC4qw1VlTkK1GFR5VwqR1LsjQoQiaoSrSCFIRBXCekABXCKFIRoBCkIoVEo0YqFUIpUAS0YCFUI8QIpud9YAltrHLEz3FU0yAeqVM9TjbZ8KvC5oYUhErhXqQQpCKFIRpMWKF+74lRFi9e74lRZ33DbTbYdg9yMNTKLJA7B7k8Ux2+79Uu2NepDKJKa2iB1+eCZ57lYHnz56t6i8rVdYS5ix7QsKY41aY8c3nvK6kefPntXK26+DQ/6zO+Jt54LPnf4q4zywbHE0+wnz7V1WtKwbAHQcODz7guwAq4cv4wuU8k5FfNJsKAKu1LIXzKsUU0FWjtRhBpqjTWiFMirsWM3Nq8i0ZFObR2LGfIqLFp5tVzaOw6sj2FAKK1VLJLXlF5HIjKJCmVGK9kh4k70TlReJllcKhh+tNbRT7FheVVlWjIpzafYsILAhLVoNGUBoHt7Uuwwk0pR02AdaLmzvHnz+vFE1nnz59hU26qeGLaLpLG/aZW/9Yjz1rPgCSxvYFqqCcVSaf4bj4kjz/RZtlu+jA4SPaseH9q05ezTzRTMg4ocyjQF0SsrFwEup1Jhp8EBpdaepxjxTbi+74lRXiqd9+nzUU0napeqOwe7zqmR58/HwS6Pqt7B7tw+K002EXt7/wCpWWt4AN8+feUbKJNo6+Fvl7StbBYSLm/6laqAHfuWd54qcWTB4Ql1xYXXnOXLodhh/wDYXfgyO94b4r19V4heI5ZGa+E6nO78z6Lf5lO208xNlVQ19ZpP1z73Bdak+QubsumPSMQCPrGPxu+a6rQBI4LT07/GJ5e4XmBokOqlalFaWZuI4gomVjMbk+B582VFAGCrWTmzx8/FMa8jUowHkqJeZSUEt1SNxVOdayhKqUwCm8nUJkIVYQF5AlVieCcFTrphicZR03kLQaIOoUDBFh4+Y96NC6bpCOmwbjPn2rOWu8/r8VYYfPm/uSDUSgeOvz5/qlGqeHx/r2BGHce/9fklgLyuH1vPn9OKaD58+e9C536+ePuSiz+nuCoMIdOOj7NJvtc090CoPE9SRhGEGo37NRw9qmHJ9Mru+y1jB/pptLvafYtFK1esOJDvET8VjPeLvtRXCqmTITXAqNYeK2Qa9wCJwWV9IneiaSLXRCpeMFx2fEqIMWLjs+JUU1Lu7OptIBmbDtNkVWoRaLjduXAo8oqDQIeSYHqtcYt2I6nKGjoBUPEim/5LP9t/06lSs4mxIAQekvnNedBdcp23WbqWII6qL79eitm2pNsPieoc0feVWwvLs1MU4xbt6l5nlGSauHLtc4H4qrD/ACLYdrun/lq8n7oGuup7Vw9vbZptq0zVZVpuaGva0tBzZXPi4NpNr6Qptng47FF0Yqr1ifHKV0M0968tS2+2pXmlRquc4QG/RiQ1om5fGjZXWo7QxAj+5u65q0h3alV6dziXKbXapkwrLlzP2hiCI9E//amlMxGIk/3cdnPMnxAunpY7Bclyer5LnDEYmP8Al2d9UflVHE4n+DT/AN0/lT0sdRz1RK5zqmK15mj/ALjvyoM2Lv8ARUP9x/5UaMdQPVgrkZ8X/Dof7j/yo2nGbqeH6+nU/KjfoY6sqnFcqpVxemTDCPv1Tftyq2VcYTZmG7M1X8qN+hjoh5TMy5JqYwWLcN+Kr+VVzmM+xhvxVfy2T36LHYB7vPBWHDz5suMH4z7GH/HV/Krz4w/4eH/HUj3Jb9HjruqDz5ura6fN/wBFxzWxczzeH/G/5Im18UP8GhHDnH+05bo36J1587v1VHzxPbwC5QxOL/hUZ48473QocViv4FPrirr35UaMdWf6/AKp88Os9a5DsVif/jt6oqi3sQ+m4kW9F7YrMujRjseR1nipHs9/n3Lk/tTEC/oh6vpqdlTdqVrD0R+u6pT7gjsMFsy+JxPU4Dv6Y9wajeYxR+9TafANHwK4WA5R0mPrOLXAvqOkEsBbc2gmXQDqEdblHSdWaWMrOIGQQ1suu646XX7Fl8Lv7enlUQuP+2rXw+J3f4RN+4pjdvMtNOuOM0nLXtEY6kKLl/8AEFDeXjtpv+SH/iPC/wAUDta4fBHaHjVjBcdnxKi59bbWHcZFZun3vkrU2xLs063RHYPcqzpNPQdg9yXXqEEQJveRu3xcXTtk91yWtQcrD4SW1ARNx4K2lVPJG88QZXhuWdTNjaBMEAUw4G4I51xIIOogr2ZK8Xy6p/S03D7Md4cfmlYJWvZzW/tDogBrRIDRA/dAaDrJXsJG/wCK8VyWJOJc47mH3sC9jziOM8Dl7nMI3C6nOdSSHKSqwjM8qhEoQQoCgHufNgbIXvjfKUSqRg02m6E4PGqyyoXIs0tOqETZCHcFwsZiix5bJ+s7tMSPe1b8NWnMBYh1ibjpAP8A5k8Guk6vIhA1YcE8lrWCA4AgA6dBp8RLVWMq+oc0AG/DUa36kjbgVMyWDvkcPPgUQPWjSEXqwUMC9/PiqDINzqMwtAAu2J3mWk94RoMe5BnQ5VSAZmUlKVSjBpznhRlSCDwv7Uk3QkIwa8hyLDTUrte0OJh4kAkXIdBP+Zq22djKQAADRUdYRcPqNHsaxc3BP5nHuG48409l3D/xatfJmXV3vO5kd5I+RUfEVf29Y0lXrokEq8xWmI00viQhc8FKS31WgSXADcSQEYNLxTROg0+JUScXVE+sNOI61aikxPxPpHRpVCA1uV8EsIJc05hA4McP9RXRr4OrVZJewNDXsHSd9kBxIIMnpzrqT3eWpQ27WtB4gAH3LR6dUiJH4W/JZWbdby2eGbHUGUxla8vdpaA3Wb8bxZKbNNjntiQHfWfaQZ0IG86JxrOmbJv7QqxlzAjgWs9trp+fgf7v/GnYe3aTKQbUqy+ST65id0u1hY+UuOp1zTNN05Sc1iLEiNe9ZgzpZjf7sAN8Gx71qbjCJDadFs8KTPfCq2lIrk9jWUnuc+btgW65+C9GzbFI73W6j8F504+pvyf7dP5IjjqnFv4KfyRxvKQrI9ENr0uJ8FR2xTBPrdw1Xly8+Y+CvMetXqcen/bNP73gB7ylnauctbS9YujpWaRkcd0k6AwINtV53nHdaRiqJfl6RABkiAZHC6V8xXHJZr12Lwz6ZFapWJADSGNBDXE6wHO+J03aIHbaaDGR8wDeBYxxPWvLbEwAouqQXOzsfMxbouII6/hKeO9Tx2eNPneNviPQO2637DvFvzRDbFp5s+Im/VrC8/PV7/mjZTc4OP2RmPYXNbYdrgntTkO2pjmvdOS/bOhFtOpYRiXjRsaTZ5Lu0z1dSc2m46Ansko/Ran8N/4XJcuXzTk+h7JxtR1am0saBmdoxurg4XMTv4rC3G1gAAOOjGz4gLu7A2e91Vpyu6Lm2g3BdB8Bdcx+GeHZMjs4OUtyvkOBy5dIJkbpUSzfHI7L8OtsbZeDr4SrVxTqbKoe4ND8V6MSA1pBFMDpXLr74jcuVVx1djWMpVGuZEtLOllbJAaXkDOYvN5kXmVh5RbKrsaM9Go0uBIDmOBMdRCLD7OxJosbTo1XONLMA2k5zrDX1Z1gLPtlvkSb4xtbtLEB2UVXPGUmcoF8sxLhNtOC6OH2m93Mh7qo6LWnI1nrmvVEuJHq5cukrNs7ktjS6k6oxzCc7DSqfRF002w7MRGriBbUK9sPfhq1LCVWZa7WCA18hwNSpUBzZYGrhruT7S/sZhnKFrKdR1JlbEVD0CamYZCDDiAzKDIm1/kudnqZ7PrimGgOcTJaTuDdI0iY1PC8x+1nc4A6kJ5unALwWua0ikHSDeSwg34rFT21UktbSaAS5ly8gn1T9frN43InkHuq1SSCXxYAmpcXFzGoF9Gq31qmUZXVQ4XM1A4SJHRFosRvOh4oXOJvla3qBJA7C66q/UteidDiOcknMTa5L9YG/RLw2LeDBL8pILwx93EcDe/X2JpnqViYOk2O7TQj2jwR0Ghdsl7nNcMoGsvq0QbayA6dQmt2dUaZbVpA9VVg4781t6zM03KR1hHW/J9oZUwlTV1SmYM2qh5kEwR4pRY4mXPBJ1OZx64v1q+9VdPp9loea62+1MwtJmYc5BZeQ0kHtbunt8Ch71Xej8c+Rq8ZTaXfRANbuDnFxnffKFEPerU9Ii3y1AngpmPBWZP1kQZ1lNqVJ4KS7gjNMR5+aCEEoF3Urv1exXCtyYVfq9il+I9ig8PO5QdqZCE8QpJ8/wBEIHH3+5FHmxQFz1+/5IxPFBZXHWgNGGcWnOfVAcLglpOUiDHaPFL5sxJMCAZJAEGYuT1Fen5NbWwtHDvbXs4vc4E03uluWmAA5jTvEwuo7buCcwPNanlmI+lB6QBu2Mw39V3TeVjy9SytJOP7rwb2EAuIcAJl0WkajNpPVqtmG2cHCrPrClnaA8AmHt4O0vvXsae2sEbNqttcQ6uy4gi9jwsm1eUmEeH5K9OXQ5xzOkgb5N9/fvUcvUthzjxeJw2Dd6rHlp6ZtUcPVZnizrGAVKmMcG04qEFznNJLomANS4/e1616inisM8kc820H94W9IAATB3gGQdV0KfopEc6CAbEVDv4kHsWV5Tl7xUme1eEx+LcGZuddlyzYm5BIMXvJasWIrllUTVJY5jHZQ82ljZOs3Mnv7F9Ra3B5Dme209I1Httf60gaz2LjY7AYRzwWVtQ0T6S+Ia0AES+9gL7zJMyiZPaHcvu8rSbNQA1HAF2mYxGaOMxpdXToh1UNLpGYNjM7U7jderqYWgHgGpq7N++dx/zTHUm4WtQLjD2k21fMGeEyL8EaWR4puF5h+em1oyEuLxrnDppkmLmGm5vZd3azBW2rs7GF7IqUwKsOaRTBa+MzR6sc4ZJt6ui9LQ9EgNFRklswa7zrm+/Iu0juKdhNpYJjgBVpSIDQ6q592nWC46fFOn4ea5VckmNxLKLsQB/djSDgz1HPxVesxxAfIAzlvc06E5fL43k0+i4ta81SypeKeWXOAcQRJsA4EkaBfSHbdwMl/PUMz8zrOLodpJicokg986lYX8qtnQW56RaSHGab3SeJlmtvMqpy5RN6vl1BuKdUH92qZenHQeMwGkndoL75K6OKwtWn0YpiWAuc7K4MzNDg0zGV5IyzaLxNp9xhuU+zeeJa6iHgyXmi5knQkVDTEk5jod560n/irCAnKHvv9SjM31FwNyffkJfT8PPUtl06lMc24ekNfkqU+cY5pbka4VAZsLjtzK6PJ6tmjJeJIAc7okfVyAyYMx1L1eF5WjPLcJjnAgERQMXg5TlJMjQ2i1jvWuvyjq9GpTwOILpAcxwNI5elJl7QJEi2/wBqqepyxNnGvmmIwbqZyvbB10cDfiHAEd4Sch4Ltcp3VHVg+rSNJzmBwYS1xyy5oMtt9U+HeeMujj5jKhyHgqvwCKRunwhCSqIPcFJPD2KyeKsFABfzHyVqw7rUUVNazTnh3lWRukdl0lgIMEW18iUzKYt7h2btFLZZaqE/oELSRqZ74CgcRoY67myNAndnnxUE9aH0g7yfb8kHPX3d4dKekaRCl0kVTvA9vxCdnPDvuSjQhHUoBu+SjqpnSB2D4q21bRFkBbpHDx+EK2zOo9pSxXb1+CY0xefPgmHsuRu0a7BSp03kMdi6DXtgEGm/MH+sOptxeyTj+WmKbhKNUOpGo+rXY4vpU7tpcyRbKIgVHIOR+0ME1sYirkqNrMq07vAPNgFskCInNYr0mz2bLbTFI4inUbnLxzlUDKXNaCOjlERTbrwXLz/s142Z7uRtblQ+ntDCUOboc1XZhHEmgwkurFoeA6OvulFsXlE6ptapgn0MLzTH4poigwOHMmrkBO+zW7l6Jjdl1TSrVH4bnWNphpOIALObyuaAC/6pA1va62YLY+y21zimOpc+4vc6oK8kuqgh5y58t8x3Wm0JaPDyXJzbrsRSxLqmFwIdSpNczLQbq54acwzG0HqTNsY8YfAVK/ouDdUZWpsH91a4ZKhIPQzy4z94L12zeTezqQeKJaBUbkfFYuloMgXcYuNyfjuTmBr0XYepem9zS5oq5SS0y05mmd53pUsfO6e3y7ZuGxbNnbPfVq1azHtOHa1uWmSAWjNIPqzJOqbyi2mKOGwdZmysE+piKVR9Vno7crH08nRDgej6ztZnL4+6byIwPo7cK0O5lpe4NFUkzUILjmJJMkcV19lYOlhWNoMMMY0Boc4SBLjE95T08fMuXWPoYLE8yzZ+z8hptqA1MO0uk58w6Lh9kXiBxuIvbuNoUdpOwTdn4A02mlc4eX5XtYSSQ4DVxi27evbbe5HYXG1TUrB8820ZmPDQWh1Qt3fed4ottciMNia3PvNUPlrjkc1oJYG5ZGUz6jUaXWPm+2uUFKhtU4BuzNnmkK9GlmOHGfLVFIkzMSM53bkW3eUdLD7SODGztnc2K9OkCcKC/K805k5gM30nDdovd7U/s7wlfFHGPNYVTUp1SGuaGZ6QaG9EsJ+oN6Rtz+zzB1cQ/HPFY1i5lSGvaBmp5MsAtt6g37ynsK8I8Tyu5YDB46phaeCwGVlSmwE4bpZXspuJJDgJ6Ziy18vOV9TA4t9ChQwWVvNnp02B2VzA53127+pew27/AGdYPFV34iqKnOPc1xLSwXY1rRBLCYhgtKrlF/Z7g8ZWdXrtql7g1pLX5RDWwLQjYrq7tDLla4NaJaDYAaidyFxPFQBrGtZNmgNEkTDRF+uyzVcbSGtVg7XtHxSMFZy5zrlXjNuYQWOKw4PDnqc+GZYKvKPBtE+k0u5wPuVRN5R5H+0W+Jp/9Bn/ALKuvivJkLu8sNp08RXa+k9r282G5gJEh7yRJHWFwsnEefFdPD2jLl7gd51VE7r+HzRHxUAjcqIHnRR57Parc/t9qhKAEnzZRRt73UUVFbTiARGVg/ET7XJbXawD/wB2irmx2brW8eKotAOnkR81DbYdTrC8gk9v6FEyuyfVPYCR4dFZalXQ+6B3aWQ0rzAA9vxQNjc+uI9RzTrOYRHAy03SPSGzv43M/wAqF7B5hFSptO5BbDG4ql9h27R3HX/DR87S3B44dIe3oCVkqODTAHfqiLurz8EZ9jY2tqUR6wqzuy5B2zYlC2jSJH7zSfUZ16S4DgsoYFMusQCN+qMGxubhqbdXVBb7NMXtxqXHelinQJ1r9f0TCfAVexZWtPV2wra1vAe5Ky/I2A29s9k0xQL6oLZJ5twIdMFuW/D2rCdlPBMUdJE5eG8Tusu5RYBxnW5KcCN48xxWVtK8JfOvNvw72kAtOmjekY68uiGnUdoC+e1w0HavTGNSJ7yNL6yn06zXCXMnXV0zc6yL96Xal+KfLyjK7jEPqXiIdUvOkX3oxVIMc48H/O8H3r2GAe0NOVgaDwie4xbU6cSifTbvBOYXmCb21INk+xfiny8i2sdM7z/qcZ8SmMxLx9cjw+IXq20mtkgRv3ey1lHNBsWU3CfrU2OOk7wjsX4r/k8v6ZVIjnDHY0i/a1Q7VxA0rvHZk/KvTuo04jmaNhEilTB8Q3VZ6mz6RP7seA+AS0/x35ecft/GDTFO720z/Klv5UY2P34P+ll/YvR+gUhfm2/hZ+VDTotEw1vYWscO4Ftu5Pfo5x5T9vJ1+VmMPrVf+1sLDiNv4g+s/wAWs+IXuzhgCXNhhF/o202AzxAbc2F1ZxeIb0fSHOGkPZSfb/Uwpdl5P2+cu2pVP1/BrB7ghOOqn/Fd3GPcve1KTi0hxYQ4kmKGHYZ3kubTkk8ZSKuEcSDzrhGgAADexosNBdHajrxeKp1Kr/VdUd1Nc4+wJtPY+JqGBQrOO/6OoY7bWXrnUKgJPpFWeOdw6uKN2IxGhxWIM6jnHR4TZG0/DBhMFVw7GsqU3NdezmlpM3tOuoRNxM/Vd4W9ia9knpEuPFxkowwW+ZXXws6s6S6oNC0+eo6KswPHwPyTBYqzWPmFWwtARwAhTJ1AdyEVzf5x7kT6hN0tg1RpRuA7lFJUS8Jtf//Z',
       linkToBookOnline: 'https://www.charlestonharbortours.com',
       schedule: [
         {
-          monday: true,
-          mondayTime: '11:30AM, 1:30PM, 3:30PM',
-          tuesday: true,
-          tuesdayTime: '11:30AM, 1:30PM, 3:30PM',
-          wednesday: true,
-          wednesdayTime: '11:30AM, 1:30PM, 3:30PM',
-          thursday: true,
-          thursdayTime: '11:30AM, 1:30PM, 3:30PM',
-          friday: true,
-          fridayTime: '11:30AM, 1:30PM, 3:30PM',
-          saturday: true,
-          saturdayTime: '11:30AM, 1:30PM, 3:30PM',
-          sunday: true,
-          sundayTime: '11:30AM, 1:30PM, 3:30PM'
+          day: 'Monday',
+          open: true,
+          time: '11:30AM, 1:30PM, 3:30PM'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '11:30AM, 1:30PM, 3:30PM'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '11:30AM, 1:30PM, 3:30PM'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '11:30AM, 1:30PM, 3:30PM'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '11:30AM, 1:30PM, 3:30PM'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '11:30AM, 1:30PM, 3:30PM'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '11:30AM, 1:30PM, 3:30PM'
         }
       ],
-      options: ['history', 'boat']
+      options: [
+        'adventure',
+        'boat',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       tourName: 'Calhoun Mansion',
       _id: 'history_calhoun-mansion',
       companyName: 'Calhoun Mansion',
       address: '',
-      phone: '843-722-8205',
+      phone: 8437228205,
       price: 75,
       duration: '1.5 hours',
       desc:
         'Almost a century before it was built, the ground on which George Walton Williams would build his home was hallowed in the tradition of optimistic patriotism. 14-16 Meeting Street in downtown Charleston was originally part of the Lowndes House plot owned by Governor Charles Pinckney, who hosted George Washington three times in 1791.  The New Grand Tour is an hour and half long. It covers the entire Mansion, including the Italianate tower. ',
-      img: '',
+      img:
+        'data:image/jpeg;base64,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',
       linkToBookOnline: 'http://www.calhounmansion.net/tour_schedule/',
-
       schedule: [
         {
-          monday: true,
-          mondayTime: '11:00AM, 12:30PM, 2:00PM, 3:30pm, 5:00PM',
-          tuesday: true,
-          tuesdayTime: '11:00AM, 12:30PM, 2:00PM, 3:30pm, 5:00PM',
-          wednesday: true,
-          wednesdayTime: '11:00AM, 12:30PM, 2:00PM, 3:30pm, 5:00PM',
-          thursday: true,
-          thursdayTime: '11:00AM, 12:30PM, 2:00PM, 3:30pm, 5:00PM',
-          friday: true,
-          fridayTime: '11:00AM, 12:30PM, 2:00PM, 3:30pm, 5:00PM',
-          saturday: true,
-          saturdayTime: '11:00AM, 12:30PM, 2:00PM, 3:30pm, 5:00PM',
-          sunday: true,
-          sundayTime: '11:00AM, 12:30PM, 2:00PM, 3:30pm, 5:00PM'
+          day: 'Monday',
+          open: true,
+          time: '11:00am, 12:30pm, 2:00pm, 3:30pm, 5:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '11:00am, 12:30pm, 2:00pm, 3:30pm, 5:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '11:00am, 12:30pm, 2:00pm, 3:30pm, 5:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '11:00am, 12:30pm, 2:00pm, 3:30pm, 5:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '11:00am, 12:30pm, 2:00pm, 3:30pm, 5:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '11:00am, 12:30pm, 2:00pm, 3:30pm, 5:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '11:00am, 12:30pm, 2:00pm, 3:30pm, 5:00pm'
         }
       ],
-      options: ['history', 'museum', 'plantation']
+
+      options: [
+        'history',
+        'museum',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
     {
       tourName: 'Ghosts of Charleston Tour',
@@ -639,216 +1143,378 @@ db
       type: 'walking',
       desc:
         "The highlight of Tour Charleston's Ghosts of Charleston Tour is entering the lush, spellbinding Unitarian Church Graveyard built in 1772. Real time hauntings occur only a handful of times a year. However, since 1996, when we started what is now Charleston's oldest ghost tour, spirits in the Unitarian Church Graveyard have reached out to many people on our tour in visual, tactile and auditory ways.",
-      img: '',
+      img:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQycA7c3B-CA63qoGUb5FBFmU8F_2VmlKiUhuWCEuEzbg0W7fF2',
       linkToBookOnline: 'http://www.tourcharleston.com/ghost-tours/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '7:30PM, 9:30PM',
-          tuesday: true,
-          tuesdayTime: '7:30PM, 9:30PM',
-          wednesday: true,
-          wednesdayTime: '7:30PM, 9:30PM',
-          thursday: true,
-          thursdayTime: '7:30PM, 9:30PM',
-          friday: true,
-          fridayTime: '7:30PM, 9:30PM',
-          saturday: true,
-          saturdayTime: '7:30PM, 9:30PM',
-          sunday: true,
-          sundayTime: '7:30PM, 9:30PM'
+          day: 'Monday',
+          open: true,
+          time: '7:30pm, 9:30pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '7:30pm, 9:30pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '7:30pm, 9:30pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '7:30pm, 9:30pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '7:30pm, 9:30pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '7:30pm, 9:30pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '7:30pm, 9:30pm'
         }
       ],
-      options: ['history', 'haunted', 'walking']
+
+      options: [
+        'haunted',
+        'walking',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     },
 
     {
       tourName: 'The Haunted Jail Tour',
       _id: 'haunted_the-haunted-jail-tour',
       companyName: 'BullDog Tours',
-      address: '',
-      price: '',
-      duration: '',
-      type: '',
+      address: '18 Anson Street, Charleston, SC 29401 ',
+      price: '25',
+      phone: 8437662080,
+      duration: '45 minutes',
       desc:
         'Join us for a behind-the-scenes tour of the Old City Jail, which housed some of Charleston’s most infamous criminals, 19th-century pirates, and Civil War prisoners. Located on Magazine Street downtown, the Old City Jail was in operation from 1802 until 1939, and most of the building’s original structures — like the cells and warden’s quarters — remain intact.  Book Your Tour!',
-      img: '',
-      linkToBookOnline: '',
+      img:
+        'data:image/jpeg;base64,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',
+      linkToBookOnline: 'https://bulldogtours.com/the-haunted-jail-tour/',
       schedule: [
         {
-          monday: true,
-          mondayTime: '7:00PM, 7:30PM, 8:00PM, 8:30PM, 9:00PM, 9:30PM, 10:00PM',
-          tuesday: true,
-          tuesdayTime:
-            '7:00PM, 7:30PM, 8:00PM, 8:30PM, 9:00PM, 9:30PM, 10:00PM',
-          wednesday: true,
-          wednesdayTime:
-            '7:00PM, 7:30PM, 8:00PM, 8:30PM, 9:00PM, 9:30PM, 10:00PM',
-          thursday: true,
-          thursdayTime:
-            '7:00PM, 7:30PM, 8:00PM, 8:30PM, 9:00PM, 9:30PM, 10:00PM',
-          friday: true,
-          fridayTime: '7:00PM, 7:30PM, 8:00PM, 8:30PM, 9:00PM, 9:30PM, 10:00PM',
-          saturday: true,
-          saturdayTime:
-            '7:00PM, 7:30PM, 8:00PM, 8:30PM, 9:00PM, 9:30PM, 10:00PM',
-          sunday: true,
-          sundayTime: '7:00PM, 7:30PM, 8:00PM, 8:30PM, 9:00PM, 9:30PM, 10:00PM'
+          day: 'Monday',
+          open: true,
+          time: '7:00pm, 8:00pm, 9:00pm, 10:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '7:00pm, 8:00pm, 9:00pm, 10:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '7:00pm, 8:00pm, 9:00pm, 10:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '7:00pm, 8:00pm, 9:00pm, 10:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '7:00pm, 8:00pm, 9:00pm, 10:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '7:00pm, 8:00pm, 9:00pm, 10:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '7:00pm, 8:00pm, 9:00pm, 10:00pm'
         }
       ],
-      options: ['history', 'haunted']
+
+      options: [
+        'haunted',
+        'walking',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
+    },
+    {
+      tourName: '2 Hour Marsh Kayaking',
+      _id: 'adventure_2-hour-marsh-kayaking',
+      companyName: 'Charleston Outdoor Adventures',
+      address: '1871 Bowens Island Road, Charleston, SC 29412 ',
+      price: '47',
+      phone: '843-795-0330',
+      duration: '2 hours',
+      desc:
+        'Explore the winding creeks and marshes of the Lowcountry from the seat of a kayak on our marsh kayaking eco-tour. This easy moving trip will take you through the saltwater estuary behind Folly Beach giving you the opportunity to see a variety of wildlife such as dolphins, wading birds, pelicans and crabs. An experienced local guide will lead the group through these beautiful coastal waterways, taking time to talk about and point out the local ecosystems, indigenous species, fauna and flora. This tour is a perfect and unique way to unwind and relax, bringing family and friends together to experience the wild side of Charleston.',
+      img:
+        'data:image/jpeg;base64,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',
+      linkToBookOnline:
+        'https://www.charlestonoutdooradventures.com/kayaking/2-hour-marsh-tour/',
+      schedule: [
+        {
+          day: 'Monday',
+          open: true,
+          time: '9:00am, 1:30pm, 5:30pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '9:00am, 1:30pm, 5:30pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '9:00am, 1:30pm, 5:30pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '9:00am, 1:30pm, 5:30pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '9:00am, 1:30pm, 5:30pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '9:00am, 1:30pm, 5:30pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '9:00am, 1:30pm, 5:30pm'
+        }
+      ],
+
+      options: [
+        'adventure',
+        'kayak',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
+    },
+    {
+      tourName: 'Blackwater Cypress Swamp Kayak Tour',
+      _id: 'adventure_blackwater-cypress-swamp-kayak-tour',
+      companyName: 'Charleston Kayak Company',
+      address: '4290 Ashley River Rd 29414  Charleston, SC',
+      price: '69',
+      phone: '843-628-2879',
+      duration: '2 hours',
+      desc:
+        'The Blackwater Cypress Swamp kayak tour at Middleton Place offers a unique opportunity to kayak in one of South Carolina’s most mysterious ecosystems. As you paddle beneath the 100ft+ canopy of Cypress and Tupelo trees, your naturalist guide will share knowledge about the human history, the plants, and the animals that make their home in this special environment. There seem to be fewer and fewer places that offer the kind of quite and solitude available on the swamp kayak tour. Migratory ducks, raptors, herons, woodpeckers, owls, white tail deer, and wild pigs are just a few of the animals that can be spotted while kayaking. These bottomland forests were an integral part of the early rice culture of South Carolina, and signs of this history are still evident.',
+      img:
+        'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUTExMWFRUXGRkaGBcYGRoYHRsWHyAYGBgeHhgaHSggGxolHRcYIjEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGi0lHx8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAMIBAwMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAAEBQIDBgABBwj/xAA/EAABAgQDBgQEBAQFBQEBAAABAhEAAwQhEjFBBSJRYXGBBhORoTKxwfAUI0LRB1Ji4RUkcoLxM5KissJTY//EABgBAAMBAQAAAAAAAAAAAAAAAAABAgME/8QAJBEBAQACAgMAAgIDAQAAAAAAAAECESExAxJBE1EyYSNCsQT/2gAMAwEAAhEDEQA/APksqNT4RmYZqcIKjezZuDawPyjLyY3n8NABUyyrLfZw/wCkjLURU7KtLLr5YSlaypKkT0E4goPdluTbJ7526xd4pLbLdLDelqJBDuVPk3E88oltmYlVNOBQlLTFkkMMplrD7sYU+JkyhIX5bpAIdCTuYnBcJJLdm05w8spOCnLWUapcySnGuUFXWkJT5ZxOC2+5U+InpBOyaCWidMlpmKKDhnISklgVOFJPDeCj0UIzi6mb5dKTMPk+WLODjWQCBhF91m7xxnTKVaqunQuyU+YFXSpBzwkl7ECx0ERvlWuH1RKwUhRQUnVJueF+OkAV82WoEBO8wJUnC4OigTqOnIxmfD+3TUoxKMzECFLCQN1yLB29emcNkoAXiUgYFJStQL4sNxvW+IWcDWNIjTwVgROP5eLFLZQO6FAKThIBDEb3aAtjTwKZbpNxNQCDYMVWIGRub8IP2nUkz6cpDBWNIORDpUojo6E+0Z+kRMT5wzImTQUkWBJccXcqyhXg4J2tNUZqWNxJlFTZFRmC31h9shakyETEkELDkPoSbA/ZjKypClvhSkjDJAUA28CVG2Tn3+Wg2TIUillkBTlMtlZs7HjbNgBEmcbEngyybYsShhS2WIs3LXtENqKCSFpUonECzuHDjLPgITpnCWhlOShSiS5SXClB7M9tBlA9NN8xYIfMu+b5569YYVbSmf5gk5LIcCwLCw9W9IfUs1JmkqAISgMLAAX49HhZtOidaLEvwt7xHARMxJSS1mJBfNhmYKINqZomJSSBhM7dILH4jr0EE004fiF+YR/0ZYByNlTCe4DW5QumVXmIQhi4mFXBjvEX43z5RcmSDOmgqdkJAP8AU5/eEVH7KWPMUQoEAJQgn9L4lG/QJ72gCbKAqZgcLxXIIcfCkEjsTHszAfiIScZJCbcU9W3ffnAcqWDMVoLDnyP3wh7DQT5QmbqAOC1js4f9WQtHy7x2lSNoSjNAdKZZsbEBasv5XbLSPo1EpXmBJmWRoLX0D66doyXjCnxbUkOzDyc7hiokuD/qMVKXQDZs8LpcOYQ1ibBjmH0bh/eDdpTZmCUiWMIE1Qxq3S2GY+li3EcILlSEmlm7qVgGYyT+nfVdBexYuzdCI8LfiEyyCoeYSlyf/wA1ghlai2fERfxO+S2bIAlYwtgn4wQOG9YEvrd4u2lKQJZnTDjS8sIYkWxDP71MV7coyhGHKxYC9jbXm/rAxSfISjA90Op3DBSFFh1+sZ6m2m7o+8PkzQpjhSFrwoAGqiQ4yFzb+0aGloUy2AOJRLrUbOW0+UZTYlWoTZmHMrJZsywGhsz+8PsDzEJMzEplEJIB4XfLWN8buMM5y+O/xbKf8RVhf4EZ8WLxoNgUpFIlaZCFrwy7AkBlXJJzfiMukIv4pyx+PJII3Eu9nIJHoY2ng6oQukSTuLEpAuLFhhJbIvhzztGdx3ldtN6xhFVrIlzMSRiKskklt6wB7tzjPTqVKlsoYVIUnEk53A04XEaubKxBTD4UgkWAUtwqx4M/OM1XKV+OnFQwnBdPAgIPqHjkywurW8qc+bKCiGTYtmB7FiPSOiqcEYixYPYFnbR7ZtHRj+H+/wDrT2jDy8413g3aIlz5XIsbOzuMh19oySQ8PNhSFebLCTcnjrz9Y69sdPou1Zn+WmqVmVzQCSAXM0C4dzmbHkYSeMlpIQpAWlSyMQWc2AZhwubntAu29oEyfKUUhaVTMSQk548ThbkF20yDiKttrmqNOJgOgQ5e1m79oeV2UmjabSCTNlpBTiSUKYE34t1GojZSFzVgjGnApJUQ5IbPC+Z7vlGUm7PKFY8OJSbnV065d7RpaHbNP+G8uYlBWrECCohWMZANdKiWyzcxGJ0rMyRTVQUlwAElDKKgACnEhQ/UkBingLOGBh3P8TpmFOJLEgpYEqGZAszhULtqbPkWmoQlAlhCigvcupCgUl9A7Dh6FS6YLmKUyMO5YCzKxAEDiGBi0vJm0VK8tKSWQt7tYsQQC75ZdYu2fVKBmMCXN3/m0c9D7R7X7NEtsLZucNiGIHyI9YK2MQnzcScY4EasOGR/aAIUtQUzCpmDy1Z3sldyMjfDDb/E/wAuUlwEpSkKBOeHABkOLmM8n42bNL34BJP0/aNFsmTLKXWwIYB8i2dtfhhkAmzU3GbnIcDhUfrB+zaUDAwI421yPy0gLywyiAM0MAdBf6iG8tQBQBwL9XMLYE1EoYQr+WFdOU4yo5Bj/uYHXSHFOsFEx9A8JKTCVTgCTujlvB7tCNfRyry1jIlX/wBRXSECZMJZuHEXtFVJOdElL/qW4cf1ntFa56d8ZG1xzd/WACZ9PhWg2IOF9bs5t3jyfgVMmEBiQAMJa7Jc26x1BNSVS0lJBxC76dIilkzZlnOQ4ZJPaxh7BnQeUkB1XuRYeuVunExlPETLrkqSrMy2Po30jRLBKg5CUk9+PpaM3tRkVkvgDLPax9IpI9NCoSqonJJmgkZFTPllqPWI7XpVColrUQGYBabm6ZjAu992JV9eQmpQlQYrmnsUj20gSdUFE6nxAqSFKIb9TBXDmr5wbGqr2vIKcZLEkAupydbNlcA8oBoZP5MyYSGSzAWdykG3UD1h3tGpBxMSXSWHZZJ6Ewop6dBp5hUtiAkhHEnC/bSDjZ/DPYEwYpqEoZa1BjZgnIudLgwVUBVPPSSAyUqJAJUSDhuDpC7YEtaZszCd0BOV93FMCWu7XTBm05ivMUUFKsMu7vY3cEdG9Y0nEZ3mvnf8UpiZlYlScvKTcjmrTvGp8A06xIQbt5SWuMsU0ZC+kZP+ICUmoQUveWl3/mdUHbC2ktMlCA/wABjkQqZd8wIXtq7qvXc0ZzEJ8vCr4sEpaWtZTAPaMz4gmo/xCdZlLxZ5AgAMBn8KWg2WvCiY6sSlSkJD5hi47ZEQm2o34uXOcn83ConhbhyPtGGdl3prjNAq7bBExQwA3jonXyErmLVuh1G3S30jojS9sqhTEQ/2BWYaiSsoxXunQ/EO/FuUIksesN9lzEpmSVPdKkl9Bf5Re06N9ohK5i1qxB/OLNkShSkWBLXZ+noTXS0pVRfmO6hzwpJQX/8AI25c4iZ4m1M1j/1HuQXDSlghgSQ97XgCvlqSukKiwKUKBchg4PbjaHSb+VUYlEJ3iSH4AkqGeSXBb0tEKSQkyicSFeXNUElW65DjIB8izHj1gWk2rLlgBK0YXQ4DO4Up90Zi7+kX7NmgSyVJcKmBTaHJWQyuk+sZ45z7TsS2jKmBUwC5AGdwA7EAC519IlseepH5c3dDpDsbXKhzAZZ04QMMU2ZhScPxANlixJZgNCVM0XlZKgC5JCXKrPdhnyEXCrSzZ0taV4UksFMTbCHDG5c6R1BVBBnB1AKZvT7aEUlUwBSXYMRcu4s49YtoqlblOquAfS0PZaXzFgkE33G7sQPcw5p5wMtKtcRsQwZ1MCemlh1jOS56Sw4aji8ES6ualAZIZzckXsoizPkYUo0dCdiUoHdNm6kWto/1gvHhw8rN99Iz0krVM3lNiAduWUFVVZgQkqzxMFO9mLvAGi2fUgianiD9YzUidvKDvnzv9/KPdibTGNQ4gwsrJrFRdm1fXpwhb0ejvZpO7wSuY/QCYTbLIGBHV5isNw8tJcfzAq4MLJMJaauKTZRzIUcLtbPveJJ2qoVK0hlutByByQsDPRle0PZaaQL3kEnddOI8hiYe0QrNopE9YSpksCGyJwy3Ha8JafaA/LQrdQtd1MSzA2HF4MKRjmAEOMKgGuxRLZ+A3s4e+B9P0VJKUtm5I69+UZnxLP8A80CXyRY8rfSNDQzQAkKG8y7G4wsC7jW3vGN8WTQmtSk/yynFrOATbvlFXpM7OrrNSSLhJNha6IG21OWJkh057/GzAW5b0CSqwkzi5AKEvhu7Jw3+sLtqzSfIU5UcB/VkBh5W/tE74PR1PqF+ZhBfElR4ZAu3rrC78QoyCEi2FJVqbAXfMdIPFQhU8ucpKh/KVEkNZ7We0LCXp5ikpYiSHbgLP1Le8LjZtD4ekh0kklwwvrhSsdmgfa6mnqcZm+YD4RboHgnZyQinScSSUzJL95CAL/6pmUDVC8ShYBTrOHQBLI7HL0jXLpnjeWL8azlKnJf9KALFw19RbWJ+H61SJZGFwQAP+5dvf2jvHNF5U0A6lVxkSyCW6PE/DPl/hKpz+YPLwX0JuG109IlaorwK3r4paDx4td7WhBPnFVRN/qWpQ0uCSOmsaCbUJSkkHOTKHDeCSFC+WcZNE4maValT+8Z3WuKeP9rKspUtSiS5JJvrHRJS0uXfM6R0QoiGsONmoUVysBZWJAHJRVY+8J5YvB1EplIL5KHTO8Wbb1Gy1y9oCUsnGsJJV8ILy1uQ1uIfkYzs471K7ZJy4Yin/wCTGo2ySNpycWEjBL+GwYpW2eWcY3zHmIBDYbaZYlHvnDyRG4nLSS4Z9zCpHBz72FnyvHlJWpUqWgkC7Ynwht7XSxHRoW7RmIZZQFi8nPIKu5B6j2MVUaQZklNrzSM2YEaqNu8ZWftcaUqKFyVOM1NcZ4kly/R4LralAmU6/jBlJfCLFpk0ZtdmAflyhRPVvy9Qyyz6WDh+fyitc5BKQ9kyxpwmLJHoYuZcFZydza+WoAsr4S3IsGB5ekUUNeN4glJZOVvtmhdST0qcrADIWCRqWHveAqWoyxEiwHpY/WJtGh9FNCpiDiKd9KbD+YFvrDiVXliDosPZzhyNznr9iMxQTQPLDuoqCtbYQo/X35Q7RLUuZIDMhUwJVcZhwL6ApOb/ADgtOQ3q6jDULSlQIEvE7hrO5B1FusCbV2i8hCFBsKnd+AIuO8LNuUyaetKEOUKkkpJ1UASWNgR+/GFe0561S8T5lJOV3CT3Yn5w+dlwP2JtABTlQGd+x/aLq6rTMmTMOi2HC5s5y4xmNjTU2KlEb6bhnw4Zj52Z8IgmTMJmEn9Ux2Dh2KgL+mn6orKE0VEtxhBBeZMGE5klIY8LPaIbNSJtVUFF2chslJZL5cjlHmxyo1UspISDPmACxY4HGYFi4z4coD8HrMurq0uCcExIZ873GoPbODQ21lHs1ExVI6ScQnEmxDBKFJtwBU/GBJqyZs0qcKwpF9EhCADbTdHoIXeHK9RqKUBeApQsOS/8rjKwNrR6lZ8+pU6VE06mIxBh+W2tjyh3mJ6rUyqsqSgqCSMK2uxcpD7qXJOWbM0YLxHPH+IEhQO+jeBxDJOROn7R9N2oUpXTykJVhPmOA4KXCCL2y66R8h8VzANoTP1JxoJyuCEnQnN4d6GPbYbNUrFPSlQBIlpc7u7fUaML8YW7dL/hFJUFeZTfEoasAe4NoYeC5kk1VQoDdSndAdwRjGhHD3hN4rrgpFDhyTSZEgMoMpTEC+YtzhY/x5F7Mdp0R8yZhDNKC2uP1FK2B/2+kLqEqNNPXa0hVhwJULgnkWhlsusIxlSziVQks4OIEg53IuDaM3s2pSmlqQQ+KWlIuzHfJ05ptzhcSyq5sfQkySqgnkG6cKnDj4ZNKQ3NxA21pgRkAFEKGruqatLuzWhPs/xAsUCkps4mvYX3UJF+O6IDVtNUxEtS1EnFLOQ+I4Vns6zwjS5zTOYXYPx7X+Z5TpYpVOB/7hCnZk1paw4DlIvnmSW6BvWPfEa3Eo33sSj3LwPs2bmNHcdWP7CMrluNZNCp04MoC5wAEHS4cjnYe8I5DBVvvWHVRfFZjhDnkL/3hTSpdQFu3rEy8G5BtdvSOigoVHQwXS1MYMkjdsHu/aAJRzgynLp9W9HhhslTEGrklbpH5Qwk4w13Lm+pIFheM3UsZymyxLZuGJREGT6kJnSlnIIQT1GcLFTPzMXFT+pMKW2DTQVNQpRANwnyyOmLTkXiibNAmJaxCzfR94ZRCeoIAu+6lz3FueUeyyFGWofEFqN9bu0Raej+TVoMtAVKD4V7zlyXSAG4O/rCo1G9iNrPa+S1RxmnFLBYDAfmo/T2hZPWzlxk3/kT9GggNJ9SyxvMCnjbIfP9orpZ6iohgQLcrt6QMhQKXN8x6MfvpA+z5ykLUSx3SCOI0+kE6GzPZ6/zEIZ1Cc3JilQI+vaC6etX5vl4ilBKSQL5CZc8PhEIqGuUmcF6vi/3MsD/ANjDWkcVJCsNsSeditJbK1zBlDgnxDVFUxLrKt2wd7bwP/qm0AVE38vCG+JB0e6Rw94v2rRKMxJa2HTP4jplYQJPlAJJCnAUBkx4P03R6w8PhZKtlrDMQ7rT7JmW7kjTSD5FenGlhkVH/wBtT0TCWimXHO47fZgyZLN1M7qd+pNvUxrn2mHlNtGWJyCylYZ0w2sTuIAuMr5wPsWtwVVSpCXBxskm28FM+bm9oB2cnDPCScsR7tx6ewiGy5gRPmYrgm7FuNx0MRun6j9gVikTUElmQodipL/KJ0U11TcBbcViubB092+HKFtMvDNSFKAZLPmA6n0fUn1MV05ZSxk+LLUM7dP2g2NPpVTXzjNkoKypSsW4NwvhcbzmxAbTLnHzbbSv80snUhVzyBzPSHsyqWZ0tlkbxYjQhNsukZnbU0KmgqJJIlknW6QT8xBLstabDwltFMusq3JZUuYzDV3FiM943hdt2r878GS27SlLD+lJLm+v0gHZE9QmzFJbEZR0y0y1cAX5wJUKAMkcJRBH+0/faD2+D1+mFJPAXiJJaQAz6sLchcwPIB8ifcaH3ct7RXSnPQGWB3tf0eKpU38qawz1+kRb+lQ42dOP4ZIexEwEdTHkmcMCDpi9QChOXRJgajWRJl2sEqL/AO6F0qqOE8ideYMPez0K24gkSAne/LBLBmLC0B0QAO+FM3rp6RVtWqZSMLslAHtE9nVbviJsCQ3v0/tD3wkZNmhi7WQPpx6wBRKvd+xa8T2rVDCAHxEC54QJRzQDxh/A6dM3jdo6KKk7xjochA6I3MWSZrJDaF/mIppBY9IspWsOLj9oY2bzVklBzGEekDqAxHkYpp55TuKsz4Tw4jpEDOId+8LRnVXMDBm+FPOIzJoHlsf1qfPiNehi7ZVHJnyyTMUhVsWRuM25EXgj/CJZloV5i2zFhkbm8c18mMuqXtC9c/4CbgC1zk5s+ucCrn4lFnbn1f6wbNkSfykiaSC4dhrvCLpuy0IAVjJfiB21ysYueTGD2UqW6g3BT2GbAluOftFVDM/NIfMEe1oYV9IcONKVFTABhYjXqYzFWJiFMsFKs72PKLwsyPZ3TVCMQbPV7tmPvrBNJNSXUwxAl7kWuQ3d9IzEqaxBjV02ziQJyAwCcRBGhHW4vBnrETJpaMmYkLWQAzYUgZAKTe5MZXbNTvLAZkqOTAPf77RQqZVOspukJBdJDJAIW/XdvnCysmhSmGZusguCouTy/wCIPHjyLltKlqMK0k8/eNXTSyZYVYhi4BClBIe+EXABvGJwuoOWf2huZ7jBjISwGgsBZ8IHCNvNJtXj8eWU3F0ua61BCSpQU+6Cd0AglupEU0E/EtZ4wLs6tmyiVS14VksenT09Ia7K2SSrzVzQcZchIB1c3LJB7GM8tSFJasp0SzMBOQbuS5IfjAs8pSspSp2Kr65RqKfwjUTE4kyFMS6VFw+mvLSE6vDC5M4mcNwu6UKClgnIsM7/ADjOZwtulbQH4iWo5i5HZvq8ZmrqHmG7syf+0BP0jX7X2PRSkeYDMKggkAqGgtrxaxjAYjF4cla0cmr/AOoXL+UAONww+YgOtqw6AD8KQOF2vBmyaIKp/P8ANSCBMSUYXNg4c5sxGlogfDS1JKzPkBrl1EO/BxeFLN8ntamrZBU+SABzOnXL3EDIr/y1hs3eI0sgjFKKgwPxDIt/VEqfZkghTzFhs2KSIW5OxsRTVQVIwg3ZVr8XgdF0EpD2fPRr/WDaHZ8hKCpK1HP4i2jFsB+cCzZclEpRThcB03Ubmwa3N72tCmU3weyeqq8SiYv2ZM3sL5giFZzi+RPKVBQzEbWcJ2P2jNdbfysn0z94olTGMDmYfrHYmIh64C6ZNJJMdDKVTJYacsIPu8dEfkgB0gCUmwNvv5RTShwpOuY6j+zxdJICT3+UUU6mUIoLqk40herMrrx7j3BitE0EMvLQ6j9xyibhCyCHTqORuG5i3pAc3dLfbQQU6pqRckY8SCkg2F7aM3H6xdSV08SU7iiAkhKhwyDgD+oX6QBsfaplKAVvS3fCQC3QGNlL2qAhgsJSouCiW5w9SrMPlyuYzyx3eYNcMTTFRwhKCVJULt0DH0EbGg2qVeWAkSyMwELf1BxX4pIgWbJkO6jMIUQy1i/o7DIxfNXTIYIVNLPcbjZXbEXirjKQmvrFr3kSkpKfiUMaVPriUZhU3cQBOpBOSSTSoJIcpKlzBpda1skZ5cM4tMoJQkmTMSlfwkuAo2uCc2tqYjR0MszFJmJ8pgQSpMxbLawZP6nxZ8TaJxx0FdPslEudhTPpiFMcS0yyQcikIWogZnPhnGrTQLmyTK8xAxAgTEplYX4bt9Tw5ANFOwfDMifUJCF4kAAkplFQCmViYqbCCdOYd2eNgdhU8shKlodRdKvKUohDHIA4STfN+kHk8dy1yXtrp87Gx1BC5S6spQqzpRMViDMzYAtSdGdrGKNqbEk0yE+UtM4uQSZa0HgHKk4WzGYyj7fSyZSbywSEJ3gZWEK1ywA4n4Rltr7O/HEqlSqaUhI+KZLQ5W5cupBJLYQw4xpjjobr4VUXJwi97Ad7cohKWo2NwLuBprlnGn23JNPNUhRSsj9WApHYKD+0BK2kWzSOgifN5MvbXq7fHhjqX2DrpVzpaQJSgpNsYBDnQHlz4vF2zKCalQEwJSnECoLVmkEYmCXcs+bQQa4CWXK1KPwqCsIDG7gi9n1ERowmYpAJLl8TvbJmIN8joM9Yz/yXqQ7fHJu22tJN8Ry3EqnxAJNziZ823Rl7wnqNszCsgsWOoc2Fv0wzpNlU2PdKEfCwWFh3+LeSnTj7RTMpx5qVrCVAWwuQ47MWjTHx6jkzzmVJfFm2FLAlHDkMRwgFrEAHNnu0ZfDY9I2G3NipSDOLzArPQiwAysdMxA+zpdEUKK6CsXcAKlzXS9v/AOYuWLDpF60nZLsivMvENFJUB1ItEa1S90HJgR0h9M2JSJS5VNlcpiQ/Q8+TvHg2aV3SpKghmJaw5sfnE7m+AVyE7hHFL+8T2fsuZMRMwJJ7gD1JaDVT5qBuS0ZEFWFKnHuPSLaaoWQBMScLk7i8JfoXD2zMRZl8VwtotlrQhKFABW+7kEZ2uHGQjN7TnOcIACU3tqchplGjdSARJkMX+M4lEg9HEMKSvWE76Aok3OAEgCzNnwtEe2WPcHb54EF8j6RNcsjQ+kfQU1dMqwWmWrK8sD1JtZngyTs6mZnlzTlvMOZwpAzd7ntBf/Rr4Xq+dU9Jja7cSch1i2fSJCgMTk2NsuEa3bMqiQpCFyWKibhSt2wzv0sImNnS8IMunSwuHTjUTa5Upz9Lw/y7+U/Vlv8ADO/r+8exppmzy/wLHIAAfKOiPfIerIzkkMACe2kVTJKhvNujXhB3mDA2N+FlODq5LP6GA1zcjiLx0S0l20AFoRNSDYBKzmArTo/0gFSX5tDmXXITKKShTLuoJ+BWEvcHgWOcUpnyVJYpAKS4GQL5ixfh6Qrlr4QKRs2YsskZAm5AAHMnIdWeC6FK2+IEC4+KxsWsQRzY+sWokSlMCEpS2afiBu2YvBkiUlIYacbP9Ycts6EaM1MmYEK8pQYb7qMxIsSkJUWZNjYuc7mLK1dGkJMuUpynNa81n+lFwkXsTw0zTy5ygnDoWtFk2Yks5JHAWD2/vFQCqetAXvCUtILDElSwA/6QW7OYbo8SMCQqVLKRMCEiRLwscN3SLqLEd82MZxFCyTMZRQFFJU6QMTEgDFnxNrCFs1CEkh3If4bgnKynZucItN7s+vo/ywpcxOIAKRLSwxNhA81SwxAbINeGf46mWSUqElJL45qlTVFTKuU4nBvYkM4F4+b0u1vLACES0nIrIK1Z6YnwnSzQYjaykl0MxY/AgM1syCRDGm3qfFvlyUykLSooLhQxORch0qcYgVG9394z9R4iqQMUtU1LOrdUsg3c7o3U65AQu2hZIWEljcqewewB5wCqa7uogEXLqYDm2kE7PQLaK5s3FNWp8ZJbECeF05jrC0y1P99IvXJcuJiJg4B8nYWIDmJLlEMbXD2IPY8Dyi8+arGrZcgEBJ43PWGFNSIQsbzEaEMeXeAgCdfvSH8mmUFy1qQpRIISlSSymFyC1y9u0RorlVEpRMwEm+Jndm4G0E1hwrSHd+eLiM3t0gjyCmaXRgU9wsMyubhx0iFUgYwokYiSMIyYavk+YaLkRaYTKMKp3IBxAWN8+RN/Qx822ioy5qglRSQbhJwsRySwDco+qyZaTJCraB+7ZP7x888TSkifNdZDMydVkuf+0EJd73DPDy6TjeRvhhWNYKyZpU7+Y5L66kqsNYbeI5gElKThGKYohKFHdcvd/bNtIX+FJN3TcAXUBkTbJWucMdtghIKilQuQMN3OenB/SFjOBey2gdOBsw5yDsQRqGZtDaBaKalJmYSCFuHIGT3IA+HtB1FNwsxaxA6HQ5fYgClABWEsc+TdTwibFytFsOYUSWEszGffSpixfu3NolPr1YAVhKgm6XAUOP8AK5OcG7KUUU2BCkqU3xX4XBJF+1oS1jFLAZA2I1+/nGmWE0zxy5La3xFTqdJo5T/zJJTfSxT68eMLPxiSrdxJc/pVYfNoV7RllK1O2ekdROVDgIwuLbbQzakZqdZFt4pXw0IiZ8RKO7dgGAFm4ZGFNW2pN+X1gQM9hC9T2c/jz/N8/wBo6ExmdY6F6T9DdUy16RSFXj2WY8a8aaTtemYcnLFnGha4cat7RApY52i2WU4f1Pyy+2i5cvK1z0+/eHotjaMbrf39mhjIlsxa3RvmRAlMMmL8Sfo0Hyy2Tk8coNBYpQ4+31/vDel2umn35MtpgxDGovgBslrAOz8i4tChajq3d45RtYekAX1u2KmaFJWvEDooAhN3OENuEnPCz6whmS/zL8Yc00lSgWazPcDPLMxVtOmVLmKlqw4km7EKD6sRaFowUqiWokscJBYpGLJnLC+o9YPTIQolwXZgXSA9s3zs+vOBUVMxLhC1JCrEoUU4hwLEOORgihRhIcaatr1+kPRDkzUMiWpTJzBbh/pDnh3iFWmnWLLXLYHTECpywIIAyYPyePKhSWS6Xv156x5bArFcMSp724waDP1CiTeZi0DW7XGXtF6ZZYFiX4EfKK6qi8plC+NlJv8AouA+oLjLhx09lh75cflbjDpjAkjJKh1OvYCGOy65aFYkKKFjVr/b8oAkqIvityVfjlHqVLVuqN83d36HSAjj8S6buVv8SncDh66xFCjiYdLizHO5gWViAZyR2zic/wD1Dpl8s4ZG0tJCQxPZJH36xkPFOEzBvHFqL2HQ5Q/pJYBdz2hR4mAICwoO7FJCX6gs8V8TO0NkVIRgGIYSSMRcDlzB7QbtOrC0pSHG8Sd52As74bAs/eKqKmUlCFTEoOJTYX38wxbJvbpEtqSS2JIKUJcKSC4PE3J+sKSyHdbViwNwfvrFcoi7lwbX0flBC1KFiAQQ6fhyY2JGvBg3SAqQLBdk3ORDN10AvrC+m0/h6rAkKSSoEE3xYfa7/WAqgEByxFw+R5bv9okJamBVLYaEKBS50KSd0vHVSSAn4H52+b2aNbNxlOKye3wMevfL2ED7LUArIZa/SDvEaF4gohg9iFYk+mmUCbLNzawzIzjKzltOl8yZqN3vbvAapwJsG6GL5qnDG+vGARE0Rf53M+0dFD9fWOhGjhYxIIvESY9eGRnSHdwu44CPVMnSI7On2azRObc/YivhfV1LN4hun7wyp5g4BXWE9Iz37OGPY6w1pZge8SYudILOza8IoBOEh37w0mBOAZBw4+jwvSi+Yb0HeHoISm/4iqeCZgwueXLM5aZ+kTCucCzTfiTqDlxhaCuoUQrFpw/4hjKmBTG4LXHOAJ+9lfpF9D0LZnldvtoRmsikVNWhCE3Au5LcyeXvGyHhBa6aZKljEpSS7nDiVbA50SDp8zFey5JkIBCEpe+OYWKv9MtIJbqUxOZt+oHwzGt+lIT8yr5wANQ/w3mfhSKkBM8E4VghTBgAm1igNlzMY3a2ylyJpQpBTaz7zjIkKCQ4e/e8bGg8QVMtCUGapQCQC7FzqXIJ94In1Iq0+XNKCc0ljLUlWhSp1JJ9HgDAIlJBDkN0OY9C9/eL1JSxOJiHzBFvv5RKs2XOlKHmJUh3AKm0sTa17HvAlSgkZv2iiGU6n+HLjwiyej0c8922UD0lr58ItmTHS3oBDITJSALP/eEe26VXmJUGAU2f8wfLjDmVMyHT9oG8TEAI3nJIYMf+OMVrgvpeEkMd4MCPmfWJT6ssxWWVY2fhB8ldk/qF88h1H1aKKhmaw7vl8oXqNvZ1QkJwpew1OYgKnwuZnfPLsRcRbNIYOLjnAUlYYg5H5QvqoOocRUnA4GdrA8BwMNqgAqGMHtfnC7ZNXmh3HDoS2WunRoJnysSnAf6RpOmd7I/FNOErS2o5/fpE9i0aFS1KBOMO4Bs3o8D7ZGQvuli/E8OIaK9lSpgOJBA5gh/SJ/26V87EGQkhW98LBxkx46u8KUpve37QxqCok3u18w8LcV9e8TkceER0eqjok0ZyGJEQic4nU5ZRBodA2gzPyi8u/KB6Y/L3i9n1tDJOnLFy3Lj24QzpRfX7+9IFmUpl4SWZScSQCCWcpc8C4No9Soj+0LQPl1SSBvBxa1vYwIqYAbXzvaAZdSHZg/SLVqIveKDnHb74R2Ejppp9mPBMP2HjxQL3Vbh95QgkpClcXy5l+8bXYezfw0sKUkGaoBrO3C2v2Y88F+HAUqqZmQ/6YIzUbCNFKpVKCiSQ5Z+D5xFUztVXygSZs0lQLFKQVqKuFrPyiiRt6kJCQiYVGwGAkv0eNlsbYEuUkJSnK7m5fi/G2kOJWzkguEgHi1/WAMWkS2vJmd5bx7+BkryRMSeSF/sRG5VQ23gPSK00gGgg2GYp9nqUnyZwM2UfhUxC0cGe9uH/ABGL8UeHplKsBQdJuhZDhQ66GPrFbs4TUYccxHBUtZQR6Z9wYapoUVlOqRUJcpsFHNv0qfjp2fWCUPz/ACwQnPpr84hMDsQB994f+KfDy6OaULBKS+BWih+8Z8ka+0WRhSS7uWHDEbf8Qp2/IONmIuL3Llh2tzg6UeGf3wgHaqwpYDKJAfQjjZzbSzaRXxP1OXNszHnp96RTOJOv30ESlzrZ9bfbRWtdhxhkhULtAyGvFk5UUoVEfVDKEl8x3Y+hhtLVCuiLXz/aD1LYZtG2LPIl21IxKcKJN3xMA4yYZOR8oq2RNF8ZtwZx6cYM2+slAABOpIyYcdCYW7MQRvM6fV/2iMv5KnQhUxirDYHk9vWAWGKCqlYJsluEBgkKvGVXHFL6j3/aOjxbvHQbAdarx6HjxZjkGADZBYZPBCVwLKW8XpNool6RYqfvr6QRTTiC7A2IYgEXBDsdbv1aAQvQZHMP1b5mLXbh2gAuUlAuHfmYtWonOBEAZn1i6Wv+8MLcQ1/5jReDfD6qucAzoDOfpCXZtIuctKEByot0j7h4W2UmmkplotMXZ9RqtXYe5ETlRCzxwk09GPJHwzEgcyly3TdaAztJc2i8+kvNdC0pa9ikqHOzgjrG88Q7BE+kMhNiGKDwUMv27x8x2VQrSpRpSlCwWnUs0kJKxYqQu5lrOoO6TwiVDpfhGVOCTMqqoTFJClIK3wq1SxGht2grZXg+dJmYkbQnhH8jO/UKJT/4x6jxLKlkJqQulWf/ANhhBP8ATMDoV1BhxI2xIIdM+WRoy0n6wbI6KRAy0wJN29SoG/USk9VpH1hBtL+ItCg4ZZXULyCZaSb9SwI6PCNoamViSoEkJIuQoot/qSQR6xHwAoYGQpa5ZXMMtUxRUoyxgS7m+HHiA5CM0qXU1SfO2h/laXNNMktMm6jzFZhP9NieWcbXwhLKkGcUhCVAIlIAYJlpsGGj/QQAb4h2LKq5RlTAOKTqk8RHwHxHsmbSTlSpibjJQ/UnQiP0fOQSLWOh5/tHz/x/gqEBC5CrOfNS5MsiysQAdhqOBeK3onyWSq39u8Ka6bhUrCM75EEEapvy1GkMdoJVJUpChvAta4L3BB1BsQRC6dKKi40u51P3840SgJuIAnP65ZRyjzjxExJGTHueufOPJqri14AhM1P36RQlUXKWwioqcwjEUky/30EM5M08oT0x+kHTGIIORjXDpnkVbXnnEUk8w1h6axCiCbF8Ja+t/oIntZLEWDHX5wNILNGWXa50IW72PrA84km5ixcy5+sULXeIUl5kdFRVHQBBeceIzjo6ALpX1gxJj2OioSKDeJJNo9joYX6DqYlHR0AajwsWTMIsd0Pqzq17R9e8JqJSkm58ge8xT/IR0dGeXap02Uj4RHyb+Im5tEFG6SlBJTYk3Dls8o6OgvQa3YiRMSELGNJF0q3geoNjHyr+KGy5EmaBKkypYOiEJT/6iOjoeCc2T2RToUq6UnqAY+3+A6CSmViTKlpVxCUg+oEdHQZdCE/iFZVXJSokjELEuPQx9N2mGlWsxSzW1jo6JnS72hSLJmKcnI/OFdcoipU1roytmlT+rD0jyOhfB9fF/GcsBMpgBvTBloClh2c+pjK0Jur71EdHRtj0ipr+I9T9IHRr0jyOikvDEEG56H6x5HQUR0nTr9YsUbiPY6HOiqG18vvnC+XlHR0T5O1YdPFRWY6OjNb1MdHR0NL/2Q==',
+      linkToBookOnline:
+        'http://charlestonkayakcompany.com/middleton-place/middleton-swamp-tour-2/',
+      schedule: [
+        {
+          day: 'Monday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '10:00am, 2:00pm'
+        }
+      ],
+
+      options: [
+        'adventure',
+        'kayak',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
+    },
+    {
+      tourName: 'Private Surf Lessons Isla Surf School',
+      _id: 'adventure_private-surf-lessons-isla-surf-school',
+      companyName: 'Isla Surf School',
+      address: '3rd St. West, Folly Beach, SC 23439',
+      price: '85',
+      phone: '843-813-7897',
+      duration: '90 minutes',
+      desc:
+        'Whether you have never surfed or simply want to hone your skills, a private lesson is a great Choice. Highly recommended for first time surfers and those looking to improve more rapidly.',
+      img:
+        'data:image/jpeg;base64,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',
+      linkToBookOnline:
+        'https://www.islasurfschool-charleston.com/charleston-surf-lessons/',
+      schedule: [
+        {
+          day: 'Monday',
+          open: true,
+          time: '9:15am, 11:00am, 12:45pm, 2:30pm'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '9:15am, 11:00am, 12:45pm, 2:30pm'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '9:15am, 11:00am, 12:45pm, 2:30pm'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '9:15am, 11:00am, 12:45pm, 2:30pm'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '9:15am, 11:00am, 12:45pm, 2:30pm'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '9:15am, 11:00am, 12:45pm, 2:30pm'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '9:15am, 11:00am, 12:45pm, 2:30pm'
+        }
+      ],
+
+      options: [
+        'adventure',
+        'surf',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
+    },
+    {
+      tourName: 'Private Surf Lessons Shaka Surf Lessons',
+      _id: 'adventure_private-surf-lessons-shaka-surf-lessons',
+      companyName: 'Shaka Surf School',
+      address: '6th Street East, Folly Beach, SC 23439',
+      price: '60',
+      phone: '843-607-9911',
+      duration: '90 minutes',
+      desc:
+        'One on one lesson with expert local surfer. Wave knowledge , safety, awareness and skills. Teaching the Art of Surfing since 2004!',
+      img:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp34dIEXiFxOsmNwyqbhWzKoCKMaqvZgnKlCfv2aZNAV4y9kWF',
+      linkToBookOnline: 'http://www.shakasurfschool.com/',
+      schedule: [
+        {
+          day: 'Monday',
+          open: true,
+          time: '10:15am'
+        },
+        {
+          day: 'Tuesday',
+          open: true,
+          time: '10:15am'
+        },
+        {
+          day: 'Wednesday',
+          open: true,
+          time: '10:15am'
+        },
+        {
+          day: 'Thursday',
+          open: true,
+          time: '10:15am'
+        },
+        {
+          day: 'Friday',
+          open: true,
+          time: '10:15am'
+        },
+        {
+          day: 'Saturday',
+          open: true,
+          time: '10:15am'
+        },
+        {
+          day: 'Sunday',
+          open: true,
+          time: '10:15am'
+        }
+      ],
+
+      options: [
+        'adventure',
+        'surf',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+      ]
     }
   ])
   .then(result => console.log('Documents successfully uploaded!', result))
   .catch(err => console.log('Error uploading documents', err))
-
-// {
-//   tourName: 'Template',
-//   _id: 'history_template',
-//   companyName: 'F',
-//   address: '',
-//   price: '',
-//   duration: '',
-//   type: '',
-//   desc: '',
-//   img: '',
-//   linkToBookOnline: '',
-//   ///////////   HOW SHOULD I HANDLE IT WHEN THE TOUR LEAVES EVERY 15
-//   //////////    MINUTES EVERY DAY?
-//   schedule: [
-//     {
-//       monday: false,
-//       mondayTime: null,
-//       tuesday: false,
-//       tuesdayTime: null,
-//       wednesday: false,
-//       wednesdayTime: null,
-//       thursday: false,
-//       thursdayTime: null,
-//       friday: false,
-//       fridayTime: null,
-//       saturday: true,
-//       saturdayTime: '1:00PM',
-//       sunday: false,
-//       sundayTime: null
-//     }
-//   ],
-//   options: [
-//     {
-//       history: true,
-//       adventure: false,
-//       culinary: false,
-//       haunted: false,
-//       museum: false,
-//       carriage: false,
-//       boat: false,
-//       water: false,
-//       walking: true,
-//       bike: false,
-//       plantation: false,
-//       food: false,
-//       wine: false,
-//       pub: false
-//     }
-//   ]
-// }
-// {
-//   tourName: 'Template',
-//   _id: 'history_template',
-//   companyName: 'F',
-//   address: '',
-//   price: '',
-//   duration: '',
-//   type: '',
-//   desc: '',
-//   img: '',
-//   linkToBookOnline: '',
-//   ///////////   HOW SHOULD I HANDLE IT WHEN THE TOUR LEAVES EVERY 15
-//   //////////    MINUTES EVERY DAY?
-//   schedule: [
-//     {
-//       monday: false,
-//       mondayTime: null,
-//       tuesday: false,
-//       tuesdayTime: null,
-//       wednesday: false,
-//       wednesdayTime: null,
-//       thursday: false,
-//       thursdayTime: null,
-//       friday: false,
-//       fridayTime: null,
-//       saturday: true,
-//       saturdayTime: '1:00PM',
-//       sunday: false,
-//       sundayTime: null
-//     }
-//   ],
-//   options: [
-//     {
-//       history: true,
-//       adventure: false,
-//       culinary: false,
-//       haunted: false,
-//       museum: false,
-//       carriage: false,
-//       boat: false,
-//       water: false,
-//       walking: true,
-//       bike: false,
-//       plantation: false,
-//       food: false,
-//       wine: false,
-//       pub: false
-//     }
-//   ]
-// }
-// {
-//   tourName: 'Template',
-//   _id: 'history_template',
-//   companyName: 'F',
-//   address: '',
-//   price: '',
-//   duration: '',
-//   type: '',
-//   desc: '',
-//   img: '',
-//   linkToBookOnline: '',
-//   ///////////   HOW SHOULD I HANDLE IT WHEN THE TOUR LEAVES EVERY 15
-//   //////////    MINUTES EVERY DAY?
-//   schedule: [
-//     {
-//       monday: false,
-//       mondayTime: null,
-//       tuesday: false,
-//       tuesdayTime: null,
-//       wednesday: false,
-//       wednesdayTime: null,
-//       thursday: false,
-//       thursdayTime: null,
-//       friday: false,
-//       fridayTime: null,
-//       saturday: true,
-//       saturdayTime: '1:00PM',
-//       sunday: false,
-//       sundayTime: null
-//     }
-//   ],
-//   options: [
-//     {
-//       history: true,
-//       adventure: false,
-//       culinary: false,
-//       haunted: false,
-//       museum: false,
-//       carriage: false,
-//       boat: false,
-//       water: false,
-//       walking: true,
-//       bike: false,
-//       plantation: false,
-//       food: false,
-//       wine: false,
-//       pub: false
-//     }
-//   ]
-// }

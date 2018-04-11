@@ -8,7 +8,13 @@ import { withStyles } from 'material-ui/styles'
 import Avatar from 'material-ui/Avatar'
 import Button from 'material-ui/Button'
 import AddIcon from 'material-ui-icons/Add'
-
+import { START_OVER } from '../../constants'
+import Card, {
+  CardHeader,
+  CardMedia,
+  CardContent,
+  CardActions
+} from 'material-ui/Card'
 const styles = {
   row: {
     display: 'flex',
@@ -18,57 +24,80 @@ const styles = {
     margin: 10
   },
   bigAvatar: {
-    width: 300,
-    height: 300
+    width: 200,
+    height: 200
+  },
+  media: {
+    height: 400
+  },
+  card: {
+    maxWidth: 450
   }
 }
 
 const Welcome = () => (
   <center>
     <Typography style={{ padding: '16px' }} variant="display2">
-      Welcome to the Charleston Tour Planner
+      Charleston Tour Planner
     </Typography>
   </center>
 )
-
+// <Avatar
+//   alt="fountain"
+//   src="../../../fountain.png"
+//   className={classNames(classes.avatar, classes.bigAvatar)}
+// />
 const Home = props => {
   const { classes } = props
+  //console.log('clean start over home', JSON.toStringify(home))
   return (
-    <div style={{ padding: '60px' }}>
-      <Welcome />
-      <center>
-        <Avatar
-          alt="fountain"
-          src="https://c1.staticflickr.com/7/6240/6349710040_d6b09c28b6_b.jpg"
-          className={classNames(classes.avatar, classes.bigAvatar)}
+    <center>
+      <Card className={classes.card}>
+        <CardMedia
+          className={classes.media}
+          image="../../../fountain.png"
+          title="Home Page"
         />
-        <Typography style={{ padding: '16px' }} variant="display1">
-          In just 3 easy steps we will find you the perfect tour.
-        </Typography>
+      </Card>
+      <div style={{ padding: '30px' }}>
+        <Welcome />
         <dim>
-          <Link to="/interests" style={{ textDecoration: 'none' }}>
-            <Button
-              variant="raised"
-              size="large"
-              color="grey"
-              className={classes.button}
-            >
-              <p />
-              Get Started
-            </Button>
-          </Link>
+          <Typography style={{ padding: '30px' }} variant="display5">
+            In just 3 easy steps, we will find you the perfect tour.
+          </Typography>
+          <Button
+            variant="raised"
+            size="large"
+            color="grey"
+            onClick={props.onClick(props.history)}
+            className={classes.button}
+          >
+            <p />
+            <p />
+            Get Started
+          </Button>
         </dim>
-      </center>
-    </div>
+      </div>
+    </center>
   )
 }
 
 function mapStateToProps(state) {
   return {
-    home: state.appData
+    home: state.home
   }
 }
 
-const connector = connect(mapStateToProps)
+function mapActionToProps(dispatch) {
+  return {
+    onClick: history => e => {
+      dispatch({ type: START_OVER })
+      history.push('/interests')
+    }
+    //console.log('onClick set InitiatialState agian')
+  }
+}
+
+const connector = connect(mapStateToProps, mapActionToProps)
 
 export default connector(withStyles(styles)(Home))
