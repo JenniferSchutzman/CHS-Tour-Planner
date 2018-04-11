@@ -28,7 +28,7 @@ import {
 
 const styles = theme => ({
   progress: {
-    margin: theme.spacing.unit * 25
+    margin: theme.spacing.unit * 22
   },
   root: {
     display: 'flex',
@@ -44,6 +44,10 @@ const styles = theme => ({
   },
   icon: {
     color: 'rgba(255, 255, 255, 0.54)'
+  },
+  button: {
+    root: theme.typography.button,
+    align: 'left'
   }
 })
 //try out in ramda to get it to recognize if empty[]
@@ -125,16 +129,16 @@ class Recommendations extends React.Component {
           ))}
         </GridList>
         <p />
-        <div>
+        <div className={classes.button}>
           <CardActions>
             <Link to="/" style={{ textDecoration: 'none' }}>
-              <Button size="small" color="primary">
+              <Button size="small" color="primary" align="left">
                 Start Over
               </Button>
             </Link>
 
             <Link to="/tours" style={{ textDecoration: 'none' }}>
-              <Button size="small" color="primary">
+              <Button size="small" color="primary" align="left">
                 See all tours
               </Button>
             </Link>

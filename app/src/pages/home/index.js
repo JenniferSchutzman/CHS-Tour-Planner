@@ -45,7 +45,7 @@ const Home = props => {
             src="../../../fountain.png"
             className={classNames(classes.avatar, classes.bigAvatar)}
           />
-          <Typography style={{ padding: '16px' }} variant="display5">
+          <Typography style={{ padding: '25px' }} variant="display5">
             In just 3 easy steps, we will find you the perfect tour.
           </Typography>
           <Button
@@ -55,6 +55,7 @@ const Home = props => {
             onClick={props.onClick(props.history)}
             className={classes.button}
           >
+            <p />
             <p />
             Get Started
           </Button>

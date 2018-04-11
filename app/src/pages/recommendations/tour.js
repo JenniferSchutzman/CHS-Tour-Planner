@@ -26,15 +26,10 @@ const styles = theme => ({
     height: 200
   },
   progress: {
-    margin: theme.spacing.unit * 25
+    margin: theme.spacing.unit * 20
   }
 })
 
-// const Day = () => (
-//   const day = this.props.schedule
-// console.log('day', JSON.stringify(day))
-// const schedule = compose(map(x => x.day), filter(x => x.open === true))(day)
-// )
 class IndividualTour extends React.Component {
   componentDidMount() {
     const id = this.props.match.params.id

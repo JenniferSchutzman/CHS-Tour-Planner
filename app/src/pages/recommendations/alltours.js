@@ -27,7 +27,7 @@ import {
 
 const styles = theme => ({
   progress: {
-    margin: theme.spacing.unit * 25
+    margin: theme.spacing.unit * 22
   },
   root: {
     display: 'flex',
@@ -37,8 +37,10 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.paper
   },
   gridList: {
-    width: 500,
-    height: 450,
+    maxWidth: '100%',
+    minWidth: '100%',
+    // width: 500,
+    // height: 450,
     transform: 'translateZ(0)'
   },
   icon: {
@@ -80,7 +82,9 @@ class AllTours extends React.Component {
                 style={{ textDecoration: 'none' }}
               >
                 <center>
-                  <img src={tile.img} />
+                  <div className={classes.gridList}>
+                    <img src={tile.img} />
+                  </div>
                 </center>
                 <GridListTileBar
                   title={tile.tourName}
@@ -89,20 +93,19 @@ class AllTours extends React.Component {
               </Link>
             </GridListTile>
           ))}
+          <div style={{ padding: '20px' }}>
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              <dim>
+                <center>
+                  <Button variant="raised" size="large" color="grey">
+                    START OVER
+                  </Button>
+                </center>
+              </dim>
+            </Link>
+          </div>
         </GridList>
         <p />
-        <center>
-          <div>
-            <dim>
-              <Link to="/" style={{ textDecoration: 'none' }}>
-                <Button variant="raised" size="large" color="grey">
-                  <p />
-                  Start Over
-                </Button>
-              </Link>
-            </dim>
-          </div>
-        </center>
       </div>
     )
   }
