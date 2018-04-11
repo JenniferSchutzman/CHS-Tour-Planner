@@ -144,13 +144,13 @@ export const stateTracker = (state = initialState, action) => {
       const finalInterestsWithNewExpCul = map(
         i =>
           i.name === 'History' || 'Culinary' || 'Adventure' || 'Haunted'
-            ? merge(i, { experienceTypes: newExpAdv })
+            ? merge(i, { experienceTypes: newExpCul })
             : i,
         state.interests
       )
-      //  console.log('finalInterestsWithNewExpCul', finalInterestsWithNewExpCul)
+      console.log('finalInterestsWithNewExpCul', finalInterestsWithNewExpCul)
       return merge(state, { interests: finalInterestsWithNewExpCul })
-    //console.log('state after all reducer function with cul', state)
+      console.log('state after all reducer function with cul', state)
     case SELECTED_HISTORY:
       const newExp = compose(
         map(
@@ -183,9 +183,14 @@ export const stateTracker = (state = initialState, action) => {
     case MAKE_RESULTS_ARRAY:
       var resultOptions = []
 
-      //console.log('dow in state payloard', JSON.stringify(action.payload.dow))
+      console.log(
+        'action.payload.interests',
+        JSON.stringify(action.payload.interests)
+      )
       const chosenInterest = find(i => i.selected, action.payload.interests)
+      //console.log('chosenInterests', JSON.stringify(chosenInterest))
       const resultOptions1 = concat([chosenInterest.name], resultOptions)
+      //console.log('resultOptions1', JSON.stringify(resultOptions1))
       const chosenExp = find(e => e.selected, chosenInterest.experienceTypes)
       const resultOptions2 = concat([chosenExp.name], resultOptions1)
       const chosenDays = find(d => d.selected, action.payload.dow)
@@ -197,17 +202,4 @@ export const stateTracker = (state = initialState, action) => {
   return state
 }
 
-// export const homeReducer = (state = initialState, action) => {
-//   console.log('stste in homeReducer onclick', state)
-//   switch (action.type) {
-//     case START_OVER:
-//       console.log('initial state inside start over', initialState)
-//       return initialState
-//     //console.log('stste case START_OVER', state)
-//     default:
-//       return state
-//   }
-// }
-
-//    return merge(initialState, { dow: newDow })
 export default stateTracker

@@ -7,7 +7,7 @@ import Button from 'material-ui/Button'
 import classNames from 'classnames'
 import { CHECK_DAY, MAKE_RESULTS_ARRAY } from '../../constants'
 import { schedule, checkDay } from '../../action-creators/schedule'
-
+import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card'
 import List, {
   ListItem,
   ListItemIcon,
@@ -22,52 +22,67 @@ const styles = theme => ({
     width: '100%',
     maxWidth: 360,
     backgroundColor: theme.palette.background.paper
+  },
+  card: {
+    maxWidth: '100%'
+  },
+  media: {
+    height: 200
   }
 })
 
 const Schedule = props => {
   const { classes, history, onClick } = props
   const data = props.days
-  console.log('state with trues before clear', JSON.stringify(props.state))
+  //console.log('state with trues before clear', JSON.stringify(props.state))
   return (
-    <div style={{ padding: '60px' }}>
-      <center>
-        <div>
-          <center>
-            <Typography variant="display1" gutterBottom>
-              Select Your Availability
-            </Typography>
-          </center>
+    <div>
+      <Card className={classes.card}>
+        <CardMedia
+          className={classes.media}
+          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyRVTTO35jEIxHgu-sQ-mNpu4-CnBcm23DRisy5H9kRr2ca2WApA"
+          title="Select Your Availability"
+        />
+      </Card>
+      <div style={{ padding: '20px' }}>
+        <center>
+          <div>
+            <center>
+              <Typography variant="display1" gutterBottom>
+                Availability
+              </Typography>
+            </center>
 
-          {map(day => (
-            <ListItem>
-              <ListItemIcon>
-                <TodayIcon />
-              </ListItemIcon>
-              <ListItemText primary={day.name} />
-              <Switch
-                checked={day.selected}
-                onChange={props.checkDay(day.name)}
-                value={day.name}
-              />
-            </ListItem>
-          ))(data)}
-        </div>
-        <dim>
-          <Link to="/recommendations" style={{ textDecoration: 'none' }}>
-            <Button
-              variant="raised"
-              size="large"
-              color="grey"
-              className={classes.button}
-              onClick={onClick(history, props.state)}
-            >
-              <p />
-              Ready for Results
-            </Button>
-          </Link>
-        </dim>
-      </center>
+            {map(day => (
+              <ListItem>
+                <ListItemIcon>
+                  <TodayIcon />
+                </ListItemIcon>
+                <ListItemText primary={day.name} />
+                <Switch
+                  checked={day.selected}
+                  onChange={props.checkDay(day.name)}
+                  value={day.name}
+                />
+              </ListItem>
+            ))(data)}
+          </div>
+          <dim>
+            <Link to="/recommendations" style={{ textDecoration: 'none' }}>
+              <Button
+                variant="raised"
+                size="large"
+                color="grey"
+                className={classes.button}
+                onClick={onClick(history, props.state)}
+              >
+                <p />
+                Ready for Results
+              </Button>
+            </Link>
+          </dim>
+        </center>
+      </div>
     </div>
   )
 }

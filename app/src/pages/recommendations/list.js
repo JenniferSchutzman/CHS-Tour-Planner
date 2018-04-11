@@ -12,6 +12,7 @@ import Button from 'material-ui/Button'
 import { recommendations } from '../../action-creators/individual-tour'
 import { CircularProgress } from 'material-ui/Progress'
 import PropTypes from 'prop-types'
+import { LinearProgress } from 'material-ui/Progress'
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import {
@@ -31,7 +32,8 @@ const styles = theme => ({
     margin: theme.spacing.unit * 22
   },
   root: {
-    display: 'flex',
+    //display: 'flex',
+    flexGrow: 15,
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
@@ -46,8 +48,7 @@ const styles = theme => ({
     color: 'rgba(255, 255, 255, 0.54)'
   },
   button: {
-    root: theme.typography.button,
-    align: 'left'
+    root: theme.typography.button
   }
 })
 //try out in ramda to get it to recognize if empty[]
@@ -93,7 +94,7 @@ class Recommendations extends React.Component {
     const { classes, value } = this.props
     const apiArray = this.props.tours
     if (apiArray < 1) {
-      return <CircularProgress className={classes.progress} color="secondary" />
+      return <LinearProgress className={classes.progress} color="secondary" />
     }
 
     return (
@@ -131,14 +132,24 @@ class Recommendations extends React.Component {
         <p />
         <div className={classes.button}>
           <CardActions>
-            <Link to="/" style={{ textDecoration: 'none' }}>
-              <Button size="small" color="primary" align="left">
+            <Link
+              to="/"
+              style={{
+                textDecoration: 'none'
+              }}
+            >
+              <Button size="small" color="primary">
                 Start Over
               </Button>
             </Link>
 
-            <Link to="/tours" style={{ textDecoration: 'none' }}>
-              <Button size="small" color="primary" align="left">
+            <Link
+              to="/tours"
+              style={{
+                textDecoration: 'none'
+              }}
+            >
+              <Button size="small" color="primary">
                 See all tours
               </Button>
             </Link>

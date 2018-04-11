@@ -559,7 +559,7 @@ db
       ],
       options: [
         'culinary',
-        'drinks',
+        'food',
         'monday',
         'tuesday',
         'wednesday',

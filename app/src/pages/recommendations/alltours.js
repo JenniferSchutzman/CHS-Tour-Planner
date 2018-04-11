@@ -10,9 +10,10 @@ import { browserHistory } from 'react-router'
 import classNames from 'classnames'
 import Button from 'material-ui/Button'
 import { recommendations } from '../../action-creators/individual-tour'
-import { CircularProgress } from 'material-ui/Progress'
+import { LinearProgress } from 'material-ui/Progress'
 import Typography from 'material-ui/Typography'
 import PropTypes from 'prop-types'
+
 import {
   compose,
   find,
@@ -30,7 +31,7 @@ const styles = theme => ({
     margin: theme.spacing.unit * 22
   },
   root: {
-    display: 'flex',
+    //display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
@@ -57,7 +58,7 @@ class AllTours extends React.Component {
     const { classes, value } = this.props
     const apiArray = this.props.tours
     if (apiArray < 1) {
-      return <CircularProgress className={classes.progress} color="secondary" />
+      return <LinearProgress className={classes.progress} color="secondary" />
     }
 
     return (

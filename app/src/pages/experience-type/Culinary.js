@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { withStyles } from 'material-ui/styles'
 import GridList, { GridListTile } from 'material-ui/GridList'
 import Subheader from 'material-ui/List/ListSubheader'
-import { prop, find, compose } from 'ramda'
+import { prop, find, compose, tap } from 'ramda'
 import ButtonBase from 'material-ui/ButtonBase'
 import Typography from 'material-ui/Typography'
 import { SELECTED_CULINARY } from '../../constants'
@@ -84,12 +84,19 @@ const styles = theme => ({
 const Culinary = props => {
   const { classes, onClick, history } = props
   const width = '30%'
-  //  console.log('insideinterests before data compose', props.insideInterests)
+
+  //console.log('****CULINARY*****', JSON.stringify(props.insideInterests))
+  const wiretap = x => console.log(x)
   const data = compose(
+    tap(wiretap),
     prop('experienceTypes'),
-    find(x => x.name === 'Culinary')
+    tap(wiretap),
+    find(x => x.name === 'Culinary'),
+    tap(wiretap)
   )(props.insideInterests)
-  //console.log('data after compose', data)
+
+  //  console.log('data after compose', JSON.stringify(data))
+
   return (
     <div>
       <GridList cellHeight={180}>
@@ -140,11 +147,12 @@ function mapStateToProps(state) {
   return {
     insideInterests: state.stateTracker.interests
   }
+  console.log('state inside mapStateToProps', JSON.stringify(state))
 }
 function mapActionsToProps(dispatch) {
   return {
     onClick: (history, value) => () => {
-      //console.log('onClick clicked', value)
+      console.log('onClick in mapActiontoProps culinary', value)
       dispatch({ type: SELECTED_CULINARY, payload: value })
       history.push(`/schedule`)
     }

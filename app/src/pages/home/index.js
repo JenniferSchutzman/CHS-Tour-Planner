@@ -9,7 +9,12 @@ import Avatar from 'material-ui/Avatar'
 import Button from 'material-ui/Button'
 import AddIcon from 'material-ui-icons/Add'
 import { START_OVER } from '../../constants'
-
+import Card, {
+  CardHeader,
+  CardMedia,
+  CardContent,
+  CardActions
+} from 'material-ui/Card'
 const styles = {
   row: {
     display: 'flex',
@@ -21,6 +26,12 @@ const styles = {
   bigAvatar: {
     width: 200,
     height: 200
+  },
+  media: {
+    height: 400
+  },
+  card: {
+    maxWidth: 450
   }
 }
 
@@ -31,21 +42,27 @@ const Welcome = () => (
     </Typography>
   </center>
 )
-
+// <Avatar
+//   alt="fountain"
+//   src="../../../fountain.png"
+//   className={classNames(classes.avatar, classes.bigAvatar)}
+// />
 const Home = props => {
   const { classes } = props
   //console.log('clean start over home', JSON.toStringify(home))
   return (
     <center>
-      <div style={{ padding: '60px' }}>
+      <Card className={classes.card}>
+        <CardMedia
+          className={classes.media}
+          image="../../../fountain.png"
+          title="Home Page"
+        />
+      </Card>
+      <div style={{ padding: '30px' }}>
         <Welcome />
         <dim>
-          <Avatar
-            alt="fountain"
-            src="../../../fountain.png"
-            className={classNames(classes.avatar, classes.bigAvatar)}
-          />
-          <Typography style={{ padding: '25px' }} variant="display5">
+          <Typography style={{ padding: '30px' }} variant="display5">
             In just 3 easy steps, we will find you the perfect tour.
           </Typography>
           <Button
