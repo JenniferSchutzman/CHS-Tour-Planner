@@ -383,7 +383,7 @@ db
       tourName: 'Harbour Sailing Tour',
       companyName: 'Charleston Sailing Charters',
       address: '',
-      price: 3,
+      price: 499,
       duration: '2 hours',
       type: 'boat',
       desc:
@@ -391,7 +391,7 @@ db
       img:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKtCdd4f_pu2dPf36s0VV2n4qbaaWK1GThhAIGqS8kzBD7LnZi',
       linkToBookOnline:
-        'https://freetoursbyfoot.com/charleston-sc-tours/walking-tours/historic-district/',
+        'http://www.charlestonsailingcharters.com/charleston-harbor-cruises.htm#.WtANONPwZ1M',
       schedule: [
         {
           day: 'Monday',

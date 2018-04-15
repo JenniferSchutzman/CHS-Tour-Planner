@@ -13,7 +13,7 @@ import { recommendations } from '../../action-creators/individual-tour'
 import { LinearProgress } from 'material-ui/Progress'
 import Typography from 'material-ui/Typography'
 import PropTypes from 'prop-types'
-
+import { CircularProgress } from 'material-ui/Progress'
 import {
   compose,
   find,
@@ -40,16 +40,15 @@ const styles = theme => ({
   gridList: {
     maxWidth: '100%',
     minWidth: '100%',
-    // width: 500,
-    // height: 450,
+    width: 500,
+    height: 450,
     transform: 'translateZ(0)'
   },
   icon: {
     color: 'rgba(255, 255, 255, 0.54)'
   }
 })
-//try out in ramda to get it to recognize if empty[]
-//then loading CircularProgress
+
 class AllTours extends React.Component {
   componentDidMount() {
     this.props.recommendations
@@ -58,7 +57,7 @@ class AllTours extends React.Component {
     const { classes, value } = this.props
     const apiArray = this.props.tours
     if (apiArray < 1) {
-      return <LinearProgress className={classes.progress} color="secondary" />
+      return <CircularProgress className={classes.progress} color="secondary" />
     }
 
     return (
@@ -94,18 +93,18 @@ class AllTours extends React.Component {
               </Link>
             </GridListTile>
           ))}
+        </GridList>
+        <center>
           <div style={{ padding: '20px' }}>
             <Link to="/" style={{ textDecoration: 'none' }}>
               <dim>
-                <center>
-                  <Button variant="raised" size="large" color="grey">
-                    START OVER
-                  </Button>
-                </center>
+                <Button variant="raised" size="large" color="grey">
+                  START OVER
+                </Button>
               </dim>
             </Link>
           </div>
-        </GridList>
+        </center>
         <p />
       </div>
     )

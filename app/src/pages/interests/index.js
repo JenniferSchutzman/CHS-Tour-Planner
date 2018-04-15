@@ -87,7 +87,7 @@ const Interests = props => {
   const { classes, onClick, history } = props
   const width = '70%'
   const interests = pathOr([], ['stateTracker', 'interests'], props)
-  console.log('interests', interests)
+  //console.log('interests', interests)
   return (
     <div className={classes.root}>
       <center>
@@ -98,7 +98,7 @@ const Interests = props => {
               What Interests You?
             </Typography>
           </GridListTile>
-          console.log()
+
           {interests.map(image => (
             <ButtonBase
               focusRipple
@@ -136,7 +136,7 @@ const Interests = props => {
 }
 
 function mapStateToProps(state) {
-  console.log('what is state?', state)
+  //  console.log('what is state?', state)
   return {
     stateTracker: state.stateTracker
   }

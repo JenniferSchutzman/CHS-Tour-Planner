@@ -51,8 +51,7 @@ const styles = theme => ({
     root: theme.typography.button
   }
 })
-//try out in ramda to get it to recognize if empty[]
-//then loading CircularProgress
+
 class Recommendations extends React.Component {
   componentDidMount() {
     this.props.recommendations

@@ -26,7 +26,7 @@ const styles = theme => ({
     height: 200
   },
   progress: {
-    margin: theme.spacing.unit * 20
+    margin: theme.spacing.unit * 15
   }
 })
 

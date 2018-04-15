@@ -147,12 +147,12 @@ function mapStateToProps(state) {
   return {
     insideInterests: state.stateTracker.interests
   }
-  console.log('state inside mapStateToProps', JSON.stringify(state))
+  //console.log('state inside mapStateToProps', JSON.stringify(state))
 }
 function mapActionsToProps(dispatch) {
   return {
     onClick: (history, value) => () => {
-      console.log('onClick in mapActiontoProps culinary', value)
+      //console.log('onClick in mapActiontoProps culinary', value)
       dispatch({ type: SELECTED_CULINARY, payload: value })
       history.push(`/schedule`)
     }
