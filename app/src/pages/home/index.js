@@ -42,11 +42,6 @@ const Welcome = () => (
     </Typography>
   </center>
 )
-// <Avatar
-//   alt="fountain"
-//   src="../../../fountain.png"
-//   className={classNames(classes.avatar, classes.bigAvatar)}
-// />
 const Home = props => {
   const { classes } = props
   //console.log('clean start over home', JSON.toStringify(home))
@@ -76,6 +71,20 @@ const Home = props => {
             <p />
             Get Started
           </Button>
+
+          {'       '}
+          <Link to="/login" style={{ textDecoration: 'none' }}>
+            <Button
+              variant="raised"
+              size="large"
+              color="grey"
+              className={classes.button}
+            >
+              <p />
+              <p />
+              Log In
+            </Button>
+          </Link>
         </dim>
       </div>
     </center>

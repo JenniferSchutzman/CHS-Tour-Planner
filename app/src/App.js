@@ -12,15 +12,10 @@ import Haunted from './pages/experience-type/Haunted.js'
 import History from './pages/experience-type/History.js'
 import Adventure from './pages/experience-type/Adventure.js'
 import Culinary from './pages/experience-type/Culinary.js'
-// import Adventure from './pages/experience-type/Adventure'
+//import Login from './pages/login/index'
+import Auth from './auth.js'
+const auth = new Auth()
 
-//
-//
-//
-// <Route path="/days" component={Days}/>
-// <Route path="/times"component={Times}>
-// <Route path="/recommendations" component={Recommendations}>
-//
 class App extends Component {
   render() {
     return (
@@ -37,6 +32,7 @@ class App extends Component {
             <Route path="/schedule" component={Schedule} />
             <Route path="/recommendations/:id" component={IndividualTour} />
             <Route path="/recommendations" component={Recommendations} />
+            <Route path="/login" component={Login} />
           </Switch>
         </div>
       </BrowserRouter>
@@ -45,3 +41,8 @@ class App extends Component {
 }
 
 export default App
+
+function Login() {
+  auth.login()
+  return null
+}

@@ -8,9 +8,6 @@ export const recommendations = async (dispatch, getState) => {
 }
 
 export const allTours = async (dispatch, getState) => {
-  //console.log('in ac before fetch', getState)
   const tours = await fetch(`${url}/tours`).then(res => res.json())
-  //console.log('tours after fetch', tours)
   dispatch({ type: ALL_TOURS, payload: tours })
-  //console.log('tours after dispatch', tours)
 }
