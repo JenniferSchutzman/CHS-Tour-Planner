@@ -1,14 +1,7 @@
 require('dotenv').config();
 const PouchDB = require('pouchdb-core');
 PouchDB.plugin(require('pouchdb-adapter-http'));
-const db = new PouchDB(process.env.COUCHDB_URL + process.env.COUCHDB_DATABASE);
-console.log(
-	'loading data to :',
-	process.env.COUCHDB_URL + process.env.COUCHDB_DATABASE
-);
-// const db = new PouchDB(
-// 	`http://localhost:8080/_utils/#database/chs-tour-finder/_all_docs`
-// );
+var db = new PouchDB();
 
 db
 	.bulkDocs([
